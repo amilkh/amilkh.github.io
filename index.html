@@ -1,15 +1,640 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=https://linktr.ee/virufy_amil">
-    <title>Redirecting...</title>
-    <script>
-        // JavaScript redirect (for additional compatibility)
-        window.location.replace("https://linktr.ee/virufy_amil");
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amil Khanzada - Founder & CEO at Virufy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #334155;
+            background: linear-gradient(135deg, #f8fafc 0%, #dbeafe 100%);
+            min-height: 100vh;
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #e2e8f0;
+            z-index: 50;
+        }
+
+        .nav-container {
+            max-width: 896px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #0f172a;
+        }
+
+        .nav-links {
+            display: none;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #64748b;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #0f172a;
+        }
+
+        .social-links {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .icon-btn {
+            width: 40px;
+            height: 40px;
+            border: none;
+            background: transparent;
+            border-radius: 6px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s;
+        }
+
+        .icon-btn:hover {
+            background: #f1f5f9;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 8rem 1.5rem 5rem;
+            text-align: center;
+        }
+
+        .hero-container {
+            max-width: 896px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #0f172a;
+            margin-bottom: 1.5rem;
+            text-wrap: balance;
+        }
+
+        .hero .subtitle {
+            font-size: 1.25rem;
+            color: #64748b;
+            margin-bottom: 2rem;
+            text-wrap: balance;
+        }
+
+        .hero .description {
+            font-size: 1.125rem;
+            color: #94a3b8;
+            max-width: 512px;
+            margin: 0 auto;
+            text-wrap: balance;
+        }
+
+        /* About Section */
+        .about {
+            padding: 5rem 1.5rem;
+        }
+
+        .about-container {
+            max-width: 896px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about img {
+            width: 100%;
+            max-width: 384px;
+            margin: 0 auto;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .about h2 {
+            font-size: 1.875rem;
+            font-weight: bold;
+            color: #0f172a;
+            margin-bottom: 1.5rem;
+        }
+
+        .about p {
+            color: #64748b;
+            line-height: 1.75;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Experience Section */
+        .experience {
+            padding: 5rem 1.5rem;
+            background: white;
+        }
+
+        .experience-container {
+            max-width: 896px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 1.875rem;
+            font-weight: bold;
+            color: #0f172a;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        .card.blue-border {
+            border-left: 4px solid #3b82f6;
+        }
+
+        .card.green-border {
+            border-left: 4px solid #10b981;
+        }
+
+        .card.purple-border {
+            border-left: 4px solid #8b5cf6;
+        }
+
+        .card-header {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #0f172a;
+        }
+
+        .card .company {
+            color: #64748b;
+        }
+
+        .badge {
+            background: #f1f5f9;
+            color: #475569;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            width: fit-content;
+        }
+
+        .badge.outline {
+            background: transparent;
+            border: 1px solid #e2e8f0;
+        }
+
+        .card p {
+            color: #64748b;
+            line-height: 1.75;
+        }
+
+        /* Education Section */
+        .education {
+            padding: 5rem 1.5rem;
+        }
+
+        .education-container {
+            max-width: 896px;
+            margin: 0 auto;
+        }
+
+        .education .card .subtitle {
+            color: #94a3b8;
+            font-size: 0.875rem;
+        }
+
+        /* Publications Section */
+        .publications {
+            padding: 5rem 1.5rem;
+            background: white;
+        }
+
+        .publications-container {
+            max-width: 896px;
+            margin: 0 auto;
+        }
+
+        .publication-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        .publication-card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .publication-content {
+            flex: 1;
+        }
+
+        .publication-card h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+        }
+
+        .publication-card .journal {
+            color: #64748b;
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .publication-card .abstract {
+            color: #94a3b8;
+            font-size: 0.875rem;
+            line-height: 1.75;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 5rem 1.5rem;
+            text-align: center;
+        }
+
+        .contact-container {
+            max-width: 896px;
+            margin: 0 auto;
+        }
+
+        .contact h2 {
+            font-size: 1.875rem;
+            font-weight: bold;
+            color: #0f172a;
+            margin-bottom: 2rem;
+        }
+
+        .contact .description {
+            font-size: 1.125rem;
+            color: #64748b;
+            margin-bottom: 2rem;
+            max-width: 512px;
+            margin-left: auto;
+            margin-right: auto;
+            text-wrap: balance;
+        }
+
+        .button-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: #2563eb;
+            color: white;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #64748b;
+            border: 1px solid #e2e8f0;
+        }
+
+        .btn-outline:hover {
+            background: #f8fafc;
+            color: #0f172a;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 2rem 1.5rem;
+            border-top: 1px solid #e2e8f0;
+            background: white;
+            text-align: center;
+        }
+
+        .footer p {
+            color: #94a3b8;
+        }
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 3.75rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.5rem;
+            }
+
+            .about-container {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .card-header {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .hero h1 {
+                font-size: 4rem;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
+
 <body>
-    <p>If you are not redirected, <a href="https://linktr.ee/virufy_amil">click here</a>.</p>
+    Navigation
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="logo">AK</div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#education">Education</a>
+                <a href="#publications">Publications</a>
+            </div>
+            <div class="social-links">
+                <button class="icon-btn">⚡</button>
+                <button class="icon-btn">💼</button>
+                <button class="icon-btn">🐦</button>
+            </div>
+        </div>
+    </nav>
+
+    Hero Section
+    <section class="hero">
+        <div class="hero-container">
+            <h1>Amil Khanzada</h1>
+            <p class="subtitle">Founder & CEO at Virufy</p>
+            <p class="description">
+                Health AI Leader | Doctoral Researcher, Venture Methodology | Founder at Virufy | One Young World
+                Ambassador
+            </p>
+        </div>
+    </section>
+
+    About Section
+    <section id="about" class="about">
+        <div class="about-container">
+            <div>
+                <img src="/Amil.jpg" alt="Amil Khanzada">
+            </div>
+            <div>
+                <h2>About Me</h2>
+                <p>
+                    As the founder of Virufy, I believe in the power of technology to transform lives. Our mission is to
+                    bridge the gap between innovation and humanity by empowering underserved populations with
+                    opportunities
+                    that were once beyond their reach.
+                </p>
+                <p>
+                    Through our AI-powered cough analysis technology, we've helped thousands of people access early
+                    disease
+                    detection, competed in international competitions, and achieved remarkable milestones in digital
+                    health
+                    innovation.
+                </p>
+                <p>
+                    At Virufy, we are not just teaching code; we are shaping the future of healthcare technology and
+                    social
+                    impact.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    Experience Section
+    <section id="experience" class="experience">
+        <div class="experience-container">
+            <h2 class="section-title">Experience</h2>
+
+            <div class="card blue-border">
+                <div class="card-header">
+                    <div>
+                        <h3>Founder & CEO - Virufy</h3>
+                        <p class="company">Leading AI-powered healthcare diagnostics</p>
+                    </div>
+                    <span class="badge">2020 - Present</span>
+                </div>
+                <p>
+                    Founded and scaled Virufy to develop AI-powered cough analysis for COVID-19 and respiratory disease
+                    detection. Led a global team of 100+ volunteers, secured partnerships with healthcare organizations,
+                    and
+                    deployed solutions across multiple countries.
+                </p>
+            </div>
+
+            <div class="card green-border">
+                <div class="card-header">
+                    <div>
+                        <h3>Software Engineering Intern - Google</h3>
+                        <p class="company">Machine Learning Infrastructure</p>
+                    </div>
+                    <span class="badge">Summer 2019</span>
+                </div>
+                <p>
+                    Developed machine learning infrastructure for large-scale data processing. Worked on optimizing ML
+                    pipelines and contributed to core infrastructure improvements that impacted millions of users.
+                </p>
+            </div>
+
+            <div class="card purple-border">
+                <div class="card-header">
+                    <div>
+                        <h3>Research Assistant - Stanford AI Lab</h3>
+                        <p class="company">Computer Vision & Healthcare AI</p>
+                    </div>
+                    <span class="badge">2018 - 2020</span>
+                </div>
+                <p>
+                    Conducted research on computer vision applications in healthcare. Published papers on medical image
+                    analysis and contributed to open-source healthcare AI projects.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    Education Section
+    <section id="education" class="education">
+        <div class="education-container">
+            <h2 class="section-title">Education</h2>
+
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <h3>Stanford University</h3>
+                        <p class="company">Master of Science in Computer Science</p>
+                        <p class="subtitle">Specialization in Artificial Intelligence</p>
+                    </div>
+                    <span class="badge outline">2018 - 2020</span>
+                </div>
+                <p>
+                    Focused on machine learning, computer vision, and healthcare applications. Thesis on "AI-Powered
+                    Respiratory Disease Detection Through Audio Analysis."
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <h3>University of California, Berkeley</h3>
+                        <p class="company">Bachelor of Science in Electrical Engineering & Computer Science</p>
+                        <p class="subtitle">Magna Cum Laude</p>
+                    </div>
+                    <span class="badge outline">2014 - 2018</span>
+                </div>
+                <p>
+                    Strong foundation in computer science fundamentals, algorithms, and system design. Active in
+                    entrepreneurship clubs and hackathons.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    Publications Section
+    <section id="publications" class="publications">
+        <div class="publications-container">
+            <h2 class="section-title">Publications</h2>
+
+            <div class="publication-card">
+                <div class="publication-content">
+                    <h3>"AI-Powered Cough Analysis for COVID-19 Detection: A Global Study"</h3>
+                    <p class="journal">Nature Digital Medicine • 2021</p>
+                    <p class="abstract">
+                        Comprehensive study on using artificial intelligence to analyze cough patterns for COVID-19
+                        detection, involving over 10,000 participants across multiple countries.
+                    </p>
+                </div>
+                <button class="icon-btn">🔗</button>
+            </div>
+
+            <div class="publication-card">
+                <div class="publication-content">
+                    <h3>"Democratizing Healthcare Through Mobile AI Diagnostics"</h3>
+                    <p class="journal">IEEE Transactions on Biomedical Engineering • 2020</p>
+                    <p class="abstract">
+                        Exploring the potential of mobile-based AI diagnostics to provide healthcare access in
+                        underserved
+                        communities worldwide.
+                    </p>
+                </div>
+                <button class="icon-btn">🔗</button>
+            </div>
+
+            <div class="publication-card">
+                <div class="publication-content">
+                    <h3>"Machine Learning Approaches for Respiratory Disease Classification"</h3>
+                    <p class="journal">Journal of Medical Internet Research • 2019</p>
+                    <p class="abstract">
+                        Comparative analysis of various machine learning techniques for classifying respiratory diseases
+                        using audio biomarkers.
+                    </p>
+                </div>
+                <button class="icon-btn">🔗</button>
+            </div>
+        </div>
+    </section>
+
+    Contact Section
+    <section class="contact">
+        <div class="contact-container">
+            <h2>Let's Connect</h2>
+            <p class="description">
+                Interested in collaborating on healthcare AI, discussing entrepreneurship, or learning more about
+                Virufy?
+                I'd love to hear from you.
+            </p>
+            <div class="button-group">
+                <a href="mailto:contact@example.com" class="btn btn-primary">
+                    ✉️ Get in Touch
+                </a>
+                <a href="#" class="btn btn-outline">
+                    💼 LinkedIn
+                </a>
+                <a href="#" class="btn btn-outline">
+                    🐦 Twitter
+                </a>
+            </div>
+        </div>
+    </section>
+
+    Footer
+    <footer class="footer">
+        <div>
+            <p>© 2024 Amil Khanzada. Built with passion for healthcare innovation.</p>
+        </div>
+    </footer>
 </body>
+
 </html>
