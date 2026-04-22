@@ -29,7 +29,7 @@
 <div class="spinner" id="spinner"></div>
 <p id="status"></p>
 <script>
-const JSON_URL = "https://amilkh.github.io/seminar/tunnel-url.json";
+const JSON_URL = "./tunnel-url.json";
 const CACHE_BUST = `?t=${Math.floor(Date.now()/30000)}`;   // busts every 30 s
 
 async function redirect() {
