@@ -5,50 +5,60 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Takemoto Lab Seminar</title>
 <style>
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0f172a; color: #e2e8f0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+  #loader {
     display: flex; flex-direction: column; align-items: center;
-    justify-content: center; min-height: 100vh; margin: 0;
-    background: #0f172a; color: #e2e8f0;
+    justify-content: center; height: 100vh; gap: 1rem;
   }
-  h1 { font-size: 1.4rem; margin-bottom: 0.5rem; }
-  p  { color: #94a3b8; font-size: 0.95rem; margin: 0.25rem 0; }
+  #loader p { color: #94a3b8; font-size: 0.95rem; }
   .spinner {
     width: 40px; height: 40px; border: 4px solid #334155;
     border-top-color: #60a5fa; border-radius: 50%;
-    animation: spin 0.8s linear infinite; margin: 1.5rem auto;
+    animation: spin 0.8s linear infinite;
   }
   @keyframes spin { to { transform: rotate(360deg); } }
-  .error { color: #f87171; margin-top: 1rem; }
-  a { color: #60a5fa; }
+  iframe {
+    display: none; position: fixed;
+    inset: 0; width: 100%; height: 100%; border: none;
+  }
 </style>
 </head>
 <body>
-<h1>Takemoto Lab Seminar Assistant</h1>
-<p>Connecting to today's session…</p>
-<div class="spinner" id="spinner"></div>
-<p id="status"></p>
+<div id="loader">
+  <div class="spinner"></div>
+  <p>Connecting to seminar…</p>
+</div>
+<iframe id="viewer" allow="microphone"></iframe>
 <script>
-const JSON_URL = "./tunnel-url.json";
-const CACHE_BUST = `?t=${Math.floor(Date.now()/30000)}`;   // busts every 30 s
+const CACHE_BUST = `?t=${Math.floor(Date.now() / 5000)}`;
 
-async function redirect() {
+async function load() {
+  let viewerUrl;
   try {
-    const r = await fetch(JSON_URL + CACHE_BUST);
-    if (!r.ok) throw new Error(`HTTP ${r.status}`);
-    const data = await r.json();
-    const dest = data.url
-      ? data.url.replace(/\/?$/, "/?view")
-      : "http://10.10.5.59:8080/?view";   // LAN fallback (classroom WiFi)
-    document.getElementById("status").textContent = "Redirecting…";
-    location.replace(dest);
-  } catch (err) {
-    // JSON fetch failed — go straight to LAN IP
-    location.replace("http://10.10.5.59:8080/?view");
+    const r = await fetch(`./tunnel-url.json${CACHE_BUST}`);
+    const data = r.ok ? await r.json() : null;
+    viewerUrl = data?.url
+      ? `${data.url.replace(/\/?$/, "")}/?view`
+      : "https://10.10.5.59:8443/?view";  // HTTPS LAN fallback
+  } catch (_) {
+    viewerUrl = "https://10.10.5.59:8443/?view";
   }
+
+  const frame = document.getElementById("viewer");
+  frame.src = viewerUrl;
+  frame.onload = () => {
+    document.getElementById("loader").style.display = "none";
+    frame.style.display = "block";
+  };
+  // If iframe fails to load (e.g. cert error on LAN fallback), show a helpful message
+  frame.onerror = () => {
+    document.getElementById("loader").innerHTML =
+      `<p style="color:#f87171">Could not connect. Ask your instructor for the URL.</p>`;
+  };
 }
 
-redirect();
+load();
 </script>
 </body>
 </html>
