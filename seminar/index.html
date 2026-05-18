@@ -7,16 +7,15 @@
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { background: #0f172a; color: #e2e8f0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-  #loader {
-    display: flex; flex-direction: column; align-items: center;
-    justify-content: center; height: 100vh; gap: 1rem; padding: 2rem; text-align: center;
-  }
+  #loader { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; gap: 1rem; padding: 2rem; text-align: center; }
   #loader p { color: #94a3b8; font-size: 0.95rem; }
   .spinner { width: 40px; height: 40px; border: 4px solid #334155; border-top-color: #60a5fa; border-radius: 50%; animation: spin 0.8s linear infinite; }
   @keyframes spin { to { transform: rotate(360deg); } }
   iframe { display: none; position: fixed; inset: 0; width: 100%; height: 100%; border: none; }
-  .cert-link { display: inline-block; margin-top: 0.5rem; padding: 0.5rem 1.2rem; border-radius: 6px; background: #2563eb; color: #fff; text-decoration: none; font-size: 0.9rem; }
-  .cert-link:hover { background: #1d4ed8; }
+  .btn { display: inline-block; margin-top: 0.5rem; padding: 0.6rem 1.4rem; border-radius: 6px; background: #2563eb; color: #fff; text-decoration: none; font-size: 0.9rem; }
+  .btn:hover { background: #1d4ed8; }
+  .btn-green { background: #16a34a; }
+  .btn-green:hover { background: #15803d; }
 </style>
 </head>
 <body>
@@ -26,36 +25,52 @@
 </div>
 <iframe id="viewer" allow="microphone"></iframe>
 <script>
+const LAN_URL = "https://10.10.5.59:8443";
 const CACHE_BUST = `?t=${Math.floor(Date.now() / 5000)}`;
 
+function showFallback(tunnelUrl) {
+  document.getElementById("loader").innerHTML = `
+    <p style="color:#f87171;font-size:1rem">Could not connect via tunnel (school WiFi may block it).</p>
+    <p style="margin-top:0.8rem">Try one of these options:</p>
+    <a class="btn btn-green" href="${LAN_URL}/?view" target="_blank">School WiFi (LAN) →</a>
+    <p style="margin-top:0.4rem;font-size:0.8rem;color:#64748b">Accept the certificate warning, then reload this page.</p>
+    <a class="btn" href="${tunnelUrl}" target="_blank" style="margin-top:0.8rem">External / try tunnel →</a>
+  `;
+}
+
 async function load() {
-  let serverUrl;
+  let tunnelUrl = LAN_URL;
   try {
     const r = await fetch(`./tunnel-url.json${CACHE_BUST}`);
     const data = r.ok ? await r.json() : null;
-    serverUrl = data?.url ? data.url.replace(/\/?$/, "") : "https://10.10.5.59:8443";
-  } catch (_) {
-    serverUrl = "https://10.10.5.59:8443";
-  }
+    if (data?.url) tunnelUrl = data.url.replace(/\/?$/, "");
+  } catch (_) {}
 
+  // Try tunnel first; fall back to LAN if iframe fails within 6s
   const frame = document.getElementById("viewer");
-  frame.src = `${serverUrl}/?view`;
+  let loaded = false;
 
-  // 6-second timeout: if iframe hasn't loaded, the cert needs accepting once
   const certTimeout = setTimeout(() => {
-    document.getElementById("loader").innerHTML = `
-      <p style="color:#f87171;font-size:1rem">Could not connect to the seminar server.</p>
-      <p style="margin-top:0.5rem">Your browser needs to trust the server certificate once.<br>
-         Click the button below, accept the security warning, then come back here.</p>
-      <a class="cert-link" href="${serverUrl}" target="_blank">Open server &amp; accept certificate →</a>
-      <p style="margin-top:1rem;font-size:0.8rem;color:#64748b">After accepting, reload this page.</p>`;
+    if (!loaded) showFallback(tunnelUrl);
   }, 6000);
 
   frame.onload = () => {
+    // Check if iframe loaded our app or the "no tunnel here" page
+    try {
+      const body = frame.contentDocument?.body?.innerText || "";
+      if (body.includes("no tunnel")) {
+        clearTimeout(certTimeout);
+        showFallback(tunnelUrl);
+        return;
+      }
+    } catch (_) {}
+    loaded = true;
     clearTimeout(certTimeout);
     document.getElementById("loader").style.display = "none";
     frame.style.display = "block";
   };
+
+  frame.src = `${tunnelUrl}/?view`;
 }
 
 load();
