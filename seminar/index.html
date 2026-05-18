@@ -14,63 +14,49 @@
   iframe { display: none; position: fixed; inset: 0; width: 100%; height: 100%; border: none; }
   .btn { display: inline-block; margin-top: 0.5rem; padding: 0.6rem 1.4rem; border-radius: 6px; background: #2563eb; color: #fff; text-decoration: none; font-size: 0.9rem; }
   .btn:hover { background: #1d4ed8; }
-  .btn-green { background: #16a34a; }
-  .btn-green:hover { background: #15803d; }
 </style>
 </head>
 <body>
-<div id="loader">
-  <div class="spinner"></div>
-  <p>Connecting to seminar…</p>
-</div>
+<div id="loader"><div class="spinner"></div><p>Connecting to seminar…</p></div>
 <iframe id="viewer" allow="microphone"></iframe>
 <script>
 const LAN_URL = "https://10.10.5.59:8443";
 const CACHE_BUST = `?t=${Math.floor(Date.now() / 5000)}`;
 
-function showFallback(tunnelUrl) {
-  document.getElementById("loader").innerHTML = `
-    <p style="color:#f87171;font-size:1rem">Could not connect via tunnel (school WiFi may block it).</p>
-    <p style="margin-top:0.8rem">Try one of these options:</p>
-    <a class="btn btn-green" href="${LAN_URL}/?view" target="_blank">School WiFi (LAN) →</a>
-    <p style="margin-top:0.4rem;font-size:0.8rem;color:#64748b">Accept the certificate warning, then reload this page.</p>
-    <a class="btn" href="${tunnelUrl}" target="_blank" style="margin-top:0.8rem">External / try tunnel →</a>
-  `;
-}
+let currentUrl = null;
+let switchedToLan = false;
 
-async function load() {
-  let tunnelUrl = LAN_URL;
-  try {
-    const r = await fetch(`./tunnel-url.json${CACHE_BUST}`);
-    const data = r.ok ? await r.json() : null;
-    if (data?.url) tunnelUrl = data.url.replace(/\/?$/, "");
-  } catch (_) {}
-
-  // Try tunnel first; fall back to LAN if iframe fails within 6s
+function loadViewer(serverUrl) {
+  currentUrl = serverUrl;
   const frame = document.getElementById("viewer");
-  let loaded = false;
-
-  const certTimeout = setTimeout(() => {
-    if (!loaded) showFallback(tunnelUrl);
-  }, 6000);
-
+  frame.src = `${serverUrl}/?view`;
   frame.onload = () => {
-    // Check if iframe loaded our app or the "no tunnel here" page
-    try {
-      const body = frame.contentDocument?.body?.innerText || "";
-      if (body.includes("no tunnel")) {
-        clearTimeout(certTimeout);
-        showFallback(tunnelUrl);
-        return;
-      }
-    } catch (_) {}
-    loaded = true;
-    clearTimeout(certTimeout);
     document.getElementById("loader").style.display = "none";
     frame.style.display = "block";
   };
+}
 
-  frame.src = `${tunnelUrl}/?view`;
+// Listen for WebSocket disconnect signals from the viewer iframe
+window.addEventListener("message", (e) => {
+  if (switchedToLan) return;
+  if (e.data?.type === "ws_disconnected" && e.data.count >= 3) {
+    switchedToLan = true;
+    document.getElementById("loader").innerHTML =
+      `<div class="spinner"></div><p>Tunnel blocked by school WiFi — switching to LAN…</p>`;
+    document.getElementById("loader").style.display = "flex";
+    document.getElementById("viewer").style.display = "none";
+    loadViewer(LAN_URL);
+  }
+});
+
+async function load() {
+  let serverUrl = LAN_URL;
+  try {
+    const r = await fetch(`./tunnel-url.json${CACHE_BUST}`);
+    const data = r.ok ? await r.json() : null;
+    if (data?.url) serverUrl = data.url.replace(/\/?$/, "");
+  } catch (_) {}
+  loadViewer(serverUrl);
 }
 
 load();
