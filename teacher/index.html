@@ -3,31 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <title>竹本研究室 — Teacher</title>
-  <style>
-    body { font-family: sans-serif; display: flex; align-items: center; justify-content: center;
-           height: 100vh; margin: 0; background: #111; color: #eee; flex-direction: column; gap: 16px; }
-    .msg { font-size: 1.2rem; }
-    .sub { font-size: 0.85rem; color: #888; }
-    a { color: #7af; }
-  </style>
+  <meta http-equiv="refresh" content="0; url=http://10.10.5.59:8080/?t=sWBkvO4MIREjVL58" />
 </head>
 <body>
-  <div class="msg" id="msg">Connecting to classroom…</div>
-  <div class="sub" id="sub"></div>
-  <script>
-    const TOKEN = "sWBkvO4MIREjVL58";
-    fetch("/seminar/tunnel-url.json?t=" + Date.now())
-      .then(r => r.json())
-      .then(data => {
-        const url = data.url.replace(/\/$/, "");
-        document.getElementById("sub").textContent = url;
-        window.location.replace(url + "/?t=" + TOKEN);
-      })
-      .catch(err => {
-        document.getElementById("msg").textContent = "Could not load tunnel URL.";
-        document.getElementById("sub").innerHTML =
-          'Check that the server is running, then refresh. Error: ' + err;
-      });
-  </script>
+  <p>Redirecting to classroom…
+    <a href="http://10.10.5.59:8080/?t=sWBkvO4MIREjVL58">click here if not redirected</a>
+  </p>
 </body>
 </html>
