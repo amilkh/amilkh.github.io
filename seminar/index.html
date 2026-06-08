@@ -6,60 +6,29 @@
 <title>Takemoto Lab Seminar</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { background: #0f172a; color: #e2e8f0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-  #loader { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; gap: 1rem; padding: 2rem; text-align: center; }
-  #loader p { color: #94a3b8; font-size: 0.95rem; }
-  .spinner { width: 40px; height: 40px; border: 4px solid #334155; border-top-color: #60a5fa; border-radius: 50%; animation: spin 0.8s linear infinite; }
+  body { background: #0f172a; color: #e2e8f0; font-family: -apple-system, sans-serif;
+         display: flex; align-items: center; justify-content: center; height: 100vh; }
+  #msg { text-align: center; }
+  p { color: #94a3b8; margin-top: 0.5rem; font-size: 0.9rem; }
+  .spinner { width: 40px; height: 40px; border: 4px solid #334155; border-top-color: #60a5fa;
+             border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto; }
   @keyframes spin { to { transform: rotate(360deg); } }
-  iframe { display: none; position: fixed; inset: 0; width: 100%; height: 100%; border: none; }
-  .btn { display: inline-block; margin-top: 0.5rem; padding: 0.6rem 1.4rem; border-radius: 6px; background: #2563eb; color: #fff; text-decoration: none; font-size: 0.9rem; }
-  .btn:hover { background: #1d4ed8; }
 </style>
 </head>
 <body>
-<div id="loader"><div class="spinner"></div><p>Connecting to seminar…</p></div>
-<iframe id="viewer" allow="microphone"></iframe>
+<div id="msg"><div class="spinner"></div><p>Connecting to seminar…</p></div>
 <script>
-const LAN_URL = "http://10.60.67.230:8080";
-const CACHE_BUST = `?t=${Math.floor(Date.now() / 5000)}`;
-
-let currentUrl = null;
-let switchedToLan = false;
-
-function loadViewer(serverUrl) {
-  currentUrl = serverUrl;
-  const frame = document.getElementById("viewer");
-  frame.src = `${serverUrl}/?view`;
-  frame.onload = () => {
-    document.getElementById("loader").style.display = "none";
-    frame.style.display = "block";
-  };
-}
-
-// Listen for WebSocket disconnect signals from the viewer iframe
-window.addEventListener("message", (e) => {
-  if (switchedToLan) return;
-  if (e.data?.type === "ws_disconnected" && e.data.count >= 3) {
-    switchedToLan = true;
-    document.getElementById("loader").innerHTML =
-      `<div class="spinner"></div><p>Tunnel blocked by school WiFi — switching to LAN…</p>`;
-    document.getElementById("loader").style.display = "flex";
-    document.getElementById("viewer").style.display = "none";
-    // HTTP LAN URL can't be iframed from HTTPS page (mixed content) — redirect instead
-    window.location.href = LAN_URL + "/?view";
-  }
-});
-
 async function load() {
-  let serverUrl = LAN_URL;
   try {
-    const r = await fetch(`./tunnel-url.json${CACHE_BUST}`);
+    const r = await fetch("./tunnel-url.json?t=" + Math.floor(Date.now() / 5000));
     const data = r.ok ? await r.json() : null;
-    if (data?.url) serverUrl = data.url.replace(/\/?$/, "");
+    if (data?.url) {
+      window.location.replace(data.url.replace(/\/?$/, "") + "/?view");
+      return;
+    }
   } catch (_) {}
-  loadViewer(serverUrl);
+  window.location.replace("http://10.60.67.230:8080/?view");
 }
-
 load();
 </script>
 </body>
