@@ -20,7 +20,7 @@
 <div id="loader"><div class="spinner"></div><p>Connecting to seminar…</p></div>
 <iframe id="viewer" allow="microphone"></iframe>
 <script>
-const LAN_URL = "https://10.10.5.59:8443";
+const LAN_URL = "http://10.60.67.230:8080";
 const CACHE_BUST = `?t=${Math.floor(Date.now() / 5000)}`;
 
 let currentUrl = null;
@@ -45,7 +45,8 @@ window.addEventListener("message", (e) => {
       `<div class="spinner"></div><p>Tunnel blocked by school WiFi — switching to LAN…</p>`;
     document.getElementById("loader").style.display = "flex";
     document.getElementById("viewer").style.display = "none";
-    loadViewer(LAN_URL);
+    // HTTP LAN URL can't be iframed from HTTPS page (mixed content) — redirect instead
+    window.location.href = LAN_URL + "/?view";
   }
 });
 
