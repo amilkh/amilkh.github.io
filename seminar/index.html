@@ -27,12 +27,21 @@ function loadViewer(serverUrl) {
   };
 }
 
+const CLOUD_URL = "https://takemoto-seminar.japaneast.cloudapp.azure.com";
+
 async function load() {
+  // Try cloud VM first (stable, always-on)
+  try {
+    const probe = await fetch(CLOUD_URL + "/api/health", { signal: AbortSignal.timeout(4000) });
+    if (probe.ok) { loadViewer(CLOUD_URL); return; }
+  } catch (_) {}
+  // Fall back to tunnel-url.json
   try {
     const r = await fetch("./tunnel-url.json?t=" + Math.floor(Date.now() / 5000));
     const data = r.ok ? await r.json() : null;
     if (data?.url) { loadViewer(data.url.replace(/\/?$/, "")); return; }
   } catch (_) {}
+  // Last resort: laptop on LAN
   loadViewer("http://10.60.67.230:8080");
 }
 
