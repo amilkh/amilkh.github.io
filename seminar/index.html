@@ -1,16 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Takemoto Lab Seminar</title>
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { background: #0f172a; }
-  iframe { position: fixed; inset: 0; width: 100%; height: 100%; border: none; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>竹本研究室 — Seminar</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #0d0f14;
+      color: #dde2d8;
+      font-family: "Helvetica Neue", "Segoe UI", sans-serif;
+      height: 100vh;
+      height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    header {
+      padding: 10px 16px;
+      background: #13161e;
+      border-bottom: 1px solid #252a35;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0;
+    }
+    header h1 { font-size: 1rem; font-weight: 700; }
+    #statusDot { font-size: 0.8rem; color: #555; }
+    #statusDot.live { color: #2ec49c; }
+
+    #transcript {
+      flex: 1;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      padding: 14px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .entry {}
+    .entry-ja { font-size: 1.1rem; line-height: 1.6; }
+    .entry-en {
+      font-size: 0.95rem;
+      color: #7a9478;
+      padding-left: 10px;
+      border-left: 3px solid #1a3a2a;
+      margin-top: 5px;
+      line-height: 1.5;
+    }
+    .entry-en.loading { opacity: 0.4; font-style: italic; }
+
+    .status-line { font-size: 0.8rem; color: #555; font-style: italic; }
+  </style>
 </head>
 <body>
-<iframe src="https://52-196-249-44.sslip.io/?view" allow="microphone"></iframe>
+  <header>
+    <h1>竹本研究室</h1>
+    <span id="statusDot">接続中…</span>
+  </header>
+  <div id="transcript"></div>
+
+  <script>
+    const transcript = document.getElementById("transcript");
+    const statusDot  = document.getElementById("statusDot");
+    const WS_URL     = "wss://52-196-249-44.sslip.io/ws/view";
+
+    function addEntry(ja, en) {
+      const wrap  = document.createElement("div");
+      wrap.className = "entry";
+
+      const jaEl = document.createElement("div");
+      jaEl.className = "entry-ja";
+      jaEl.textContent = ja;
+      wrap.appendChild(jaEl);
+
+      const enEl = document.createElement("div");
+      enEl.className = "entry-en" + (en ? "" : " loading");
+      enEl.textContent = en || "…";
+      wrap.appendChild(enEl);
+
+      transcript.appendChild(wrap);
+      transcript.scrollTop = transcript.scrollHeight;
+      return enEl;
+    }
+
+    function connect() {
+      const ws = new WebSocket(WS_URL);
+
+      ws.onopen = () => {
+        statusDot.textContent = "● Live";
+        statusDot.className = "live";
+      };
+
+      ws.onclose = () => {
+        statusDot.textContent = "○ Reconnecting…";
+        statusDot.className = "";
+        setTimeout(connect, 3000);
+      };
+
+      ws.onerror = () => {};
+
+      ws.onmessage = ({ data }) => {
+        let msg;
+        try { msg = JSON.parse(data); } catch { return; }
+
+        if (msg.type === "final" && msg.text) {
+          addEntry(msg.text, msg.translation || "");
+        } else if (msg.type === "session_start") {
+          transcript.innerHTML = "";
+        }
+      };
+    }
+
+    connect();
+  </script>
 </body>
 </html>
