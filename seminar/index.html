@@ -108,7 +108,27 @@
         try { msg = JSON.parse(data); } catch { return; }
 
         if (msg.type === "final" && msg.text) {
-          addEntry(msg.text, msg.translation || "");
+          const enEl = addEntry(msg.text, msg.translation || "");
+          if (!msg.translation) {
+            // Broadcast had no translation — fetch it directly
+            fetch("https://52-196-249-44.sslip.io/api/translate", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ text: msg.text, target_lang: "en" }),
+            })
+            .then(r => r.ok ? r.text() : Promise.reject())
+            .then(t => {
+              t = t.trim();
+              if (t && !/<!doctype|<html/i.test(t)) {
+                enEl.className = "entry-en";
+                enEl.textContent = t;
+                transcript.scrollTop = transcript.scrollHeight;
+              } else {
+                enEl.remove();
+              }
+            })
+            .catch(() => enEl.remove());
+          }
         } else if (msg.type === "session_start") {
           transcript.innerHTML = "";
         }
