@@ -3,16 +3,45 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>竹本研究室 — Teacher</title>
+<meta name="robots" content="noindex">
+<title>竹本研究室 | Teacher</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { background: #0f172a; }
+  body { background: #0f172a; color: #e2e8f0; font-family: system-ui, sans-serif; }
   iframe { position: fixed; inset: 0; width: 100%; height: 100%; border: none; }
+  #gate { max-width: 360px; margin: 18vh auto; padding: 24px; text-align: center; }
+  #gate input { width: 100%; padding: 10px; margin: 14px 0; font-size: 16px; border-radius: 6px; border: 1px solid #475569; background: #1e293b; color: #e2e8f0; }
+  #gate button { padding: 10px 18px; font-size: 15px; border: 0; border-radius: 6px; background: #2563eb; color: #fff; cursor: pointer; }
 </style>
 </head>
 <body>
-<iframe src="https://52-196-249-44.sslip.io/?t=sWBkvO4MIREjVL58"
-        allow="microphone; camera"
-        allowfullscreen></iframe>
+<div id="gate" hidden>
+  <p>Teacher key / 教員キー</p>
+  <input id="key" type="password" autocomplete="current-password">
+  <button id="go">Open / 開く</button>
+</div>
+<script>
+// The teacher key is no longer in this public page (2026-10-19). It is entered once per
+// browser and remembered there; a link ending in #k=KEY also works and is then removed
+// from the address bar.
+(function () {
+  var BOX = "https://52-196-249-44.sslip.io/?t=";
+  var m = location.hash.match(/k=([^&]+)/);
+  if (m) { try { localStorage.setItem("teacherKey", decodeURIComponent(m[1])); } catch (e) {} history.replaceState(null, "", location.pathname); }
+  var k = null; try { k = localStorage.getItem("teacherKey"); } catch (e) {}
+  function open(key) {
+    var f = document.createElement("iframe");
+    f.src = BOX + encodeURIComponent(key); f.allow = "microphone; camera"; f.allowFullscreen = true;
+    document.body.innerHTML = ""; document.body.appendChild(f);
+  }
+  if (k) { open(k); return; }
+  var g = document.getElementById("gate"); g.hidden = false;
+  document.getElementById("go").onclick = function () {
+    var v = document.getElementById("key").value.trim(); if (!v) return;
+    try { localStorage.setItem("teacherKey", v); } catch (e) {}
+    open(v);
+  };
+})();
+</script>
 </body>
 </html>
