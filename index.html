@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Amil Khanzada</title>
-<meta name="description" content="Amil Khanzada is a professor at the University of Fukui and the founder of Virufy. He researches behavioral nudges, human data and AI for health and regional mobility.">
+<meta name="description" content="Amil Khanzada is a professor at the University of Fukui and CEO of Virufy. He researches behavioral nudges, human data and AI for health and regional mobility.">
 <link rel="canonical" href="https://amilkhanzada.com/">
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Amil Khanzada">
-<meta property="og:description" content="Professor, founder and researcher on behavioral nudges, human data and AI that people actually use.">
+<meta property="og:description" content="Professor, CEO and researcher on behavioral nudges, human data and AI that people actually use.">
 <meta property="og:url" content="https://amilkhanzada.com/">
 <meta property="og:image" content="https://amilkhanzada.com/img/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -24,7 +24,7 @@
   "name": "Amil Khanzada",
   "url": "https://amilkhanzada.com/",
   "image": "https://amilkhanzada.com/img/amil.jpg",
-  "jobTitle": ["Specially Appointed Assistant Professor", "Founder and President"],
+  "jobTitle": ["Specially Appointed Assistant Professor", "Founder and CEO, Virufy"],
   "worksFor": [
     {"@type": "CollegeOrUniversity", "name": "University of Fukui", "url": "https://www.u-fukui.ac.jp/eng/"},
     {"@type": "NGO", "name": "Virufy", "url": "https://virufy.org"}
@@ -39,6 +39,7 @@
     "https://www.linkedin.com/in/amilkhanzada",
     "https://scholar.google.com/citations?user=zdgfTfMAAAAJ",
     "https://orcid.org/0000-0002-7065-5390",
+    "https://www.semanticscholar.org/author/1661044533",
     "https://github.com/amilkh",
     "https://x.com/AmilKhanzada"
   ]
@@ -105,12 +106,12 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .btn:hover{text-decoration:none;transform:translateY(-1px);box-shadow:var(--shadow)}
 .btn.primary{background:var(--btn-bg);color:var(--btn-fg);border-color:var(--btn-bg)}
 .portrait{position:relative;justify-self:end;width:min(100%,380px)}
-.portrait img{width:100%;aspect-ratio:1/1.08;object-fit:cover;object-position:center top;border-radius:28px;box-shadow:var(--shadow);display:block}
+.portrait img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center 20%;border-radius:28px;box-shadow:var(--shadow);display:block}
 .portrait::after{content:"";position:absolute;inset:14px -14px -14px 14px;border:1px solid var(--accent);border-radius:28px;z-index:-1;opacity:.7}
 @media (max-width:860px){
   .hero{padding:44px 0 40px}
   .hero .wrap{grid-template-columns:1fr;gap:36px}
-  .portrait{justify-self:start;width:min(100%,300px);order:-1}
+  .portrait{justify-self:start;width:min(70%,260px);order:-1}
 }
 
 /* stats */
@@ -184,6 +185,15 @@ footer{border-top:1px solid var(--line);padding:34px 0 48px;color:var(--muted);f
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 footer a{color:var(--muted)}
 .theme{background:none;border:1px solid var(--line);color:var(--muted);border-radius:999px;padding:4px 12px;font:inherit;font-size:.82rem;cursor:pointer}
+.edu{list-style:none;padding:0;margin:28px 0 0;border-top:1px solid var(--line)}
+.edu li{display:grid;grid-template-columns:110px 1fr;gap:18px;padding:14px 0;border-bottom:1px solid var(--line)}
+.edu .yr{color:var(--muted);font-family:Fraunces,serif}
+.edu .t{font-weight:600}
+.edu .v{display:block;color:var(--ink2);font-size:.94rem}
+@media (max-width:560px){.edu li{grid-template-columns:1fr;gap:2px}}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;padding:0;list-style:none}
+.chips li{background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:.93rem}
+.linkrow{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
 </style>
 </head>
 <body>
@@ -198,9 +208,8 @@ footer a{color:var(--muted)}
       <a href="#virufy">Virufy</a>
       <a href="#teaching">Teaching</a>
       <a href="#publications">Publications</a>
-      <a href="#speaking">Speaking</a>
-      <a href="#news">News</a>
-      <a href="#contact">Contact</a>
+      <a href="#news">Milestones</a>
+      <a href="#links-sec">Links</a>
     </div>
   </div>
 </nav>
@@ -208,45 +217,50 @@ footer a{color:var(--muted)}
 <header class="hero" id="top">
   <div class="wrap">
     <div>
-      <div class="eyebrow">Professor · Founder · Researcher</div>
+      <div class="eyebrow">Professor · CEO · Researcher</div>
       <h1>Amil Khanzada</h1>
       <p class="tag">Behavioral nudges, human data, and AI that people actually use.</p>
-      <p class="lead">I am a Specially Appointed Assistant Professor at the University of Fukui, Japan, and the Founder and President of <a href="https://virufy.org">Virufy</a>, a global health AI nonprofit. My work asks one question: how do small nudges change what people contribute, and how does that human data make AI more accurate and more useful? It has taken me from cough recordings to tourist flows.</p>
+      <p class="lead">Professor at the <a href="https://www.u-fukui.ac.jp/eng/">University of Fukui</a> and CEO of <a href="https://virufy.org">Virufy</a>, a global health AI nonprofit. I study how small nudges change what people share, and how that data makes AI better.</p>
       <div class="cta">
-        <a class="btn primary" href="#contact">Work with me</a>
+        <a class="btn primary" href="https://virufy.org">Virufy</a>
         <a class="btn" href="https://scholar.google.com/citations?user=zdgfTfMAAAAJ">Google Scholar</a>
         <a class="btn" href="https://www.linkedin.com/in/amilkhanzada">LinkedIn</a>
       </div>
     </div>
     <figure class="portrait">
-      <img src="img/amil.jpg" alt="Amil Khanzada" width="702" height="762">
+      <img src="img/amil.jpg" alt="Amil Khanzada" width="760" height="950">
     </figure>
   </div>
 </header>
 
 <div class="stats">
   <div class="wrap">
-    <div class="stat"><b>256,600+</b><span>clinical records collected in five countries</span></div>
-    <div class="stat"><b>1,300+</b><span>volunteers led across a global team</span></div>
-    <div class="stat"><b>60+</b><span>university and research partners</span></div>
-    <div class="stat"><b>2</b><span>patents granted, United States and Japan</span></div>
-    <div class="stat"><b>15+</b><span>years in software, security and AI</span></div>
+    <div class="stat"><b>256,600+</b><span>study participants enrolled, unpaid</span></div>
+    <div class="stat"><b>1,300+</b><span>volunteers led</span></div>
+    <div class="stat"><b>60+</b><span>partner universities</span></div>
+    <div class="stat"><b>2</b><span>patents, US and Japan</span></div>
+    <div class="stat"><b>15+</b><span>years in tech and AI</span></div>
   </div>
 </div>
 
 <section id="about">
   <div class="wrap">
     <div class="sec-head">
-      <div><div class="eyebrow">About</div><h2>Professor and founder, building between Japan and Silicon Valley</h2></div>
+      <div><div class="eyebrow">About</div><h2>Professor and CEO, between Japan and Silicon Valley</h2></div>
       <div class="sec-body">
-        <p>I founded Virufy in March 2020 to help billions of people screen for respiratory disease with nothing more than a smartphone. Over five years the team ran IRB-approved clinical studies in the United States, Colombia, India, Pakistan and Japan, completed a contract with the US Department of Health and Human Services, and assembled one of the largest clinical cough datasets in the world, without paying a single participant. That experience became my research: what makes people contribute their data, and what that data is worth.</p>
-        <p>In 2026 the University of Fukui conferred my Doctor of Engineering for a dissertation on behavioral nudges, human data contribution and predictive accuracy. I now teach entrepreneurship and AI-powered social informatics at the university's Regional Revitalization Headquarters, and I lead applied research with local governments, tourism sites and hospitals across the Hokuriku region.</p>
-        <p>Before academia I spent a decade as an engineer and leader in Silicon Valley and Tokyo: leading distributed teams at VMware Pivotal Greenplum, consulting on security for megabanks at HP Enterprise, and architecting a test grading engine adopted by 25 school districts. I studied Computer Science at UC Berkeley, took graduate AI courses at Stanford, and completed MBA coursework at Berkeley Haas. I am near-native in Japanese and a One Young World Japan Ambassador.</p>
+        <p>Specially Appointed Assistant Professor at the University of Fukui's Regional Revitalization Headquarters, where I teach entrepreneurship and AI and work with local governments across Hokuriku. Founder and CEO of <a href="https://virufy.org">Virufy</a> since 2020, and Clinical AI Research Consultant at the University of Washington.</p>
+        <p>Before academia I led engineering teams in Silicon Valley and Tokyo at <a href="https://greenplum.org/">VMware Pivotal Greenplum</a> and HP Enterprise. Fluent in Japanese, with Hindi, Urdu and Spanish. <a href="https://www.oneyoungworld.com/">One Young World</a> Japan Ambassador and <a href="https://www.town.eiheiji.lg.jp/900/905/p003453.html">Eiheiji Town</a> Evolution Ambassador.</p>
+        <ul class="edu">
+          <li><span class="yr">2023–2026</span><div><span class="t">University of Fukui</span><span class="v">Doctor of Engineering, behavioral nudges and human data</span></div></li>
+          <li><span class="yr">2021–2022</span><div><a class="t" href="https://haas.berkeley.edu/">UC Berkeley Haas School of Business</a><span class="v">MBA and Master of Engineering (Data Science) concurrent program, first year</span></div></li>
+          <li><span class="yr">2020–2021</span><div><a class="t" href="https://scpd.stanford.edu/">Stanford University</a><span class="v">Graduate AI courses, 4.0 GPA: <a href="https://cs230.stanford.edu/">CS230 Deep Learning</a> with Andrew Ng, <a href="https://cs231n.stanford.edu/">CS231n Visual Recognition</a> with Fei-Fei Li, <a href="https://stanford-cs329s.github.io/">CS329S ML Systems Design</a> with Chip Huyen</span></div></li>
+          <li><span class="yr">2010–2012</span><div><a class="t" href="https://cs.berkeley.edu/">UC Berkeley</a><span class="v">B.A. Computer Science</span></div></li>
+        </ul>
       </div>
     </div>
     <div class="two" style="margin-top:56px">
-      <figure><img src="img/graduation.jpg" alt="Amil Khanzada at the University of Fukui degree ceremony, September 2026"><figcaption>Degree conferment, University of Fukui, September 2026.</figcaption></figure>
-      <figure><img src="img/sabae.jpg" alt="Amil Khanzada with city officials and partners in Sabae, Fukui"><figcaption>With city leadership and visiting researchers in Sabae, Fukui, during the JST Sakura Science Program, September 2026.</figcaption></figure>
+      <figure><img src="img/graduation.jpg" alt="Amil Khanzada at the University of Fukui degree ceremony"><figcaption>Degree conferment, University of Fukui.</figcaption></figure>
+      <figure><img src="img/sabae.jpg" alt="Amil Khanzada with Sabae City leadership and visiting researchers"><figcaption>With Sabae City leadership and <a href="https://ssp.jst.go.jp/EN/">JST Sakura Science</a> researchers.</figcaption></figure>
     </div>
   </div>
 </section>
@@ -254,34 +268,14 @@ footer a{color:var(--muted)}
 <section id="research">
   <div class="wrap">
     <div class="sec-head">
-      <div><div class="eyebrow">Research</div><h2>Four threads, one question</h2></div>
-      <div class="sec-body"><p>Most AI fails not because the model is weak but because the human data behind it is thin. I study the behavioral side of that problem and build the systems that put the answer to work.</p></div>
+      <div><div class="eyebrow">Research</div><h2>Human data makes AI work</h2></div>
+      <div class="sec-body"><p>Most AI fails on thin human data, not weak models. I study the behavior behind the data and build systems that use it.</p></div>
     </div>
     <div class="cards">
-      <div class="card">
-        <div class="num">01</div>
-        <h3>Behavioral nudges and human data contribution</h3>
-        <p>How do you enroll hundreds of thousands of people in a clinical study when you cannot pay them? My dissertation and a 2025 paper in the Journal of Behavioral Economics for Policy analyze the nudge-based interventions that did exactly that, and measure how each contribution changes predictive accuracy.</p>
-        <a class="more" href="https://sabeconomics.org/ojs/index.php/jbep/article/view/232">Read the paper</a>
-      </div>
-      <div class="card">
-        <div class="num">02</div>
-        <h3>Health AI from sound</h3>
-        <p>Ensemble machine-learning models that screen for respiratory disease from the sound of a cough or breath on an ordinary phone. Granted patents in the United States and Japan, with peer-reviewed work in the Journal of Voice and at ACM SPML.</p>
-        <a class="more" href="https://virufy.org">Virufy</a>
-      </div>
-      <div class="card">
-        <div class="num">03</div>
-        <h3>Regional mobility and tourism AI</h3>
-        <p>The Distributed Human Data Engine fuses AI camera people-flow, weather, route intent and 97,719 survey responses to forecast daily visitor demand across 47 tourist sites in Fukui. Published open access in Measurement (Elsevier), with code and data archived on Zenodo.</p>
-        <a class="more" href="https://doi.org/10.1016/j.measurement.2026.122500">Read the paper</a>
-      </div>
-      <div class="card">
-        <div class="num">04</div>
-        <h3>Leading volunteer and university-spun ventures</h3>
-        <p>What keeps 1,300 volunteers motivated in a remote-first nonprofit, and how does a university health AI venture find its market? Mixed-methods studies in Future Business Journal and Strategic Change, drawn from running Virufy and the NSF I-Corps program.</p>
-        <a class="more" href="https://doi.org/10.1186/s43093-026-00914-6">Read the paper</a>
-      </div>
+      <div class="card"><div class="num">01</div><h3>Behavioral nudges</h3><p>How nudges, not payment, move people to contribute data at scale.</p><a class="more" href="https://sabeconomics.org/ojs/index.php/jbep/article/view/232">Journal of Behavioral Economics for Policy</a></div>
+      <div class="card"><div class="num">02</div><h3>Regional mobility AI</h3><p>A sensor-fusion engine that forecasts visitor demand across Fukui's tourist sites.</p><a class="more" href="https://doi.org/10.1016/j.measurement.2026.122500">Measurement (Elsevier)</a> · <a class="more" href="https://dhde-tourism-ai.github.io/dhde-app/">Live dashboard</a></div>
+      <div class="card"><div class="num">03</div><h3>Health AI</h3><p>Machine-learning models that screen respiratory health on an ordinary phone.</p><a class="more" href="https://patents.google.com/patent/US12444502B2/en">US Patent 12,444,502</a></div>
+      <div class="card"><div class="num">04</div><h3>Leading ventures</h3><p>What motivates volunteer teams, and how university ventures find their market.</p><a class="more" href="https://doi.org/10.1186/s43093-026-00914-6">Future Business Journal</a> · <a class="more" href="https://doi.org/10.1002/jsc.70107">Strategic Change</a></div>
     </div>
   </div>
 </section>
@@ -289,12 +283,10 @@ footer a{color:var(--muted)}
 <section id="virufy">
   <div class="wrap">
     <div class="sec-head">
-      <div><div class="eyebrow">Virufy</div><h2>A nonprofit that turned a pandemic into a dataset for the world</h2></div>
+      <div><div class="eyebrow">Virufy</div><h2>A global health AI nonprofit</h2></div>
       <div class="sec-body">
-        <p>Virufy is a 501(c)(3) nonprofit I founded in March 2020. Its smartphone app records a cough or breath and uses AI to screen for sound patterns associated with respiratory disease. It is a research tool, not a medical device, and that honesty is part of the design.</p>
-        <p>What made it work was people. A volunteer team of more than 1,300 students and professionals from over 60 universities built the app, ran the studies and labeled the data. Clinical partners across five countries enrolled more than 256,600 PCR-confirmed participants. The US Department of Health and Human Services (BARDA) funded the work, and the core technology is now protected by US Patent 12,444,502 and Japanese Patent 7850135.</p>
-        <p>Today Virufy's research continues in Japan, the world's oldest society, where respiratory illness is a leading cause of hospitalization among the elderly.</p>
-        <p><a class="btn" href="https://virufy.org">Visit virufy.org</a></p>
+        <p>As CEO I lead a 501(c)(3) with more than 1,300 volunteers from 60+ universities, clinical studies in five countries, US government (BARDA) funding, and patents in the US and Japan.</p>
+        <p><a class="btn" href="https://virufy.org">virufy.org</a></p>
       </div>
     </div>
   </div>
@@ -305,11 +297,11 @@ footer a{color:var(--muted)}
     <div class="two">
       <div>
         <div class="eyebrow">Teaching</div>
-        <h2>Students learn by asking cities real questions</h2>
-        <p style="margin-top:18px">At the University of Fukui I teach entrepreneurship theory, AI-powered social informatics and management of technology. My principle is simple: data analysis begins with a good question, not software. I give students a rigorous framework and room to defend their own conclusions.</p>
-        <p>The classroom is often a city. Students survey visitors in the field, map behavior, and present to mayors and tourism boards. In 2026 I hosted young researchers from Saudi Arabia, Pakistan, Indonesia and the UAE under the JST Sakura Science Program, building a live tourism dashboard together with Fukui's local governments.</p>
+        <h2>The city is the classroom</h2>
+        <p style="margin-top:18px">I teach entrepreneurship, AI-powered social informatics and management of technology. Students work in the field with mayors and tourism boards, and in 2026 I hosted young researchers from four countries through the <a href="https://ssp.jst.go.jp/EN/">JST Sakura Science Program</a>.</p>
+        <ul class="chips"><li>Nudges and data</li><li>Health AI</li><li>AI for regions</li><li>Global teams</li></ul>
       </div>
-      <figure><img src="img/teaching.jpg" alt="Amil Khanzada lecturing at the University of Fukui"><figcaption>Workshop on data-driven decisions, University of Fukui.</figcaption></figure>
+      <figure><img src="img/teaching.jpg" alt="Amil Khanzada lecturing at the University of Fukui"><figcaption>Workshop, University of Fukui.</figcaption></figure>
     </div>
   </div>
 </section>
@@ -317,37 +309,17 @@ footer a{color:var(--muted)}
 <section id="publications">
   <div class="wrap">
     <div class="sec-head">
-      <div><div class="eyebrow">Publications</div><h2>Selected papers and patents</h2></div>
+      <div><div class="eyebrow">Publications</div><h2>Selected work</h2></div>
       <div class="sec-body"><p>Full list on <a href="https://scholar.google.com/citations?user=zdgfTfMAAAAJ">Google Scholar</a> and <a href="https://orcid.org/0000-0002-7065-5390">ORCID</a>.</p></div>
     </div>
     <ul class="pubs">
-      <li><span class="yr">2026</span><div><a class="t" href="https://doi.org/10.1016/j.measurement.2026.122500">A multi-modal sensor fusion instrument for measuring regional human mobility: the Distributed Human Data Engine (DHDE)</a><span class="a">A. Khanzada, T. Takemoto</span><span class="v">Measurement, vol. 287 (Elsevier), open access</span></div></li>
-      <li><span class="yr">2026</span><div><a class="t" href="https://doi.org/10.1186/s43093-026-00914-6">Organizational and leadership support and its relationship to volunteer motivation in a remote-first nonprofit startup</a><span class="a">A. Khanzada, T. Takemoto</span><span class="v">Future Business Journal, vol. 12</span></div></li>
-      <li><span class="yr">2026</span><div><a class="t" href="https://doi.org/10.1002/jsc.70107">The Double Pivot: a mixed-methods case study of the NSF I-Corps customer discovery process in a university-spun health AI venture</a><span class="a">A. Khanzada, T. Takemoto</span><span class="v">Strategic Change (Wiley)</span></div></li>
-      <li><span class="yr">2025</span><div><a class="t" href="https://sabeconomics.org/ojs/index.php/jbep/article/view/232">Improving clinical trial enrollment for smartphone-based AI data collection: a methodological analysis of nudge-based interventions</a><span class="a">A. Khanzada, F. Cheema, T. Takemoto</span><span class="v">Journal of Behavioral Economics for Policy, vol. 9</span></div></li>
-      <li><span class="yr">2025</span><div><span class="t">Ensemble machine-learning models to detect respiratory syndromes</span><span class="a">Inventor</span><span class="v">US Patent 12,444,502; Japanese Patent 7850135 (2026)</span></div></li>
-      <li><span class="yr">2022</span><div><a class="t" href="https://doi.org/10.1145/3556384.3556414">Hierarchical multi-modal transformer for automatic detection of COVID-19</a><span class="a">S. Tang, X. Hu, L. Atlas, A. Khanzada, M. Pilanci</span><span class="v">ACM SPML 2022</span></div></li>
-      <li><span class="yr">2021</span><div><a class="t" href="https://doi.org/10.1016/j.jvoice.2021.08.009">Challenges and opportunities in deploying COVID-19 cough AI systems</a><span class="a">A. Khanzada, S. Hegde, S. Sreeram, G. Bower, W. Wang, R. Mediratta, K. Meister, A. Rameau</span><span class="v">Journal of Voice, vol. 35</span></div></li>
-      <li><span class="yr">2020</span><div><a class="t" href="https://doi.org/10.1145/3382507.3417966">Fusical: multimodal fusion for video sentiment</a><span class="a">B. T. Jin, L. Abdelrahman, C. K. Chen, A. Khanzada</span><span class="v">ACM ICMI 2020</span></div></li>
-      <li><span class="yr">2020</span><div><a class="t" href="https://arxiv.org/abs/2011.13320">Virufy: global applicability of crowdsourced and clinical datasets for AI detection of COVID-19 from cough</a><span class="a">G. Chaudhari, X. Jiang, A. Fakhry, A. Han, J. Xiao, S. Shen, A. Khanzada</span><span class="v">arXiv:2011.13320</span></div></li>
-    </ul>
-  </div>
-</section>
-
-<section id="speaking">
-  <div class="wrap">
-    <div class="sec-head">
-      <div><div class="eyebrow">Speaking</div><h2>Talks, lectures and media</h2></div>
-      <div class="sec-body">
-        <p>I speak in English and Japanese to universities, governments and companies about what it takes to get real people to contribute real data, and what to build once they do. Past appearances include the One Young World Tokyo Caucus, international university lectures, and a feature in <a href="https://www.forbes.com.mx/emprendedores-app-diagnostico-covid-19-toser-telefono/">Forbes México</a>.</p>
-        <p><a class="btn" href="#contact">Invite me to speak</a></p>
-      </div>
-    </div>
-    <ul class="topics">
-      <li><b>Nudges that move people to share data</b>Lessons from enrolling 256,600 participants without paying them, and how to design consent and incentives that scale.</li>
-      <li><b>Health AI that works on a basic phone</b>Building acoustic screening from first data to granted patents, and what regulators, clinicians and users each need to trust it.</li>
-      <li><b>AI for regional revitalization</b>Measuring a region's visitor economy with sensor fusion, and turning forecasts into decisions for mayors and tourism boards.</li>
-      <li><b>Leading global volunteer teams</b>How a remote-first nonprofit kept 1,300 volunteers motivated, and what Japanese and Silicon Valley leadership teach each other.</li>
+      <li><span class="yr">2026</span><div><a class="t" href="https://doi.org/10.1016/j.measurement.2026.122500">The Distributed Human Data Engine (DHDE): measuring regional human mobility</a><span class="v">Measurement (Elsevier)</span></div></li>
+      <li><span class="yr">2026</span><div><a class="t" href="https://doi.org/10.1186/s43093-026-00914-6">Leadership support and volunteer motivation in a remote-first nonprofit startup</a><span class="v">Future Business Journal</span></div></li>
+      <li><span class="yr">2026</span><div><a class="t" href="https://doi.org/10.1002/jsc.70107">The Double Pivot: NSF I-Corps customer discovery in a health AI venture</a><span class="v">Strategic Change (Wiley)</span></div></li>
+      <li><span class="yr">2025</span><div><a class="t" href="https://sabeconomics.org/ojs/index.php/jbep/article/view/232">Nudge-based interventions for clinical trial enrollment</a><span class="v">Journal of Behavioral Economics for Policy</span></div></li>
+      <li><span class="yr">2025</span><div><a class="t" href="https://patents.google.com/patent/US12444502B2/en">Ensemble machine-learning models to detect respiratory syndromes</a><span class="v">US Patent 12,444,502 and Japanese Patent 7850135</span></div></li>
+      <li><span class="yr">2022</span><div><a class="t" href="https://doi.org/10.1145/3556384.3556414">Hierarchical multi-modal transformer for automatic detection of COVID-19</a><span class="v">ACM SPML</span></div></li>
+      <li><span class="yr">2021</span><div><a class="t" href="https://doi.org/10.1016/j.jvoice.2021.08.009">Challenges and opportunities in deploying COVID-19 cough AI systems</a><span class="v">Journal of Voice</span></div></li>
     </ul>
   </div>
 </section>
@@ -355,35 +327,39 @@ footer a{color:var(--muted)}
 <section id="news">
   <div class="wrap">
     <div class="sec-head">
-      <div><div class="eyebrow">News</div><h2>Recent milestones</h2></div>
+      <div><div class="eyebrow">Milestones</div><h2>Recent highlights</h2></div>
       <div class="sec-body"></div>
     </div>
     <ul class="timeline">
-      <li><span class="d">October 2026</span><span class="t">Hosted the JST Sakura Science Program at the University of Fukui</span><p>Three weeks with young researchers from Saudi Arabia, Pakistan, Indonesia and the UAE, building a live tourism dashboard with local governments.</p></li>
-      <li><span class="d">September 2026</span><span class="t">Doctor of Engineering conferred by the University of Fukui</span><p>Dissertation: Behavioral Nudges, Human Data Contribution, and Predictive Accuracy: An Empirical Study.</p></li>
-      <li><span class="d">July 2026</span><span class="t">DHDE paper published open access in Measurement (Elsevier)</span><p>A sensor-fusion instrument for regional human mobility, with code and data archived on <a href="https://doi.org/10.5281/zenodo.21271429">Zenodo</a>.</p></li>
-      <li><span class="d">April 2026</span><span class="t">Japanese Patent 7850135 granted</span><p>The same respiratory screening technology as the US patent, now protected in Japan.</p></li>
-      <li><span class="d">February 2026</span><span class="t">Appointed Specially Appointed Assistant Professor</span><p>Regional Revitalization Headquarters, University of Fukui.</p></li>
-      <li><span class="d">2025</span><span class="t">US Patent 12,444,502 granted</span><p>Ensemble machine-learning models to detect respiratory syndromes.</p></li>
-      <li><span class="d">March 2023</span><span class="t">Virufy completes its BARDA contract with the US Department of Health and Human Services</span></li>
-      <li><span class="d">March 2020</span><span class="t">Founded Virufy</span></li>
+      <li><span class="d">2026</span><span class="t">Hosted the <a href="https://ssp.jst.go.jp/EN/">JST Sakura Science Program</a> in Fukui</span></li>
+      <li><span class="d">2026</span><span class="t">Doctor of Engineering, University of Fukui</span></li>
+      <li><span class="d">2026</span><span class="t"><a href="https://doi.org/10.1016/j.measurement.2026.122500">DHDE paper</a> published in Measurement</span></li>
+      <li><span class="d">2026</span><span class="t">Japanese Patent 7850135 granted</span></li>
+      <li><span class="d">2026</span><span class="t">Joined the University of Fukui faculty</span></li>
+      <li><span class="d">2026</span><span class="t">NSF I-Corps National Team</span></li>
+      <li><span class="d">2025</span><span class="t"><a href="https://patents.google.com/patent/US12444502B2/en">US Patent 12,444,502</a> granted</span></li>
+      <li><span class="d">2025</span><span class="t">Speaker, <a href="https://onegiantleap.com/speakers/amil-khanzada">LEAP 2025</a>, Riyadh</span></li>
+      <li><span class="d">2020</span><span class="t">Founded <a href="https://virufy.org">Virufy</a>; featured in <a href="https://www.forbes.com.mx/emprendedores-app-diagnostico-covid-19-toser-telefono/">Forbes México</a></span></li>
+      <li><span class="d">2018</span><span class="t">Represented Fukui at the <a href="https://www.oneyoungworld.com/">One Young World</a> Summit, The Hague</span></li>
     </ul>
   </div>
 </section>
 
-<section id="contact">
+<section id="links-sec">
   <div class="wrap">
     <div class="sec-head">
-      <div><div class="eyebrow">Contact</div><h2>Let's work together</h2></div>
-      <div class="sec-body"><p>I am open to research collaborations, speaking invitations, and partnerships with universities, governments and companies in Japan, the Gulf, South Asia and the United States. Academic matters go to my university address, Virufy matters to Virufy.</p></div>
-    </div>
-    <div class="contact-grid">
-      <a href="mailto:amil.k@u-fukui.ac.jp"><small>University of Fukui</small><span>amil.k@u-fukui.ac.jp</span></a>
-      <a href="mailto:amil@virufy.org"><small>Virufy</small><span>amil@virufy.org</span></a>
-      <a href="https://www.linkedin.com/in/amilkhanzada"><small>LinkedIn</small><span>in/amilkhanzada</span></a>
-      <a href="https://scholar.google.com/citations?user=zdgfTfMAAAAJ"><small>Google Scholar</small><span>Publications and citations</span></a>
-      <a href="https://orcid.org/0000-0002-7065-5390"><small>ORCID</small><span>0000-0002-7065-5390</span></a>
-      <a href="https://x.com/AmilKhanzada"><small>X</small><span>@AmilKhanzada</span></a>
+      <div><div class="eyebrow">Links</div><h2>Elsewhere</h2></div>
+      <div class="sec-body">
+        <div class="linkrow" style="margin-top:0">
+          <a class="btn" href="https://virufy.org">Virufy</a>
+          <a class="btn" href="https://www.linkedin.com/in/amilkhanzada">LinkedIn</a>
+          <a class="btn" href="https://scholar.google.com/citations?user=zdgfTfMAAAAJ">Google Scholar</a>
+          <a class="btn" href="https://orcid.org/0000-0002-7065-5390">ORCID</a>
+          <a class="btn" href="https://www.semanticscholar.org/author/1661044533">Semantic Scholar</a>
+          <a class="btn" href="https://x.com/AmilKhanzada">X</a>
+          <a class="btn" href="https://github.com/amilkh">GitHub</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -393,9 +369,8 @@ footer a{color:var(--muted)}
     <div class="sec-head">
       <div><div class="eyebrow">日本語</div><h2>プロフィール</h2></div>
       <div class="sec-body jpbox">
-        <p>カンザダ あみる。福井大学 地域創生推進本部 特命助教、博士（工学）。医療AI非営利団体 Virufy 創業者・代表。</p>
-        <p>カリフォルニア大学バークレー校でコンピュータサイエンスを学び、シリコンバレーと東京でソフトウェアエンジニア・セキュリティコンサルタントとして10年以上勤務。2020年に Virufy を創業し、咳や呼吸音から呼吸器疾患をスクリーニングするスマートフォンAIの研究開発を、5か国の臨床研究と1,300人以上のボランティアとともに進めてきました（米国特許12,444,502号、日本特許7850135号）。</p>
-        <p>研究テーマは、行動ナッジによる人間データの収集と予測精度の向上、音声AIによる健康スクリーニング、そして福井県の観光・人流データを統合した地域活性化AIです。大学ではアントレプレナーシップ理論とAI社会情報学を担当し、学生とともに自治体や観光地の現場で課題に取り組んでいます。</p>
+        <p>カンザダ あみる。福井大学 地域創生推進本部 特命助教、博士（工学）。医療AI非営利団体 Virufy 創業者・CEO。</p>
+        <p>行動ナッジと人間データによるAIの精度向上を研究し、自治体や観光地の現場で学生とともに地域の課題に取り組んでいます。</p>
       </div>
     </div>
   </div>
@@ -403,7 +378,7 @@ footer a{color:var(--muted)}
 
 <footer>
   <div class="wrap">
-    <div>© 2026 Amil Khanzada · Fukui, Japan and Silicon Valley</div>
+    <div>© 2026 Amil Khanzada</div>
     <div><button class="theme" onclick="toggleTheme()">Light / dark</button></div>
   </div>
 </footer>
