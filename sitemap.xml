@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://amilkhanzada.com/</loc><lastmod>2026-10-20</lastmod></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://amilkhanzada.com/</loc><lastmod>2026-10-20</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://amilkhanzada.com/"/><xhtml:link rel="alternate" hreflang="ja" href="https://amilkhanzada.com/ja/"/><xhtml:link rel="alternate" hreflang="ar" href="https://amilkhanzada.com/ar/"/></url>
+  <url><loc>https://amilkhanzada.com/ja/</loc><lastmod>2026-10-20</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://amilkhanzada.com/"/><xhtml:link rel="alternate" hreflang="ja" href="https://amilkhanzada.com/ja/"/><xhtml:link rel="alternate" hreflang="ar" href="https://amilkhanzada.com/ar/"/></url>
+  <url><loc>https://amilkhanzada.com/ar/</loc><lastmod>2026-10-20</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://amilkhanzada.com/"/><xhtml:link rel="alternate" hreflang="ja" href="https://amilkhanzada.com/ja/"/><xhtml:link rel="alternate" hreflang="ar" href="https://amilkhanzada.com/ar/"/></url>
 </urlset>

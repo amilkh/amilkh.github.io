@@ -6,6 +6,10 @@
 <title>Amil Khanzada</title>
 <meta name="description" content="Amil Khanzada is a professor at the University of Fukui and CEO of Virufy. He works on medical AI, tourism and data analytics, behavioral nudges and information security, bridging Japan, the US and the Middle East.">
 <link rel="canonical" href="https://amilkhanzada.com/">
+<link rel="alternate" hreflang="en" href="https://amilkhanzada.com/">
+<link rel="alternate" hreflang="ja" href="https://amilkhanzada.com/ja/">
+<link rel="alternate" hreflang="ar" href="https://amilkhanzada.com/ar/">
+<link rel="alternate" hreflang="x-default" href="https://amilkhanzada.com/">
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Amil Khanzada">
 <meta property="og:description" content="Professor and CEO building AI that works in the real world: medical AI, tourism and data analytics, behavioral nudges and information security.">
@@ -344,12 +348,24 @@ figcaption { margin-top: 10px; font-size: .79rem; line-height: 1.5; color: var(-
 .icon-links a { display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border: 1px solid var(--line); border-radius: 50%; color: var(--ink); transition: color .15s, border-color .15s; }
 .icon-links a:hover { color: var(--accent); border-color: var(--accent); }
 .ico { width: 20px; height: 20px; display: block; }
+.nav-right { display: flex; align-items: center; gap: 28px; }
+.nav-right .mobile-nav { order: 3; }
+.lang-switch { display: flex; align-items: center; gap: 12px; font-size: .82rem; padding-inline-start: 20px; border-inline-start: 1px solid var(--line); }
+.lang-switch a { color: var(--muted); text-decoration: none; padding-block: 7px; }
+.lang-switch a:hover { color: var(--ink); }
+.lang-switch a[aria-current] { color: var(--ink); font-weight: 600; }
+[dir="rtl"] .mobile-nav nav { right: auto; left: 0; }
+@media (max-width: 980px) { .nav-right { gap: 16px; } .lang-switch { gap: 10px; padding-inline-start: 14px; } }
+@media (max-width: 420px) { .lang-switch { font-size: .76rem; gap: 8px; padding-inline-start: 10px; } }
+.lang-switch a, .mobile-nav summary, .brand { white-space: nowrap; }
+@media (max-width: 420px) { .menu-label { display: none; } .brand { font-size: .95rem; } }
 </style>
 </head>
 <body>
 <header class="site-header" id="top">
   <div class="wrap navbar">
     <a class="brand" href="#top">Amil Khanzada</a>
+    <div class="nav-right">
     <nav class="desktop-nav" aria-label="Main navigation">
       <ul class="navlinks">
         <li><a href="#about">About</a></li>
@@ -362,7 +378,7 @@ figcaption { margin-top: 10px; font-size: .79rem; line-height: 1.5; color: var(-
       </ul>
     </nav>
     <details class="mobile-nav">
-      <summary>Menu <span class="menu-icon" aria-hidden="true"></span></summary>
+      <summary><span class="menu-label">Menu</span> <span class="menu-icon" aria-hidden="true"></span></summary>
       <nav aria-label="Mobile navigation">
         <ul class="navlinks">
           <li><a href="#about">About</a></li>
@@ -375,6 +391,14 @@ figcaption { margin-top: 10px; font-size: .79rem; line-height: 1.5; color: var(-
         </ul>
       </nav>
     </details>
+    <!--LANG-->
+    <div class="lang-switch" aria-label="Language">
+      <a href="./" hreflang="en" aria-current="true">EN</a>
+      <a href="ja/" hreflang="ja" lang="ja">日本語</a>
+      <a href="ar/" hreflang="ar" lang="ar">العربية</a>
+    </div>
+    <!--/LANG-->
+    </div>
   </div>
 </header>
 
