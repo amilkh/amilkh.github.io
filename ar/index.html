@@ -359,6 +359,16 @@ figcaption { margin-top: 10px; font-size: .79rem; line-height: 1.5; color: var(-
 @media (max-width: 420px) { .lang-switch { font-size: .76rem; gap: 8px; padding-inline-start: 10px; } }
 .lang-switch a, .mobile-nav summary, .brand { white-space: nowrap; }
 @media (max-width: 420px) { .menu-label { display: none; } .brand { font-size: .95rem; } }
+.courses { margin: 8px 0 0; padding: 0; list-style: none; }
+.education .courses li { display: block; position: relative; padding: 0; padding-inline-start: 14px; border: 0; color: var(--body); font-size: .94rem; line-height: 1.7; }
+.education .courses li::before { content: ""; position: absolute; inset-inline-start: 0; top: .72em; width: 6px; height: 1px; background: var(--muted); }
+.moments { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 24px; margin: 0; padding: 0; list-style: none; }
+.moments li:first-child { grid-column: 1 / -1; }
+.moments img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.moments li:first-child img { aspect-ratio: 16 / 9; }
+.moments figcaption { margin-top: 10px; font-size: .86rem; color: var(--body); }
+.moments .when { display: block; font-size: .74rem; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); margin-bottom: 2px; }
+@media (max-width: 680px) { .moments { grid-template-columns: 1fr; } }
 :root { --display: "IBM Plex Sans Arabic", "Space Grotesk", sans-serif; --text: "IBM Plex Sans Arabic", "Instrument Sans", system-ui, sans-serif; }
 html[lang="ar"] *, html[lang="ar"] *::before, html[lang="ar"] *::after { letter-spacing: 0 !important; }
 html[lang="ar"] body { line-height: 1.85; }
@@ -383,6 +393,7 @@ html[lang="ar"] .feature-title { line-height: 1.35; }
         <li><a href="#expertise">الخبرات</a></li>
         <li><a href="#virufy">Virufy</a></li>
         <li><a href="#teaching">التدريس</a></li>
+        <li><a href="#moments">لقطات</a></li>
         <li><a href="#publications">المنشورات</a></li>
         <li><a href="#news">محطات</a></li>
         <li><a href="#links-sec">روابط</a></li>
@@ -396,6 +407,7 @@ html[lang="ar"] .feature-title { line-height: 1.35; }
           <li><a href="#expertise">الخبرات</a></li>
           <li><a href="#virufy">Virufy</a></li>
           <li><a href="#teaching">التدريس</a></li>
+        <li><a href="#moments">لقطات</a></li>
           <li><a href="#publications">المنشورات</a></li>
           <li><a href="#news">محطات</a></li>
           <li><a href="#links-sec">روابط</a></li>
@@ -418,7 +430,7 @@ html[lang="ar"] .feature-title { line-height: 1.35; }
     <div class="hero-copy">
       <h1 id="name">أميل<br>خانزادا</h1>
       <p class="role">أستاذ، <a href="https://www.u-fukui.ac.jp/eng/">جامعة فوكوي</a><br>المؤسس والرئيس التنفيذي، <a href="https://virufy.org">Virufy</a></p>
-      <p class="summary">أبني ذكاءً اصطناعيًا يعمل في الواقع: الذكاء الاصطناعي الطبي، والسياحة وتحليل البيانات، والوكز السلوكي، وأمن المعلومات. وأربط بين الناس في اليابان والولايات المتحدة والشرق الأوسط.</p>
+      <p class="summary">أطوّر تطبيقات ذكاء اصطناعي عملية في مجالات الرعاية الصحية والسياحة وتحليل البيانات والعلوم السلوكية والأمن السيبراني، وأبني جسورًا بين الناس والأفكار في اليابان والولايات المتحدة والشرق الأوسط.</p>
       <div class="hero-links">
         <a href="https://virufy.org">Virufy <span class="arrow" aria-hidden="true">↗</span></a>
         <a href="https://scholar.google.com/citations?user=zdgfTfMAAAAJ">Google Scholar <span class="arrow" aria-hidden="true">↗</span></a>
@@ -435,9 +447,9 @@ html[lang="ar"] .feature-title { line-height: 1.35; }
     <div class="section-content">
       <h3 class="feature-title">بين اليابان<br>ووادي السيليكون.</h3>
       <div class="prose">
-        <p>أستاذ مساعد بتعيين خاص في مقر التنشيط الإقليمي بـ<a href="https://pure.flib.u-fukui.ac.jp/en/persons/amil-khanzada/">جامعة فوكوي</a>. أدرّس ريادة الأعمال والذكاء الاصطناعي، وأعمل مع الحكومات المحلية في منطقة هوكوريكو.</p>
-        <p>مؤسس <a href="https://virufy.org">virufy.org</a> ورئيسها التنفيذي منذ عام 2020.</p>
-        <p>أكثر من 15 عامًا من الخبرة في التقنية والذكاء الاصطناعي، شملت قيادة فرق هندسية في وادي السيليكون وطوكيو لدى <a href="https://en.wikipedia.org/wiki/Greenplum">VMware Pivotal Greenplum</a> و<a href="https://www.hpe.com/">HP Enterprise</a>، والعمل قائدًا تقنيًا في <a href="https://sandbox.mit.edu/">MIT Sandbox</a>.</p>
+        <p>أستاذ مساعد بتعيين خاص في مقر التنشيط الإقليمي بـ<a href="https://pure.flib.u-fukui.ac.jp/en/persons/amil-khanzada/">جامعة فوكوي</a>، حيث أدرّس ريادة الأعمال والذكاء الاصطناعي، وأعمل مع الحكومات المحلية في منطقة هوكوريكو على الابتكار الإقليمي.</p>
+        <p>منذ عام 2020، أشغل منصب مؤسس <a href="https://virufy.org">virufy.org</a> ورئيسها التنفيذي، وهي منظمة غير ربحية تطبّق الذكاء الاصطناعي على تحديات صحية واقعية.</p>
+        <p>لديّ أكثر من 15 عامًا من الخبرة في التقنية والذكاء الاصطناعي. قدتُ فرقًا هندسية في وادي السيليكون وطوكيو لدى <a href="https://en.wikipedia.org/wiki/Greenplum">VMware Pivotal Greenplum</a> و<a href="https://www.hpe.com/">HP Enterprise</a>، وعملت قائدًا تقنيًا في <a href="https://sandbox.mit.edu/">MIT Sandbox</a>.</p>
         <p>أتحدث اليابانية والأردية/الهندية بطلاقة. سفير <a href="https://oywj.org/">One Young World</a> في اليابان، وسفير التطور لبلدة <a href="https://www.town.eiheiji.lg.jp/900/905/p003453.html">إيهيجي</a>.</p>
       </div>
 
@@ -454,14 +466,20 @@ html[lang="ar"] .feature-title { line-height: 1.35; }
           <span class="date">2021–2022</span>
           <div>
             <a class="institution" href="https://haas.berkeley.edu/">كلية هاس لإدارة الأعمال، جامعة كاليفورنيا في بيركلي</a>
-            <span class="detail">البرنامج المتزامن لماجستير إدارة الأعمال والماجستير في الهندسة (علوم البيانات)، السنة الأولى</span>
+            <span class="detail">البرنامج المتزامن لماجستير إدارة الأعمال والماجستير في الهندسة (علوم البيانات)، أكملتُ السنة الأولى</span>
           </div>
         </li>
         <li>
           <span class="date">2020–2021</span>
           <div>
             <a class="institution" href="https://scpd.stanford.edu/">جامعة ستانفورد</a>
-            <span class="detail">مقررات دراسات عليا بمعدل 4.0:<br><span dir="ltr" class="ltr-block"><a href="https://cs230.stanford.edu/">CS230 Deep Learning</a> (<a href="https://www.andrewng.org/">Andrew Ng</a>), <a href="https://cs231n.stanford.edu/">CS231n Visual Recognition</a> (<a href="https://profiles.stanford.edu/fei-fei-li">Fei-Fei Li</a>), <a href="https://stanford-cs329s.github.io/">CS329S ML Systems Design</a> (<a href="https://huyenchip.com/">Chip Huyen</a>), <a href="https://explorecourses.stanford.edu/search?q=PEDS220">PEDS220 COVID-19</a> (<a href="https://profiles.stanford.edu/rishi-mediratta">Rishi Mediratta</a>)</span></span>
+            <span class="detail">مقررات دراسات عليا في علوم الحاسوب والذكاء الاصطناعي، بمعدل 4.0</span>
+            <ul class="courses">
+              <li><a href="https://cs230.stanford.edu/">CS230 Deep Learning</a> (<a href="https://www.andrewng.org/">Andrew Ng</a>)</li>
+              <li><a href="https://cs231n.stanford.edu/">CS231n Visual Recognition</a> (<a href="https://profiles.stanford.edu/fei-fei-li">Fei-Fei Li</a>)</li>
+              <li><a href="https://stanford-cs329s.github.io/">CS329S ML Systems Design</a> (<a href="https://huyenchip.com/">Chip Huyen</a>)</li>
+              <li><a href="https://explorecourses.stanford.edu/search?q=PEDS220">PEDS220 COVID-19</a> (<a href="https://profiles.stanford.edu/rishi-mediratta">Rishi Mediratta</a>)</li>
+            </ul>
           </div>
         </li>
         <li>
@@ -472,17 +490,6 @@ html[lang="ar"] .feature-title { line-height: 1.35; }
           </div>
         </li>
       </ul>
-
-      <div class="photo-pair">
-        <figure>
-          <img src="../img/graduation.jpg" alt="أميل خانزادا في حفل منح الدرجات بجامعة فوكوي" loading="lazy" decoding="async">
-          <figcaption>حفل منح الدرجات العلمية، جامعة فوكوي.</figcaption>
-        </figure>
-        <figure>
-          <img src="../img/sabae.jpg" alt="أميل خانزادا مع رئيس بلدية ساباي كاتسوهيسا ساساكي وباحثين زائرين" loading="lazy" decoding="async">
-          <figcaption>مع رئيس بلدية ساباي كاتسوهيسا ساساكي وباحثي برنامج <a href="https://ssp.jst.go.jp/en/">JST Sakura Science</a>.</figcaption>
-        </figure>
-      </div>
     </div>
   </section>
 
@@ -517,10 +524,6 @@ html[lang="ar"] .feature-title { line-height: 1.35; }
           </div>
         </li>
       </ul>
-      <figure class="research-photo">
-        <img src="../img/governor.jpg" alt="أميل خانزادا يعرض لوحة بيانات السياحة في فوكوي على المحافظ إيشيدا" width="1600" height="1200" loading="lazy" decoding="async">
-        <figcaption>عرض لوحة بيانات السياحة على محافظ فوكوي إيشيدا خلال إطلاق اتحاد فوكوي للذكاء الاصطناعي الصناعي (AI/AX).</figcaption>
-      </figure>
     </div>
   </section>
 
@@ -528,7 +531,7 @@ html[lang="ar"] .feature-title { line-height: 1.35; }
     <h2 id="virufy-title">Virufy</h2>
     <div class="section-content virufy-body">
       <h3 class="feature-title">منظمة عالمية غير ربحية<br>للذكاء الاصطناعي الصحي.</h3>
-      <p>بصفتي الرئيس التنفيذي، أقود منظمة أمريكية غير ربحية (501(c)(3)) تضم أكثر من 1,300 متطوع وأكثر من 60 جامعة شريكة. يشمل عملنا دراسات سريرية في خمس دول وبراءتي اختراع في الولايات المتحدة واليابان.</p>
+      <p>بصفتي الرئيس التنفيذي، أقود منظمة أمريكية غير ربحية (501(c)(3)) انضم إليها أكثر من 1,300 متطوع منذ عام 2020، وتتعاون مع أكثر من 60 جامعة شريكة. Our work spans clinical studies in five countries and two patents in the US and Japan.</p>
       <a class="text-link" href="https://virufy.org">virufy.org <span class="arrow" aria-hidden="true">↗</span></a>
     </div>
   </section>
@@ -544,10 +547,19 @@ html[lang="ar"] .feature-title { line-height: 1.35; }
         <li>الذكاء الاصطناعي للمناطق</li>
         <li>فرق عالمية</li>
       </ul>
-      <figure class="teaching-photo">
-        <img src="../img/teaching.jpg" alt="أميل خانزادا يلقي محاضرة في جامعة فوكوي" loading="lazy" decoding="async">
-        <figcaption>ورشة عمل، جامعة فوكوي.</figcaption>
-      </figure>
+    </div>
+  </section>
+
+  <section class="section" id="moments" aria-labelledby="moments-title">
+    <h2 id="moments-title">لقطات</h2>
+    <div class="section-content">
+      <ul class="moments">
+        <li><figure><img src="../img/governor.jpg" alt="أميل خانزادا يعرض لوحة بيانات السياحة في فوكوي على المحافظ إيشيدا" loading="lazy" decoding="async"><figcaption><span class="when">أكتوبر 2026</span>عرض لوحة بيانات السياحة على محافظ فوكوي إيشيدا خلال إطلاق اتحاد فوكوي للذكاء الاصطناعي الصناعي (AI/AX)</figcaption></figure></li>
+        <li><figure><img src="../img/sabae.jpg" alt="أميل خانزادا مع رئيس بلدية ساباي كاتسوهيسا ساساكي وباحثين زائرين" loading="lazy" decoding="async"><figcaption><span class="when">سبتمبر 2026</span>في ساباي مع رئيس البلدية كاتسوهيسا ساساكي وباحثي برنامج <a href="https://ssp.jst.go.jp/en/">JST Sakura Science</a></figcaption></figure></li>
+        <li><figure><img src="../img/graduation.jpg" alt="أميل خانزادا في حفل منح الدرجات بجامعة فوكوي" loading="lazy" decoding="async"><figcaption><span class="when">2026</span>دكتوراه في الهندسة، جامعة فوكوي</figcaption></figure></li>
+        <li><figure><img src="../img/industry_workshop.jpg" alt="أميل خانزادا يقدّم ورشة عمل في الذكاء الاصطناعي لقطاع الصناعة في فوكوي" loading="lazy" decoding="async"><figcaption><span class="when">يوليو 2026</span>تقديم ورشة عمل في الذكاء الاصطناعي لشركة صناعية في فوكوي</figcaption></figure></li>
+        <li><figure><img src="../img/teaching.jpg" alt="أميل خانزادا يلقي محاضرة في جامعة فوكوي" loading="lazy" decoding="async"><figcaption><span class="when">2026</span>ورشة عمل حول اتخاذ القرار المبني على البيانات، جامعة فوكوي</figcaption></figure></li>
+      </ul>
     </div>
   </section>
 

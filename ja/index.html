@@ -359,6 +359,16 @@ figcaption { margin-top: 10px; font-size: .79rem; line-height: 1.5; color: var(-
 @media (max-width: 420px) { .lang-switch { font-size: .76rem; gap: 8px; padding-inline-start: 10px; } }
 .lang-switch a, .mobile-nav summary, .brand { white-space: nowrap; }
 @media (max-width: 420px) { .menu-label { display: none; } .brand { font-size: .95rem; } }
+.courses { margin: 8px 0 0; padding: 0; list-style: none; }
+.education .courses li { display: block; position: relative; padding: 0; padding-inline-start: 14px; border: 0; color: var(--body); font-size: .94rem; line-height: 1.7; }
+.education .courses li::before { content: ""; position: absolute; inset-inline-start: 0; top: .72em; width: 6px; height: 1px; background: var(--muted); }
+.moments { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 24px; margin: 0; padding: 0; list-style: none; }
+.moments li:first-child { grid-column: 1 / -1; }
+.moments img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.moments li:first-child img { aspect-ratio: 16 / 9; }
+.moments figcaption { margin-top: 10px; font-size: .86rem; color: var(--body); }
+.moments .when { display: block; font-size: .74rem; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); margin-bottom: 2px; }
+@media (max-width: 680px) { .moments { grid-template-columns: 1fr; } }
 :root { --display: "Space Grotesk", "Noto Sans JP", sans-serif; --text: "Instrument Sans", "Noto Sans JP", system-ui, sans-serif; }
 html[lang="ja"] body { letter-spacing: .02em; line-height: 1.85; }
 html[lang="ja"] h1 { letter-spacing: -.02em; font-weight: 700; }
@@ -377,6 +387,7 @@ html[lang="ja"] .feature-title { word-break: keep-all; }
         <li><a href="#expertise">専門分野</a></li>
         <li><a href="#virufy">Virufy</a></li>
         <li><a href="#teaching">教育</a></li>
+        <li><a href="#moments">活動の記録</a></li>
         <li><a href="#publications">業績</a></li>
         <li><a href="#news">あゆみ</a></li>
         <li><a href="#links-sec">リンク</a></li>
@@ -390,6 +401,7 @@ html[lang="ja"] .feature-title { word-break: keep-all; }
           <li><a href="#expertise">専門分野</a></li>
           <li><a href="#virufy">Virufy</a></li>
           <li><a href="#teaching">教育</a></li>
+        <li><a href="#moments">活動の記録</a></li>
           <li><a href="#publications">業績</a></li>
           <li><a href="#news">あゆみ</a></li>
           <li><a href="#links-sec">リンク</a></li>
@@ -412,7 +424,7 @@ html[lang="ja"] .feature-title { word-break: keep-all; }
     <div class="hero-copy">
       <h1 id="name">カンザダ<br>あみる</h1>
       <p class="role"><a href="https://www.u-fukui.ac.jp/">福井大学</a> 特命助教<br><a href="https://virufy.org">Virufy</a> 創業者・CEO</p>
-      <p class="summary">医療AI、観光・データ分析、行動ナッジ、情報セキュリティの分野で、社会の現場で役立つAIをつくっています。日本、米国、中東の人と組織をつないでいます。</p>
+      <p class="summary">医療、観光、データ分析、行動科学、サイバーセキュリティの分野で、社会の現場で役立つAIを開発しています。日本、米国、中東の人とアイデアをつなぐ架け橋として活動しています。</p>
       <div class="hero-links">
         <a href="https://virufy.org">Virufy <span class="arrow" aria-hidden="true">↗</span></a>
         <a href="https://scholar.google.com/citations?user=zdgfTfMAAAAJ">Google Scholar <span class="arrow" aria-hidden="true">↗</span></a>
@@ -429,8 +441,8 @@ html[lang="ja"] .feature-title { word-break: keep-all; }
     <div class="section-content">
       <h3 class="feature-title">日本と<br>シリコンバレーを<wbr>つなぐ。</h3>
       <div class="prose">
-        <p><a href="https://pure.flib.u-fukui.ac.jp/ja/persons/amil-khanzada/">福井大学</a> 地域創生推進本部 特命助教。アントレプレナーシップとAIを教え、北陸の自治体と連携して活動しています。</p>
-        <p>2020年から <a href="https://virufy.org">virufy.org</a> の創業者・CEOを務めています。</p>
+        <p><a href="https://pure.flib.u-fukui.ac.jp/ja/persons/amil-khanzada/">福井大学</a> 地域創生推進本部 特命助教。アントレプレナーシップとAIを教え、北陸の自治体と連携して地域のイノベーションに取り組んでいます。</p>
+        <p>2020年から、AIで医療の課題に取り組む非営利団体 <a href="https://virufy.org">virufy.org</a> の創業者・CEOを務めています。</p>
         <p>テック・AI分野で15年以上の経験があります。シリコンバレーと東京で <a href="https://en.wikipedia.org/wiki/Greenplum">VMware Pivotal Greenplum</a> や <a href="https://www.hpe.com/">HP Enterprise</a> のエンジニアリングチームを率い、<a href="https://sandbox.mit.edu/">MIT Sandbox</a> ではテクニカルリードを務めました。</p>
         <p>日本語、ウルドゥー語／ヒンディー語に堪能。<a href="https://oywj.org/">One Young World</a> 日本アンバサダー、<a href="https://www.town.eiheiji.lg.jp/900/905/p003453.html">永平寺町</a>エボリューション大使。</p>
       </div>
@@ -448,14 +460,20 @@ html[lang="ja"] .feature-title { word-break: keep-all; }
           <span class="date">2021–2022</span>
           <div>
             <a class="institution" href="https://haas.berkeley.edu/">カリフォルニア大学バークレー校 ハース・スクール・オブ・ビジネス</a>
-            <span class="detail">MBA・工学修士（データサイエンス）同時履修プログラム 1年次</span>
+            <span class="detail">MBA・工学修士（データサイエンス）同時学位プログラム 1年次修了</span>
           </div>
         </li>
         <li>
           <span class="date">2020–2021</span>
           <div>
             <a class="institution" href="https://scpd.stanford.edu/">スタンフォード大学</a>
-            <span class="detail">大学院科目（GPA 4.0）：<a href="https://cs230.stanford.edu/">CS230 Deep Learning</a>（<a href="https://www.andrewng.org/">Andrew Ng</a>）、<a href="https://cs231n.stanford.edu/">CS231n Visual Recognition</a>（<a href="https://profiles.stanford.edu/fei-fei-li">Fei-Fei Li</a>）、<a href="https://stanford-cs329s.github.io/">CS329S ML Systems Design</a>（<a href="https://huyenchip.com/">Chip Huyen</a>）、<a href="https://explorecourses.stanford.edu/search?q=PEDS220">PEDS220 COVID-19</a>（<a href="https://profiles.stanford.edu/rishi-mediratta">Rishi Mediratta</a>）</span>
+            <span class="detail">大学院科目（コンピュータサイエンス・AI）、GPA 4.0</span>
+            <ul class="courses">
+              <li><a href="https://cs230.stanford.edu/">CS230 Deep Learning</a>（<a href="https://www.andrewng.org/">Andrew Ng</a>）</li>
+              <li><a href="https://cs231n.stanford.edu/">CS231n Visual Recognition</a>（<a href="https://profiles.stanford.edu/fei-fei-li">Fei-Fei Li</a>）</li>
+              <li><a href="https://stanford-cs329s.github.io/">CS329S ML Systems Design</a>（<a href="https://huyenchip.com/">Chip Huyen</a>）</li>
+              <li><a href="https://explorecourses.stanford.edu/search?q=PEDS220">PEDS220 COVID-19</a>（<a href="https://profiles.stanford.edu/rishi-mediratta">Rishi Mediratta</a>）</li>
+            </ul>
           </div>
         </li>
         <li>
@@ -466,17 +484,6 @@ html[lang="ja"] .feature-title { word-break: keep-all; }
           </div>
         </li>
       </ul>
-
-      <div class="photo-pair">
-        <figure>
-          <img src="../img/graduation.jpg" alt="福井大学 学位記授与式でのカンザダ あみる" loading="lazy" decoding="async">
-          <figcaption>福井大学 学位記授与式。</figcaption>
-        </figure>
-        <figure>
-          <img src="../img/sabae.jpg" alt="鯖江市 佐々木勝久市長、来日研究者とともに" loading="lazy" decoding="async">
-          <figcaption>鯖江市 佐々木勝久市長、<a href="https://ssp.jst.go.jp/">JSTさくらサイエンスプログラム</a>の研究者とともに。</figcaption>
-        </figure>
-      </div>
     </div>
   </section>
 
@@ -511,10 +518,6 @@ html[lang="ja"] .feature-title { word-break: keep-all; }
           </div>
         </li>
       </ul>
-      <figure class="research-photo">
-        <img src="../img/governor.jpg" alt="石田知事に福井の観光ダッシュボードを紹介するカンザダ あみる" width="1600" height="1200" loading="lazy" decoding="async">
-        <figcaption>福井県産業AI/AXコンソーシアムのキックオフで、石田知事に観光ダッシュボードをご紹介。</figcaption>
-      </figure>
     </div>
   </section>
 
@@ -522,7 +525,7 @@ html[lang="ja"] .feature-title { word-break: keep-all; }
     <h2 id="virufy-title">Virufy</h2>
     <div class="section-content virufy-body">
       <h3 class="feature-title">世界に広がる<br>医療AI非営利団体。</h3>
-      <p>CEOとして、1,300人以上のボランティアと60以上のパートナー大学が参加する米国の非営利団体（501(c)(3)）を率いています。5か国で臨床研究を行い、米国と日本で特許を取得しています。</p>
+      <p>CEOとして、2020年以降1,300人以上のボランティアが参加し、60以上のパートナー大学と連携する米国の非営利団体（501(c)(3)）を率いています。 Our work spans clinical studies in five countries and two patents in the US and Japan.</p>
       <a class="text-link" href="https://virufy.org">virufy.org <span class="arrow" aria-hidden="true">↗</span></a>
     </div>
   </section>
@@ -538,10 +541,19 @@ html[lang="ja"] .feature-title { word-break: keep-all; }
         <li>地域のためのAI</li>
         <li>グローバルチーム</li>
       </ul>
-      <figure class="teaching-photo">
-        <img src="../img/teaching.jpg" alt="福井大学で講義するカンザダ あみる" loading="lazy" decoding="async">
-        <figcaption>福井大学でのワークショップ。</figcaption>
-      </figure>
+    </div>
+  </section>
+
+  <section class="section" id="moments" aria-labelledby="moments-title">
+    <h2 id="moments-title">活動の記録</h2>
+    <div class="section-content">
+      <ul class="moments">
+        <li><figure><img src="../img/governor.jpg" alt="石田知事に福井の観光ダッシュボードを紹介するカンザダ あみる" loading="lazy" decoding="async"><figcaption><span class="when">2026年10月</span>福井県産業AI/AXコンソーシアムのキックオフで、石田知事に観光ダッシュボードをご紹介</figcaption></figure></li>
+        <li><figure><img src="../img/sabae.jpg" alt="鯖江市 佐々木勝久市長、来日研究者とともに" loading="lazy" decoding="async"><figcaption><span class="when">2026年9月</span>鯖江市 佐々木勝久市長、<a href="https://ssp.jst.go.jp/">JSTさくらサイエンスプログラム</a>の研究者とともに</figcaption></figure></li>
+        <li><figure><img src="../img/graduation.jpg" alt="福井大学 学位記授与式でのカンザダ あみる" loading="lazy" decoding="async"><figcaption><span class="when">2026年</span>博士（工学）、福井大学</figcaption></figure></li>
+        <li><figure><img src="../img/industry_workshop.jpg" alt="福井の企業でAIワークショップを行うカンザダ あみる" loading="lazy" decoding="async"><figcaption><span class="when">2026年7月</span>福井の製造業企業でAIワークショップを実施</figcaption></figure></li>
+        <li><figure><img src="../img/teaching.jpg" alt="福井大学で講義するカンザダ あみる" loading="lazy" decoding="async"><figcaption><span class="when">2026年</span>福井大学でデータに基づく意思決定のワークショップ</figcaption></figure></li>
+      </ul>
     </div>
   </section>
 

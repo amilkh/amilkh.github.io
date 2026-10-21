@@ -359,6 +359,16 @@ figcaption { margin-top: 10px; font-size: .79rem; line-height: 1.5; color: var(-
 @media (max-width: 420px) { .lang-switch { font-size: .76rem; gap: 8px; padding-inline-start: 10px; } }
 .lang-switch a, .mobile-nav summary, .brand { white-space: nowrap; }
 @media (max-width: 420px) { .menu-label { display: none; } .brand { font-size: .95rem; } }
+.courses { margin: 8px 0 0; padding: 0; list-style: none; }
+.education .courses li { display: block; position: relative; padding: 0; padding-inline-start: 14px; border: 0; color: var(--body); font-size: .94rem; line-height: 1.7; }
+.education .courses li::before { content: ""; position: absolute; inset-inline-start: 0; top: .72em; width: 6px; height: 1px; background: var(--muted); }
+.moments { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 24px; margin: 0; padding: 0; list-style: none; }
+.moments li:first-child { grid-column: 1 / -1; }
+.moments img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.moments li:first-child img { aspect-ratio: 16 / 9; }
+.moments figcaption { margin-top: 10px; font-size: .86rem; color: var(--body); }
+.moments .when { display: block; font-size: .74rem; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); margin-bottom: 2px; }
+@media (max-width: 680px) { .moments { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -372,6 +382,7 @@ figcaption { margin-top: 10px; font-size: .79rem; line-height: 1.5; color: var(-
         <li><a href="#expertise">Expertise</a></li>
         <li><a href="#virufy">Virufy</a></li>
         <li><a href="#teaching">Teaching</a></li>
+        <li><a href="#moments">Moments</a></li>
         <li><a href="#publications">Publications</a></li>
         <li><a href="#news">Milestones</a></li>
         <li><a href="#links-sec">Links</a></li>
@@ -385,6 +396,7 @@ figcaption { margin-top: 10px; font-size: .79rem; line-height: 1.5; color: var(-
           <li><a href="#expertise">Expertise</a></li>
           <li><a href="#virufy">Virufy</a></li>
           <li><a href="#teaching">Teaching</a></li>
+        <li><a href="#moments">Moments</a></li>
           <li><a href="#publications">Publications</a></li>
           <li><a href="#news">Milestones</a></li>
           <li><a href="#links-sec">Links</a></li>
@@ -407,7 +419,7 @@ figcaption { margin-top: 10px; font-size: .79rem; line-height: 1.5; color: var(-
     <div class="hero-copy">
       <h1 id="name">Amil<br>Khanzada</h1>
       <p class="role">Professor, <a href="https://www.u-fukui.ac.jp/eng/">University of Fukui</a><br>Founder &amp; CEO, <a href="https://virufy.org">Virufy</a></p>
-      <p class="summary">I build AI that works in the real world: medical AI, tourism and data analytics, behavioral nudges and information security. I bring people together across Japan, the US and the Middle East.</p>
+      <p class="summary">I develop real-world AI applications across healthcare, tourism, data analytics, behavioral science and cybersecurity, while building bridges between people and ideas across Japan, the US and the Middle East.</p>
       <div class="hero-links">
         <a href="https://virufy.org">Virufy <span class="arrow" aria-hidden="true">↗</span></a>
         <a href="https://scholar.google.com/citations?user=zdgfTfMAAAAJ">Google Scholar <span class="arrow" aria-hidden="true">↗</span></a>
@@ -424,9 +436,9 @@ figcaption { margin-top: 10px; font-size: .79rem; line-height: 1.5; color: var(-
     <div class="section-content">
       <h3 class="feature-title">Between Japan<br>and Silicon Valley.</h3>
       <div class="prose">
-        <p>I’m a Specially Appointed Assistant Professor at the <a href="https://pure.flib.u-fukui.ac.jp/en/persons/amil-khanzada/">University of Fukui</a>’s Regional Revitalization Headquarters. I teach entrepreneurship and AI and work with local governments across Hokuriku.</p>
-        <p>I’ve been Founder and CEO of <a href="https://virufy.org">virufy.org</a> since 2020.</p>
-        <p>My 15+ years in tech and AI include leading engineering teams in Silicon Valley and Tokyo at <a href="https://en.wikipedia.org/wiki/Greenplum">VMware Pivotal Greenplum</a> and <a href="https://www.hpe.com/">HP Enterprise</a>, and serving as Technical Lead at <a href="https://sandbox.mit.edu/">MIT Sandbox</a>.</p>
+        <p>I’m a Specially Appointed Assistant Professor at the <a href="https://pure.flib.u-fukui.ac.jp/en/persons/amil-khanzada/">University of Fukui</a>’s Regional Revitalization Headquarters, where I teach entrepreneurship and AI and work with local governments across Hokuriku on regional innovation.</p>
+        <p>Since 2020, I’ve been Founder and CEO of <a href="https://virufy.org">virufy.org</a>, a nonprofit applying AI to real-world health challenges.</p>
+        <p>I have more than 15 years of experience in tech and AI. I’ve led engineering teams in Silicon Valley and Tokyo at <a href="https://en.wikipedia.org/wiki/Greenplum">VMware Pivotal Greenplum</a> and <a href="https://www.hpe.com/">HP Enterprise</a>, and served as Technical Lead at <a href="https://sandbox.mit.edu/">MIT Sandbox</a>.</p>
         <p>Fluent in Japanese and Urdu/Hindi. <a href="https://oywj.org/">One Young World</a> Japan Ambassador and <a href="https://www.town.eiheiji.lg.jp/900/905/p003453.html">Eiheiji Town</a> Evolution Ambassador.</p>
       </div>
 
@@ -443,14 +455,20 @@ figcaption { margin-top: 10px; font-size: .79rem; line-height: 1.5; color: var(-
           <span class="date">2021–2022</span>
           <div>
             <a class="institution" href="https://haas.berkeley.edu/">UC Berkeley Haas School of Business</a>
-            <span class="detail">MBA and Master of Engineering (Data Science) concurrent program, first year</span>
+            <span class="detail">MBA and Master of Engineering (Data Science) concurrent degree program, first year completed</span>
           </div>
         </li>
         <li>
           <span class="date">2020–2021</span>
           <div>
             <a class="institution" href="https://scpd.stanford.edu/">Stanford University</a>
-            <span class="detail">Graduate courses, 4.0 GPA: <a href="https://cs230.stanford.edu/">CS230 Deep Learning</a> with <a href="https://www.andrewng.org/">Andrew Ng</a>, <a href="https://cs231n.stanford.edu/">CS231n Visual Recognition</a> with <a href="https://profiles.stanford.edu/fei-fei-li">Fei-Fei Li</a>, <a href="https://stanford-cs329s.github.io/">CS329S ML Systems Design</a> with <a href="https://huyenchip.com/">Chip Huyen</a>, <a href="https://explorecourses.stanford.edu/search?q=PEDS220">PEDS220 COVID-19</a> with <a href="https://profiles.stanford.edu/rishi-mediratta">Rishi Mediratta</a></span>
+            <span class="detail">Graduate coursework in computer science and AI, 4.0 GPA</span>
+            <ul class="courses">
+              <li><a href="https://cs230.stanford.edu/">CS230 Deep Learning</a> with <a href="https://www.andrewng.org/">Andrew Ng</a></li>
+              <li><a href="https://cs231n.stanford.edu/">CS231n Visual Recognition</a> with <a href="https://profiles.stanford.edu/fei-fei-li">Fei-Fei Li</a></li>
+              <li><a href="https://stanford-cs329s.github.io/">CS329S ML Systems Design</a> with <a href="https://huyenchip.com/">Chip Huyen</a></li>
+              <li><a href="https://explorecourses.stanford.edu/search?q=PEDS220">PEDS220 COVID-19</a> with <a href="https://profiles.stanford.edu/rishi-mediratta">Rishi Mediratta</a></li>
+            </ul>
           </div>
         </li>
         <li>
@@ -461,17 +479,6 @@ figcaption { margin-top: 10px; font-size: .79rem; line-height: 1.5; color: var(-
           </div>
         </li>
       </ul>
-
-      <div class="photo-pair">
-        <figure>
-          <img src="img/graduation.jpg" alt="Amil Khanzada at the University of Fukui degree ceremony" loading="lazy" decoding="async">
-          <figcaption>Degree conferment, University of Fukui.</figcaption>
-        </figure>
-        <figure>
-          <img src="img/sabae.jpg" alt="Amil Khanzada with Sabae Mayor Katsuhisa Sasaki and visiting researchers" loading="lazy" decoding="async">
-          <figcaption>With Sabae Mayor Katsuhisa Sasaki and <a href="https://ssp.jst.go.jp/en/">JST Sakura Science</a> researchers.</figcaption>
-        </figure>
-      </div>
     </div>
   </section>
 
@@ -506,10 +513,6 @@ figcaption { margin-top: 10px; font-size: .79rem; line-height: 1.5; color: var(-
           </div>
         </li>
       </ul>
-      <figure class="research-photo">
-        <img src="img/governor.jpg" alt="Amil Khanzada showing the Fukui tourism dashboard to Governor Ishida" width="1600" height="1200" loading="lazy" decoding="async">
-        <figcaption>Showing our tourism dashboard to Fukui Governor Ishida at the Fukui Industrial AI/AX Consortium kickoff.</figcaption>
-      </figure>
     </div>
   </section>
 
@@ -517,7 +520,7 @@ figcaption { margin-top: 10px; font-size: .79rem; line-height: 1.5; color: var(-
     <h2 id="virufy-title">Virufy</h2>
     <div class="section-content virufy-body">
       <h3 class="feature-title">A global health<br>AI nonprofit.</h3>
-      <p>As CEO, I lead a 501(c)(3) with more than 1,300 volunteers and 60+ partner universities. Our work spans clinical studies in five countries and two patents in the US and Japan.</p>
+      <p>As CEO, I lead a 501(c)(3) that more than 1,300 volunteers have joined since 2020, with 60+ partner universities. Our work spans clinical studies in five countries and two patents in the US and Japan.</p>
       <a class="text-link" href="https://virufy.org">virufy.org <span class="arrow" aria-hidden="true">↗</span></a>
     </div>
   </section>
@@ -533,10 +536,19 @@ figcaption { margin-top: 10px; font-size: .79rem; line-height: 1.5; color: var(-
         <li>AI for regions</li>
         <li>Global teams</li>
       </ul>
-      <figure class="teaching-photo">
-        <img src="img/teaching.jpg" alt="Amil Khanzada lecturing at the University of Fukui" loading="lazy" decoding="async">
-        <figcaption>Workshop, University of Fukui.</figcaption>
-      </figure>
+    </div>
+  </section>
+
+  <section class="section" id="moments" aria-labelledby="moments-title">
+    <h2 id="moments-title">Moments</h2>
+    <div class="section-content">
+      <ul class="moments">
+        <li><figure><img src="img/governor.jpg" alt="Amil Khanzada showing the Fukui tourism dashboard to Governor Ishida" loading="lazy" decoding="async"><figcaption><span class="when">Oct 2026</span>Showing our tourism dashboard to Fukui Governor Ishida at the Fukui Industrial AI/AX Consortium kickoff</figcaption></figure></li>
+        <li><figure><img src="img/sabae.jpg" alt="Amil Khanzada with Sabae Mayor Katsuhisa Sasaki and visiting researchers" loading="lazy" decoding="async"><figcaption><span class="when">Sep 2026</span>In Sabae with Mayor Katsuhisa Sasaki and researchers from the <a href="https://ssp.jst.go.jp/en/">JST Sakura Science Exchange Program</a></figcaption></figure></li>
+        <li><figure><img src="img/graduation.jpg" alt="Amil Khanzada at the University of Fukui degree ceremony" loading="lazy" decoding="async"><figcaption><span class="when">2026</span>Doctor of Engineering, University of Fukui</figcaption></figure></li>
+        <li><figure><img src="img/industry_workshop.jpg" alt="Amil Khanzada leading an AI workshop for industry in Fukui" loading="lazy" decoding="async"><figcaption><span class="when">Jul 2026</span>Leading an AI workshop for a Fukui manufacturer</figcaption></figure></li>
+        <li><figure><img src="img/teaching.jpg" alt="Amil Khanzada lecturing at the University of Fukui" loading="lazy" decoding="async"><figcaption><span class="when">2026</span>Teaching a data-driven decision workshop, University of Fukui</figcaption></figure></li>
+      </ul>
     </div>
   </section>
 

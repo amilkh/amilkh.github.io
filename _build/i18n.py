@@ -239,6 +239,90 @@ AR = {
 }
 
 
+# --- 2026-10-21 revision (Sheeba's feedback): pairs replaced by prefix ---
+def _swap(cfg, drop_prefixes, add):
+    cfg["pairs"] = [pr for pr in cfg["pairs"] if not any(pr[0].startswith(d) for d in drop_prefixes)] + add
+
+_DROP = [
+    '<p class="summary">I build AI', '<p>I’m a Specially Appointed', '<p>I’ve been Founder and CEO', '<p>My 15+ years',
+    '<a class="institution" href="https://haas.berkeley.edu/">', '<a class="institution" href="https://scpd.stanford.edu/">',
+    '</a> with <a href="https://www.andrewng.org/">', '</a> with <a href="https://profiles.stanford.edu/fei-fei-li">',
+    '</a> with <a href="https://huyenchip.com/">', '</a> with <a href="https://profiles.stanford.edu/rishi-mediratta">',
+    '<figcaption>Degree conferment', '<figcaption>With Sabae Mayor', '<figcaption>Showing our tourism dashboard',
+    '<p>As CEO, I lead', '<figcaption>Workshop, University of Fukui.',
+]
+_PF = 'https://pure.flib.u-fukui.ac.jp/en/persons/amil-khanzada/'
+_GB = '<a href="https://en.wikipedia.org/wiki/Greenplum">VMware Pivotal Greenplum</a>'
+_HP = '<a href="https://www.hpe.com/">HP Enterprise</a>'
+_MS = '<a href="https://sandbox.mit.edu/">MIT Sandbox</a>'
+_EN = {
+ 'summary': '<p class="summary">I develop real-world AI applications across healthcare, tourism, data analytics, behavioral science and cybersecurity, while building bridges between people and ideas across Japan, the US and the Middle East.</p>',
+ 'p1': f'<p>I’m a Specially Appointed Assistant Professor at the <a href="{_PF}">University of Fukui</a>’s Regional Revitalization Headquarters, where I teach entrepreneurship and AI and work with local governments across Hokuriku on regional innovation.</p>',
+ 'p2': '<p>Since 2020, I’ve been Founder and CEO of <a href="https://virufy.org">virufy.org</a>, a nonprofit applying AI to real-world health challenges.</p>',
+ 'p3': f'<p>I have more than 15 years of experience in tech and AI. I’ve led engineering teams in Silicon Valley and Tokyo at {_GB} and {_HP}, and served as Technical Lead at {_MS}.</p>',
+ 'haas': '<a class="institution" href="https://haas.berkeley.edu/">UC Berkeley Haas School of Business</a>\n            <span class="detail">MBA and Master of Engineering (Data Science) concurrent degree program, first year completed</span>',
+ 'stan': '<a class="institution" href="https://scpd.stanford.edu/">Stanford University</a>\n            <span class="detail">Graduate coursework in computer science and AI, 4.0 GPA</span>',
+ 'ng': '</a> with <a href="https://www.andrewng.org/">Andrew Ng</a></li>',
+ 'li': '</a> with <a href="https://profiles.stanford.edu/fei-fei-li">Fei-Fei Li</a></li>',
+ 'hu': '</a> with <a href="https://huyenchip.com/">Chip Huyen</a></li>',
+ 'rm': '</a> with <a href="https://profiles.stanford.edu/rishi-mediratta">Rishi Mediratta</a></li>',
+ 'vir': '<p>As CEO, I lead a 501(c)(3) that more than 1,300 volunteers have joined since 2020, with 60+ partner universities.',
+ 'nav': '">Moments</a></li>',
+ 'h2': '<h2 id="moments-title">Moments</h2>',
+ 'c1': '<span class="when">Oct 2026</span>Showing our tourism dashboard to Fukui Governor Ishida at the Fukui Industrial AI/AX Consortium kickoff</figcaption>',
+ 'c2': '<span class="when">Sep 2026</span>In Sabae with Mayor Katsuhisa Sasaki and researchers from the <a href="https://ssp.jst.go.jp/en/">JST Sakura Science Exchange Program</a></figcaption>',
+ 'c3': '<span class="when">2026</span>Doctor of Engineering, University of Fukui</figcaption>',
+ 'c4': '<span class="when">Jul 2026</span>Leading an AI workshop for a Fukui manufacturer</figcaption>',
+ 'c5': '<span class="when">2026</span>Teaching a data-driven decision workshop, University of Fukui</figcaption>',
+ 'a4': 'alt="Amil Khanzada leading an AI workshop for industry in Fukui"',
+}
+_JA = {
+ 'summary': '<p class="summary">医療、観光、データ分析、行動科学、サイバーセキュリティの分野で、社会の現場で役立つAIを開発しています。日本、米国、中東の人とアイデアをつなぐ架け橋として活動しています。</p>',
+ 'p1': '<p><a href="https://pure.flib.u-fukui.ac.jp/ja/persons/amil-khanzada/">福井大学</a> 地域創生推進本部 特命助教。アントレプレナーシップとAIを教え、北陸の自治体と連携して地域のイノベーションに取り組んでいます。</p>',
+ 'p2': '<p>2020年から、AIで医療の課題に取り組む非営利団体 <a href="https://virufy.org">virufy.org</a> の創業者・CEOを務めています。</p>',
+ 'p3': f'<p>テック・AI分野で15年以上の経験があります。シリコンバレーと東京で {_GB} や {_HP} のエンジニアリングチームを率い、{_MS} ではテクニカルリードを務めました。</p>',
+ 'haas': '<a class="institution" href="https://haas.berkeley.edu/">カリフォルニア大学バークレー校 ハース・スクール・オブ・ビジネス</a>\n            <span class="detail">MBA・工学修士（データサイエンス）同時学位プログラム 1年次修了</span>',
+ 'stan': '<a class="institution" href="https://scpd.stanford.edu/">スタンフォード大学</a>\n            <span class="detail">大学院科目（コンピュータサイエンス・AI）、GPA 4.0</span>',
+ 'ng': '</a>（<a href="https://www.andrewng.org/">Andrew Ng</a>）</li>',
+ 'li': '</a>（<a href="https://profiles.stanford.edu/fei-fei-li">Fei-Fei Li</a>）</li>',
+ 'hu': '</a>（<a href="https://huyenchip.com/">Chip Huyen</a>）</li>',
+ 'rm': '</a>（<a href="https://profiles.stanford.edu/rishi-mediratta">Rishi Mediratta</a>）</li>',
+ 'vir': '<p>CEOとして、2020年以降1,300人以上のボランティアが参加し、60以上のパートナー大学と連携する米国の非営利団体（501(c)(3)）を率いています。',
+ 'nav': '">活動の記録</a></li>',
+ 'h2': '<h2 id="moments-title">活動の記録</h2>',
+ 'c1': '<span class="when">2026年10月</span>福井県産業AI/AXコンソーシアムのキックオフで、石田知事に観光ダッシュボードをご紹介</figcaption>',
+ 'c2': '<span class="when">2026年9月</span>鯖江市 佐々木勝久市長、<a href="https://ssp.jst.go.jp/">JSTさくらサイエンスプログラム</a>の研究者とともに</figcaption>',
+ 'c3': '<span class="when">2026年</span>博士（工学）、福井大学</figcaption>',
+ 'c4': '<span class="when">2026年7月</span>福井の製造業企業でAIワークショップを実施</figcaption>',
+ 'c5': '<span class="when">2026年</span>福井大学でデータに基づく意思決定のワークショップ</figcaption>',
+ 'a4': 'alt="福井の企業でAIワークショップを行うカンザダ あみる"',
+}
+_AR = {
+ 'summary': '<p class="summary">أطوّر تطبيقات ذكاء اصطناعي عملية في مجالات الرعاية الصحية والسياحة وتحليل البيانات والعلوم السلوكية والأمن السيبراني، وأبني جسورًا بين الناس والأفكار في اليابان والولايات المتحدة والشرق الأوسط.</p>',
+ 'p1': f'<p>أستاذ مساعد بتعيين خاص في مقر التنشيط الإقليمي بـ<a href="{_PF}">جامعة فوكوي</a>، حيث أدرّس ريادة الأعمال والذكاء الاصطناعي، وأعمل مع الحكومات المحلية في منطقة هوكوريكو على الابتكار الإقليمي.</p>',
+ 'p2': '<p>منذ عام 2020، أشغل منصب مؤسس <a href="https://virufy.org">virufy.org</a> ورئيسها التنفيذي، وهي منظمة غير ربحية تطبّق الذكاء الاصطناعي على تحديات صحية واقعية.</p>',
+ 'p3': f'<p>لديّ أكثر من 15 عامًا من الخبرة في التقنية والذكاء الاصطناعي. قدتُ فرقًا هندسية في وادي السيليكون وطوكيو لدى {_GB} و{_HP}، وعملت قائدًا تقنيًا في {_MS}.</p>',
+ 'haas': '<a class="institution" href="https://haas.berkeley.edu/">كلية هاس لإدارة الأعمال، جامعة كاليفورنيا في بيركلي</a>\n            <span class="detail">البرنامج المتزامن لماجستير إدارة الأعمال والماجستير في الهندسة (علوم البيانات)، أكملتُ السنة الأولى</span>',
+ 'stan': '<a class="institution" href="https://scpd.stanford.edu/">جامعة ستانفورد</a>\n            <span class="detail">مقررات دراسات عليا في علوم الحاسوب والذكاء الاصطناعي، بمعدل 4.0</span>',
+ 'ng': '</a> (<a href="https://www.andrewng.org/">Andrew Ng</a>)</li>',
+ 'li': '</a> (<a href="https://profiles.stanford.edu/fei-fei-li">Fei-Fei Li</a>)</li>',
+ 'hu': '</a> (<a href="https://huyenchip.com/">Chip Huyen</a>)</li>',
+ 'rm': '</a> (<a href="https://profiles.stanford.edu/rishi-mediratta">Rishi Mediratta</a>)</li>',
+ 'vir': '<p>بصفتي الرئيس التنفيذي، أقود منظمة أمريكية غير ربحية (501(c)(3)) انضم إليها أكثر من 1,300 متطوع منذ عام 2020، وتتعاون مع أكثر من 60 جامعة شريكة.',
+ 'nav': '">لقطات</a></li>',
+ 'h2': '<h2 id="moments-title">لقطات</h2>',
+ 'c1': '<span class="when">أكتوبر 2026</span>عرض لوحة بيانات السياحة على محافظ فوكوي إيشيدا خلال إطلاق اتحاد فوكوي للذكاء الاصطناعي الصناعي (AI/AX)</figcaption>',
+ 'c2': '<span class="when">سبتمبر 2026</span>في ساباي مع رئيس البلدية كاتسوهيسا ساساكي وباحثي برنامج <a href="https://ssp.jst.go.jp/en/">JST Sakura Science</a></figcaption>',
+ 'c3': '<span class="when">2026</span>دكتوراه في الهندسة، جامعة فوكوي</figcaption>',
+ 'c4': '<span class="when">يوليو 2026</span>تقديم ورشة عمل في الذكاء الاصطناعي لشركة صناعية في فوكوي</figcaption>',
+ 'c5': '<span class="when">2026</span>ورشة عمل حول اتخاذ القرار المبني على البيانات، جامعة فوكوي</figcaption>',
+ 'a4': 'alt="أميل خانزادا يقدّم ورشة عمل في الذكاء الاصطناعي لقطاع الصناعة في فوكوي"',
+}
+for _cfg, _tr in ((JA, _JA), (AR, _AR)):
+    _cnt = {'nav': 2}
+    _swap(_cfg, _DROP, [(_EN[k], _tr[k], _cnt.get(k, 1)) for k in _EN])
+
+
 def build(cfg):
     s = SRC
     lang = cfg["lang"]
