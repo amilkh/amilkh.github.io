@@ -326,6 +326,11 @@ for _cfg, _a, _b in ((JA, '<span>Virufy <a href="https://virufy.org/en/news/gite
     _cfg["pairs"] += [('<span>Launched Virufy <a href="https://virufy.org/en/news/gitex-global-2025-dubai/">operations in Dubai</a></span>', _a),
                       ("<span>Opened Virufy's Japan hub in Fukuoka</span>", _b)]
 
+import sys as _sys; _sys.path.insert(0, str(ROOT / "_build"))
+from unwrap import unwrap as _unwrap
+for _cfg in (JA, AR):
+    _cfg["pairs"] = [pr if (pr[0].startswith('<p class="role">') or pr[0].startswith('<p class="publication-intro">') or 'aria-label' in pr[0] or 'title=' in pr[0]) else (_unwrap(pr[0]), _unwrap(pr[1])) + tuple(pr[2:]) for pr in _cfg["pairs"]]
+
 
 def build(cfg):
     s = SRC
