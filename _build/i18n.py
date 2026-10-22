@@ -321,9 +321,9 @@ for _cfg, _tr in ((JA, _JA), (AR, _AR)):
     _cnt = {'nav': 2}
     _swap(_cfg, _DROP, [(_EN[k], _tr[k], _cnt.get(k, 1)) for k in _EN])
 
-for _cfg, _a, _b in ((JA, '<span><a href="https://virufy.org">Virufy</a> ドバイで事業開始</span>', '<span>Virufy 日本拠点を福岡に開設</span>'),
-                     (AR, '<span>إطلاق عمليات <a href="https://virufy.org">Virufy</a> في دبي</span>', '<span>افتتاح مركز Virufy في اليابان بمدينة فوكوكا</span>')):
-    _cfg["pairs"] += [('<span>Launched <a href="https://virufy.org">Virufy</a> operations in Dubai</span>', _a),
+for _cfg, _a, _b in ((JA, '<span>Virufy <a href="https://virufy.org/en/news/gitex-global-2025-dubai/">ドバイで事業開始</a></span>', '<span>Virufy 日本拠点を福岡に開設</span>'),
+                     (AR, '<span><a href="https://virufy.org/en/news/gitex-global-2025-dubai/">إطلاق عمليات Virufy في دبي</a></span>', '<span>افتتاح مركز Virufy في اليابان بمدينة فوكوكا</span>')):
+    _cfg["pairs"] += [('<span>Launched Virufy <a href="https://virufy.org/en/news/gitex-global-2025-dubai/">operations in Dubai</a></span>', _a),
                       ("<span>Opened Virufy's Japan hub in Fukuoka</span>", _b)]
 
 
