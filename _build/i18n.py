@@ -34,7 +34,6 @@ JA = {
         ('<meta property="og:title" content="Amil Khanzada">', '<meta property="og:title" content="カンザダ あみる | Amil Khanzada">'),
         ('<meta property="og:description" content="Professor and CEO building AI that works in the real world: medical AI, tourism and data analytics, behavioral nudges and information security.">',
          '<meta property="og:description" content="福井大学 特命助教、Virufy 創業者・CEO。医療AI、観光・データ分析、行動ナッジ、情報セキュリティ。">'),
-        ('<a class="brand" href="#top">Amil Khanzada</a>', '<a class="brand" href="#top">カンザダ あみる</a>'),
         ('<span class="menu-label">Menu</span>', '<span class="menu-label">メニュー</span>'),
         ('<h2 id="about-title">About</h2>', '<h2 id="about-title">プロフィール</h2>'),
         ('<h2 id="expertise-title">Expertise</h2>', '<h2 id="expertise-title">専門分野</h2>'),
@@ -72,21 +71,20 @@ JA = {
         ('<figcaption>With Sabae Mayor Katsuhisa Sasaki and <a href="https://ssp.jst.go.jp/en/">JST Sakura Science</a> researchers.</figcaption>',
          '<figcaption>鯖江市 佐々木勝久市長、<a href="https://ssp.jst.go.jp/">JSTさくらサイエンスプログラム</a>の研究者とともに。</figcaption>'),
         ('<h3>Medical AI</h3>\n          <div><p>Researching whether cough sounds recorded on a phone can help screen for respiratory conditions.</p></div>',
-         '<h3>医療AI</h3>\n          <div><p>スマートフォンで録音した咳の音が、呼吸器疾患のスクリーニングに役立つかを研究しています。</p></div>'),
+         '<h3>医療AI</h3>\n          <div><p>スマートフォンで録音した咳の音による呼吸器疾患スクリーニング技術の研究・開発。</p></div>'),
         ('<h3>Tourism and data analytics</h3>', '<h3>観光・データ分析</h3>'),
-        ('<p>Forecasting visitor demand across Fukui with local governments.</p>', '<p>自治体と連携し、福井県内の観光需要を予測。</p>'),
-        ('>Live dashboard</a>', '>リアルタイムダッシュボード</a>'),
+        ('<p>Forecasting visitor demand across Fukui with local governments.</p>\n            <div class="reference"><a href="https://dhde-tourism-ai.github.io/dhde-app/">Live dashboard</a></div>', '<p>自治体と連携した<a href="https://dhde-tourism-ai.github.io/dhde-app/">リアルタイムダッシュボード</a>の構築、および福井県内の観光需要予測。</p>'),
         ('<h3>Behavioral nudges</h3>\n          <div><p>Getting people to share data at scale, without paying them.</p></div>',
-         '<h3>行動ナッジ</h3>\n          <div><p>謝礼に頼らず、多くの人にデータ提供を促す仕組み。</p></div>'),
+         '<h3>行動ナッジ</h3>\n          <div><p>金銭的謝礼に頼らず、多くの人にデータ提供を促す仕組みの設計。</p></div>'),
         ('<h3>Information security</h3>\n          <div><p>Security analytics for Fortune 500 clients and Japanese megabanks at <a href="https://www.hpe.com/">HP Enterprise</a>.</p></div>',
-         '<h3>情報セキュリティ</h3>\n          <div><p><a href="https://www.hpe.com/">HP Enterprise</a> にて、フォーチュン500企業や日本のメガバンク向けのセキュリティ分析に従事。</p></div>'),
+         '<h3>情報セキュリティ</h3>\n          <div><p><a href="https://www.hpe.com/">HP Enterprise</a> にて、Fortune 500企業や日本のメガバンク向けセキュリティ分析に従事。</p></div>'),
         ('<h3>Bridging Japan and the world</h3>', '<h3>日本と世界をつなぐ</h3>'),
         ('<p>Connecting universities, governments and companies across Japan, Silicon Valley, the Gulf and South Asia.</p>',
-         '<p>日本、シリコンバレー、湾岸諸国、南アジアの大学・行政・企業をつないでいます。</p>'),
+         '<p>日本、シリコンバレー、湾岸諸国、南アジアの大学・行政・企業をつなぐ産学官連携の推進。</p>'),
         ('<div class="reference"><a href="https://ssp.jst.go.jp/en/">JST Sakura Science</a>', '<div class="reference"><a href="https://ssp.jst.go.jp/">JSTさくらサイエンス</a>'),
         ('alt="Amil Khanzada showing the Fukui tourism dashboard to Governor Ishida"', 'alt="石田知事に福井の観光ダッシュボードを紹介するカンザダ あみる"'),
         ('<figcaption>Showing our tourism dashboard to Fukui Governor Ishida at the Fukui Industrial AI/AX Consortium kickoff.</figcaption>',
-         '<figcaption>福井県産業AI/AXコンソーシアムのキックオフで、石田知事に観光ダッシュボードをご紹介。</figcaption>'),
+         '<figcaption>ふくい産業AXコンソーシアムのキックオフにて、石田知事に観光ダッシュボードをご紹介。</figcaption>'),
         ('<h3 class="feature-title">A global health<br>AI nonprofit.</h3>', '<h3 class="feature-title">世界に広がる<br>医療AI非営利団体。</h3>'),
         ('<p>As CEO, I lead a 501(c)(3) with more than 1,300 volunteers and 60+ partner universities. Our work spans clinical studies in five countries and two patents in the US and Japan.</p>',
          '<p>CEOとして、1,300人以上のボランティアと60以上のパートナー大学が参加する米国の非営利団体（501(c)(3)）を率いています。5か国で臨床研究を行い、米国と日本で特許を取得しています。</p>'),
@@ -147,7 +145,6 @@ AR = {
         ('<meta property="og:title" content="Amil Khanzada">', '<meta property="og:title" content="أميل خانزادا | Amil Khanzada">'),
         ('<meta property="og:description" content="Professor and CEO building AI that works in the real world: medical AI, tourism and data analytics, behavioral nudges and information security.">',
          '<meta property="og:description" content="أستاذ ورئيس تنفيذي يبني ذكاءً اصطناعيًا يعمل في الواقع: الذكاء الاصطناعي الطبي، والسياحة وتحليل البيانات، والوكز السلوكي، وأمن المعلومات.">'),
-        ('<a class="brand" href="#top">Amil Khanzada</a>', '<a class="brand" href="#top">أميل خانزادا</a>'),
         ('<span class="menu-label">Menu</span>', '<span class="menu-label">القائمة</span>'),
         ('<h2 id="about-title">About</h2>', '<h2 id="about-title">نبذة</h2>'),
         ('<h2 id="expertise-title">Expertise</h2>', '<h2 id="expertise-title">الخبرات</h2>'),
@@ -289,7 +286,7 @@ _JA = {
  'vir': '<p>CEOとして、2020年以降1,300人以上のボランティアが参加し、60以上のパートナー大学と連携する米国の非営利団体（501(c)(3)）を率いています。',
  'nav': '">活動の記録</a></li>',
  'h2': '<h2 id="moments-title">活動の記録</h2>',
- 'c1': '<span class="when">2026年10月</span>福井県産業AI/AXコンソーシアムのキックオフで、石田知事に観光ダッシュボードをご紹介</figcaption>',
+ 'c1': '<span class="when">2026年10月</span>ふくい産業AXコンソーシアムのキックオフにて、石田知事に観光ダッシュボードをご紹介</figcaption>',
  'c2': '<span class="when">2026年9月</span>鯖江市 佐々木勝久市長、<a href="https://ssp.jst.go.jp/">JSTさくらサイエンスプログラム</a>の研究者とともに</figcaption>',
  'c3': '<span class="when">2026年</span>博士（工学）、福井大学</figcaption>',
  'c4': '<span class="when">2026年7月</span>福井の製造業企業でAIワークショップを実施</figcaption>',
@@ -325,6 +322,12 @@ for _cfg, _a, _b in ((JA, '<span>Virufy <a href="https://virufy.org/en/news/gite
                      (AR, '<span><a href="https://virufy.org/en/news/gitex-global-2025-dubai/">إطلاق عمليات Virufy في دبي</a></span>', '<span>افتتاح مركز Virufy في اليابان بمدينة فوكوكا</span>')):
     _cfg["pairs"] += [('<span>Launched Virufy <a href="https://virufy.org/en/news/gitex-global-2025-dubai/">operations in Dubai</a></span>', _a),
                       ("<span>Opened Virufy's Japan hub in Fukuoka</span>", _b)]
+
+# Reina’s Japanese review, 2026-10-27: translate the retained Virufy sentence.
+JA["pairs"].append((
+    " Our work spans clinical studies in five countries and two patents in the US and Japan.</p>",
+    "これまでに5か国で臨床研究を実施し、日米で特許2件を取得しています。</p>",
+))
 
 import sys as _sys; _sys.path.insert(0, str(ROOT / "_build"))
 from unwrap import unwrap as _unwrap
