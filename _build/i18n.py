@@ -29,17 +29,17 @@ JA = {
                 'html[lang="ja"] .feature-title { word-break: keep-all; }\n',
     "nav": ["プロフィール", "専門分野", "教育", "業績", "あゆみ", "リンク"],
     "pairs": [
-        ('<meta name="description" content="Amil Khanzada is a professor at the University of Fukui and CEO of Virufy. He works on medical AI, tourism and data analytics, behavioral nudges and information security, bridging Japan, the US and the Middle East.">',
+        ('<meta name="description" content="Amil Khanzada is an assistant professor at the University of Fukui and CEO of Virufy. He works on medical AI, tourism and data analytics, behavioral nudges and information security, bridging Japan, the US and the Middle East.">',
          '<meta name="description" content="カンザダ あみる（Amil Khanzada）。福井大学 特命助教、Virufy 創業者・CEO。医療AI、観光・データ分析、行動ナッジ、情報セキュリティに取り組み、日本・米国・中東をつないでいます。">'),
         ('<meta property="og:title" content="Amil Khanzada">', '<meta property="og:title" content="カンザダ あみる | Amil Khanzada">'),
-        ('<meta property="og:description" content="Professor and CEO building AI that works in the real world: medical AI, tourism and data analytics, behavioral nudges and information security.">',
+        ('<meta property="og:description" content="Assistant professor and CEO building AI that works in the real world: medical AI, tourism and data analytics, behavioral nudges and information security.">',
          '<meta property="og:description" content="福井大学 特命助教、Virufy 創業者・CEO。医療AI、観光・データ分析、行動ナッジ、情報セキュリティ。">'),
         ('<span class="menu-label">Menu</span>', '<span class="menu-label">メニュー</span>'),
         ('<h2 id="about-title">About</h2>', '<h2 id="about-title">プロフィール</h2>'),
         ('<h2 id="expertise-title">Expertise</h2>', '<h2 id="expertise-title">専門分野</h2>'),
         ('<h2 id="teaching-title">Teaching</h2>', '<h2 id="teaching-title">教育</h2>'),
         ('<h1 id="name">Amil<br>Khanzada</h1>', '<h1 id="name">カンザダ<br>あみる</h1>'),
-        ('<p class="role">Professor, <a href="https://www.u-fukui.ac.jp/eng/">University of Fukui</a><br>Founder &amp; CEO, <a href="https://virufy.org">Virufy</a></p>',
+        ('<p class="role">Assistant Professor, <a href="https://www.u-fukui.ac.jp/eng/">University of Fukui</a><br>Founder &amp; CEO, <a href="https://virufy.org">Virufy</a></p>',
          '<p class="role"><a href="https://www.u-fukui.ac.jp/">福井大学</a> 特命助教<br><a href="https://virufy.org">Virufy</a> 創業者・CEO</p>'),
         ('<p class="summary">I build AI that works in the real world: medical AI, tourism and data analytics, behavioral nudges and information security. I bring people together across Japan, the US and the Middle East.</p>',
          '<p class="summary">医療AI、観光・データ分析、行動ナッジ、情報セキュリティの分野で、社会の現場で役立つAIをつくっています。日本、米国、中東の人と組織をつないでいます。</p>'),
@@ -140,18 +140,18 @@ AR = {
                 '[dir="rtl"] .ltr-block { display: inline-block; text-align: left; font-family: "Instrument Sans", system-ui, sans-serif; }\n',
     "nav": ["نبذة", "الخبرات", "التدريس", "المنشورات", "محطات", "روابط"],
     "pairs": [
-        ('<meta name="description" content="Amil Khanzada is a professor at the University of Fukui and CEO of Virufy. He works on medical AI, tourism and data analytics, behavioral nudges and information security, bridging Japan, the US and the Middle East.">',
-         '<meta name="description" content="أميل خانزادا، أستاذ في جامعة فوكوي ومؤسس Virufy ورئيسها التنفيذي. يعمل في الذكاء الاصطناعي الطبي والسياحة وتحليل البيانات والوكز السلوكي وأمن المعلومات، ويربط بين اليابان والولايات المتحدة والشرق الأوسط.">'),
+        ('<meta name="description" content="Amil Khanzada is an assistant professor at the University of Fukui and CEO of Virufy. He works on medical AI, tourism and data analytics, behavioral nudges and information security, bridging Japan, the US and the Middle East.">',
+         '<meta name="description" content="أميل خانزادا، أستاذ مساعد في جامعة فوكوي ومؤسس Virufy ورئيسها التنفيذي. يعمل في الذكاء الاصطناعي الطبي والسياحة وتحليل البيانات والوكز السلوكي وأمن المعلومات، ويربط بين اليابان والولايات المتحدة والشرق الأوسط.">'),
         ('<meta property="og:title" content="Amil Khanzada">', '<meta property="og:title" content="أميل خانزادا | Amil Khanzada">'),
-        ('<meta property="og:description" content="Professor and CEO building AI that works in the real world: medical AI, tourism and data analytics, behavioral nudges and information security.">',
-         '<meta property="og:description" content="أستاذ ورئيس تنفيذي يبني ذكاءً اصطناعيًا يعمل في الواقع: الذكاء الاصطناعي الطبي، والسياحة وتحليل البيانات، والوكز السلوكي، وأمن المعلومات.">'),
+        ('<meta property="og:description" content="Assistant professor and CEO building AI that works in the real world: medical AI, tourism and data analytics, behavioral nudges and information security.">',
+         '<meta property="og:description" content="أستاذ مساعد ورئيس تنفيذي يبني ذكاءً اصطناعيًا يعمل في الواقع: الذكاء الاصطناعي الطبي، والسياحة وتحليل البيانات، والوكز السلوكي، وأمن المعلومات.">'),
         ('<span class="menu-label">Menu</span>', '<span class="menu-label">القائمة</span>'),
         ('<h2 id="about-title">About</h2>', '<h2 id="about-title">نبذة</h2>'),
         ('<h2 id="expertise-title">Expertise</h2>', '<h2 id="expertise-title">الخبرات</h2>'),
         ('<h2 id="teaching-title">Teaching</h2>', '<h2 id="teaching-title">التدريس</h2>'),
         ('<h1 id="name">Amil<br>Khanzada</h1>', '<h1 id="name">أميل<br>خانزادا</h1>'),
-        ('<p class="role">Professor, <a href="https://www.u-fukui.ac.jp/eng/">University of Fukui</a><br>Founder &amp; CEO, <a href="https://virufy.org">Virufy</a></p>',
-         '<p class="role">أستاذ، <a href="https://www.u-fukui.ac.jp/eng/">جامعة فوكوي</a><br>المؤسس والرئيس التنفيذي، <a href="https://virufy.org">Virufy</a></p>'),
+        ('<p class="role">Assistant Professor, <a href="https://www.u-fukui.ac.jp/eng/">University of Fukui</a><br>Founder &amp; CEO, <a href="https://virufy.org">Virufy</a></p>',
+         '<p class="role">أستاذ مساعد، <a href="https://www.u-fukui.ac.jp/eng/">جامعة فوكوي</a><br>المؤسس والرئيس التنفيذي، <a href="https://virufy.org">Virufy</a></p>'),
         ('<p class="summary">I build AI that works in the real world: medical AI, tourism and data analytics, behavioral nudges and information security. I bring people together across Japan, the US and the Middle East.</p>',
          '<p class="summary">أبني ذكاءً اصطناعيًا يعمل في الواقع: الذكاء الاصطناعي الطبي، والسياحة وتحليل البيانات، والوكز السلوكي، وأمن المعلومات. وأربط بين الناس في اليابان والولايات المتحدة والشرق الأوسط.</p>'),
         ('<h3 class="feature-title">Between Japan<br>and Silicon Valley.</h3>', '<h3 class="feature-title">بين اليابان<br>ووادي السيليكون.</h3>'),
@@ -328,6 +328,30 @@ JA["pairs"].append((
     " Our work spans clinical studies in five countries and two patents in the US and Japan.</p>",
     "これまでに5か国で臨床研究を実施し、日米で特許2件を取得しています。</p>",
 ))
+
+
+# --- 2026-10-28 Yasuko's Japanese review ---
+_YK = {
+ '<p class="summary">I develop': '<p class="summary">医療、観光、データ分析、行動科学、サイバーセキュリティの分野で、実社会で役立つAIソリューションを開発しています。日本、米国、中東の人とアイデアをつなぐ架け橋として活動しています。</p>',
+ '<p>I’m a Specially Appointed': '<p><a href="https://pure.flib.u-fukui.ac.jp/ja/persons/amil-khanzada/">福井大学</a> 地域創生推進本部 特命助教として、アントレプレナーシップ（起業家教育）およびAI教育に携わるとともに、北陸地域の自治体と連携して地域のイノベーションの推進に取り組んでいます。</p>',
+ '<p>Since 2020, I’ve been': '<p>また、2020年より、AIを活用してヘルスケアの課題解決に取り組む非営利団体 <a href="https://virufy.org">virufy.org</a> の創業者・CEOを務めています。</p>',
+ '<p>I have more than 15 years': f'<p>テクノロジー・AI分野で15年以上の経験を有し、シリコンバレーと東京で {_GB} や {_HP} のエンジニアリングチームを率い、{_MS} ではテクニカルリードを務めました。</p>',
+ '<p>Fluent in Japanese': '<p>日本語、ウルドゥー語／ヒンディー語に堪能。<a href="https://oywj.org/">One Young World</a> Japanアンバサダーおよび<a href="https://www.town.eiheiji.lg.jp/900/905/p003453.html">永平寺町</a>エボリューション大使として、地域社会とグローバルコミュニティをつなぐ活動にも取り組んでいます。</p>',
+ '<h3 class="feature-title">The city is the classroom.</h3>': '<h3 class="feature-title">まち全体が学びの場。</h3>',
+ '<p class="prose">At the': '<p class="prose"><a href="https://www.u-fukui.ac.jp/">福井大学</a>で、アントレプレナーシップ（起業家教育）、AIを活用した社会情報学、技術経営（MOT）を教えています。学生は自治体の首長や観光関係者と協働しながら、地域社会で実践的な学びを深めています。2026年には<a href="https://ssp.jst.go.jp/">JSTさくらサイエンスプログラム</a>の一環として、4か国の若手研究者を受け入れました。</p>',
+ '<span class="when">2026</span>Doctor of Engineering': '<span class="when">2026年</span>福井大学にて博士（工学）を取得</figcaption>',
+}
+_hit=set()
+_new=[]
+for _pr in JA["pairs"]:
+    for _k,_v in _YK.items():
+        if _pr[0].startswith(_k):
+            _pr=(_pr[0],_v)+tuple(_pr[2:]); _hit.add(_k)
+    _new.append(_pr)
+JA["pairs"]=_new
+_miss=set(_YK)-_hit
+assert not _miss, _miss
+JA["pairs"]=[(a,b.replace('行動ナッジと人々のデータ提供','行動ナッジ（人の行動をそっと後押しする仕組み）と人々のデータ提供'))+tuple(r) for a,b,*r in JA["pairs"]]
 
 import sys as _sys; _sys.path.insert(0, str(ROOT / "_build"))
 from unwrap import unwrap as _unwrap
