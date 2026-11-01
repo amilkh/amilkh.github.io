@@ -1,0 +1,360 @@
+{
+  "lang": "ar",
+  "dir": "rtl",
+  "title": "أميل خانزادا | Amil Khanzada",
+  "fonts": "family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&",
+  "font_css": ":root { --display: \"IBM Plex Sans Arabic\", \"Space Grotesk\", sans-serif; --text: \"IBM Plex Sans Arabic\", \"Instrument Sans\", system-ui, sans-serif; }\nhtml[lang=\"ar\"] *, html[lang=\"ar\"] *::before, html[lang=\"ar\"] *::after { letter-spacing: 0 !important; }\nhtml[lang=\"ar\"] body { line-height: 1.85; }\nhtml[lang=\"ar\"] h1 { line-height: 1.15; font-weight: 600; }\nhtml[lang=\"ar\"] .feature-title { line-height: 1.35; }\n[dir=\"rtl\"] .arrow { transform: scaleX(-1); margin-left: 0; margin-right: 4px; }\n[dir=\"rtl\"] .teaching-topics li { padding-left: 0; padding-right: 12px; }\n[dir=\"rtl\"] .teaching-topics li::before { left: auto; right: 0; }\n[dir=\"rtl\"] .date, [dir=\"rtl\"] .ltr { direction: ltr; unicode-bidi: isolate; }\n[dir=\"rtl\"] .ltr-block { display: inline-block; text-align: left; font-family: \"Instrument Sans\", system-ui, sans-serif; }\n",
+  "nav": [
+    "نبذة",
+    "الخبرات",
+    "التدريس",
+    "المنشورات",
+    "محطات",
+    "روابط"
+  ],
+  "pairs": [
+    [
+      "<meta name=\"description\" content=\"Amil Khanzada is an assistant professor at the University of Fukui and CEO of Virufy. He works on medical AI, tourism and data analytics, behavioral nudges and information security, bridging Japan, the US and the Middle East.\">",
+      "<meta name=\"description\" content=\"أميل خانزادا، أستاذ مساعد في جامعة فوكوي ومؤسس Virufy ورئيسها التنفيذي. يعمل في الذكاء الاصطناعي الطبي والسياحة وتحليل البيانات والوكز السلوكي وأمن المعلومات، ويربط بين اليابان والولايات المتحدة والشرق الأوسط.\">"
+    ],
+    [
+      "<meta property=\"og:title\" content=\"Amil Khanzada\">",
+      "<meta property=\"og:title\" content=\"أميل خانزادا | Amil Khanzada\">"
+    ],
+    [
+      "<meta property=\"og:description\" content=\"Assistant professor and CEO building AI that works in the real world: medical AI, tourism and data analytics, behavioral nudges and information security.\">",
+      "<meta property=\"og:description\" content=\"أستاذ مساعد ورئيس تنفيذي يبني ذكاءً اصطناعيًا يعمل في الواقع: الذكاء الاصطناعي الطبي، والسياحة وتحليل البيانات، والوكز السلوكي، وأمن المعلومات.\">"
+    ],
+    [
+      "<span class=\"menu-label\">Menu</span>",
+      "<span class=\"menu-label\">القائمة</span>"
+    ],
+    [
+      "<h2 id=\"about-title\">About</h2>",
+      "<h2 id=\"about-title\">نبذة</h2>"
+    ],
+    [
+      "<h2 id=\"expertise-title\">Expertise</h2>",
+      "<h2 id=\"expertise-title\">الخبرات</h2>"
+    ],
+    [
+      "<h2 id=\"teaching-title\">Teaching</h2>",
+      "<h2 id=\"teaching-title\">التدريس</h2>"
+    ],
+    [
+      "<h1 id=\"name\">Amil<br>Khanzada</h1>",
+      "<h1 id=\"name\">أميل<br>خانزادا</h1>"
+    ],
+    [
+      "<p class=\"role\">Assistant Professor, <a href=\"https://www.u-fukui.ac.jp/eng/\">University of Fukui</a><br>Founder &amp; CEO, <a href=\"https://virufy.org\">Virufy</a></p>",
+      "<p class=\"role\">أستاذ مساعد، <a href=\"https://www.u-fukui.ac.jp/eng/\">جامعة فوكوي</a><br>المؤسس والرئيس التنفيذي، <a href=\"https://virufy.org\">Virufy</a></p>"
+    ],
+    [
+      "<h3 class=\"feature-title\">Between Japan<br>and Silicon Valley.</h3>",
+      "<h3 class=\"feature-title\">بين اليابان<br>ووادي السيليكون.</h3>"
+    ],
+    [
+      "<p>Fluent in Japanese and Urdu/Hindi. <a href=\"https://oywj.org/\">One Young World</a> Japan Ambassador and <a href=\"https://www.town.eiheiji.lg.jp/900/905/p003453.html\">Eiheiji Town</a> Evolution Ambassador.</p>",
+      "<p>أتحدث اليابانية والأردية/الهندية بطلاقة. سفير <a href=\"https://oywj.org/\">One Young World</a> في اليابان، وسفير التطور لبلدة <a href=\"https://www.town.eiheiji.lg.jp/900/905/p003453.html\">إيهيجي</a>.</p>"
+    ],
+    [
+      "<h3 class=\"subheading\">Education</h3>",
+      "<h3 class=\"subheading\">التعليم</h3>"
+    ],
+    [
+      "<span class=\"institution\">University of Fukui</span>\n            <span class=\"detail\">Doctor of Engineering, behavioral nudges and human data</span>",
+      "<span class=\"institution\">جامعة فوكوي</span>\n            <span class=\"detail\">دكتوراه في الهندسة، الوكز السلوكي ومشاركة البيانات</span>"
+    ],
+    [
+      "<a class=\"institution\" href=\"https://cs.berkeley.edu/\">UC Berkeley</a>\n            <span class=\"detail\">B.A. Computer Science</span>",
+      "<a class=\"institution\" href=\"https://cs.berkeley.edu/\">جامعة كاليفورنيا في بيركلي</a>\n            <span class=\"detail\">بكالوريوس علوم الحاسوب</span>"
+    ],
+    [
+      "alt=\"Amil Khanzada at the University of Fukui degree ceremony\"",
+      "alt=\"أميل خانزادا في حفل منح الدرجات بجامعة فوكوي\""
+    ],
+    [
+      "alt=\"Amil Khanzada with Sabae Mayor Katsuhisa Sasaki and visiting researchers\"",
+      "alt=\"أميل خانزادا مع رئيس بلدية ساباي كاتسوهيسا ساساكي وباحثين زائرين\""
+    ],
+    [
+      "<h3>Medical AI</h3>\n          <div><p>Researching whether cough sounds recorded on a phone can help screen for respiratory conditions.</p></div>",
+      "<h3>الذكاء الاصطناعي الطبي</h3>\n          <div><p>أبحاث حول ما إذا كانت أصوات السعال المسجلة بالهاتف يمكن أن تساعد في فحص أمراض الجهاز التنفسي.</p></div>"
+    ],
+    [
+      "<h3>Tourism and data analytics</h3>",
+      "<h3>السياحة وتحليل البيانات</h3>"
+    ],
+    [
+      "<p>Forecasting visitor demand across Fukui with local governments.</p>",
+      "<p>التنبؤ بأعداد الزوار في محافظة فوكوي بالتعاون مع الحكومات المحلية.</p>"
+    ],
+    [
+      ">Live dashboard</a>",
+      ">لوحة بيانات مباشرة</a>"
+    ],
+    [
+      "<h3>Behavioral nudges</h3>\n          <div><p>Getting people to share data at scale, without paying them.</p></div>",
+      "<h3>الوكز السلوكي</h3>\n          <div><p>تشجيع الناس على مشاركة بياناتهم على نطاق واسع دون مقابل مادي.</p></div>"
+    ],
+    [
+      "<h3>Information security</h3>\n          <div><p>Security analytics for Fortune 500 clients and Japanese megabanks at <a href=\"https://www.hpe.com/\">HP Enterprise</a>.</p></div>",
+      "<h3>أمن المعلومات</h3>\n          <div><p>تحليلات أمنية لعملاء Fortune 500 وكبرى البنوك اليابانية لدى <a href=\"https://www.hpe.com/\">HP Enterprise</a>.</p></div>"
+    ],
+    [
+      "<h3>Bridging Japan and the world</h3>",
+      "<h3>جسر بين اليابان والعالم</h3>"
+    ],
+    [
+      "<p>Connecting universities, governments and companies across Japan, Silicon Valley, the Gulf and South Asia.</p>",
+      "<p>ربط الجامعات والحكومات والشركات في اليابان ووادي السيليكون والخليج وجنوب آسيا.</p>"
+    ],
+    [
+      "alt=\"Amil Khanzada showing the Fukui tourism dashboard to Governor Ishida\"",
+      "alt=\"أميل خانزادا يعرض لوحة بيانات السياحة في فوكوي على المحافظ إيشيدا\""
+    ],
+    [
+      "<h3 class=\"feature-title\">A global health<br>AI nonprofit.</h3>",
+      "<h3 class=\"feature-title\">منظمة عالمية غير ربحية<br>للذكاء الاصطناعي الصحي.</h3>"
+    ],
+    [
+      "<h3 class=\"feature-title\">The city is the classroom.</h3>",
+      "<h3 class=\"feature-title\">المدينة هي الفصل الدراسي.</h3>"
+    ],
+    [
+      "<p class=\"prose\">At the University of Fukui, I teach entrepreneurship, AI-powered social informatics and management of technology. Students work in the field with mayors and tourism boards. In 2026, I hosted young researchers from four countries through the <a href=\"https://ssp.jst.go.jp/en/\">JST Sakura Science Program</a>.</p>",
+      "<p class=\"prose\">أدرّس في جامعة فوكوي ريادة الأعمال، والمعلوماتية الاجتماعية المدعومة بالذكاء الاصطناعي، وإدارة التكنولوجيا. يعمل الطلاب ميدانيًا مع رؤساء البلديات وهيئات السياحة. وفي عام 2026 استضفت باحثين شبابًا من أربع دول عبر برنامج <a href=\"https://ssp.jst.go.jp/en/\">JST Sakura Science</a>.</p>"
+    ],
+    [
+      "aria-label=\"Teaching topics\"",
+      "aria-label=\"موضوعات التدريس\""
+    ],
+    [
+      "<li>Nudges and data</li>",
+      "<li>الوكز السلوكي والبيانات</li>"
+    ],
+    [
+      "<li>Medical AI</li>",
+      "<li>الذكاء الاصطناعي الطبي</li>"
+    ],
+    [
+      "<li>AI for regions</li>",
+      "<li>الذكاء الاصطناعي للمناطق</li>"
+    ],
+    [
+      "<li>Global teams</li>",
+      "<li>فرق عالمية</li>"
+    ],
+    [
+      "alt=\"Amil Khanzada lecturing at the University of Fukui\"",
+      "alt=\"أميل خانزادا يلقي محاضرة في جامعة فوكوي\""
+    ],
+    [
+      "<h2 id=\"publications-title\">Selected<br>publications</h2>",
+      "<h2 id=\"publications-title\">منشورات<br>مختارة</h2>"
+    ],
+    [
+      "<p class=\"publication-intro\">Full list on <a href=\"https://scholar.google.com/citations?user=zdgfTfMAAAAJ\">Google Scholar</a>, <a href=\"https://pure.flib.u-fukui.ac.jp/en/persons/amil-khanzada/\">University of Fukui</a> and <a href=\"https://orcid.org/0000-0002-7065-5390\">ORCID</a>.</p>",
+      "<p class=\"publication-intro\">القائمة الكاملة على <a href=\"https://scholar.google.com/citations?user=zdgfTfMAAAAJ\">Google Scholar</a> و<a href=\"https://pure.flib.u-fukui.ac.jp/en/persons/amil-khanzada/\">جامعة فوكوي</a> و<a href=\"https://orcid.org/0000-0002-7065-5390\">ORCID</a>.</p>"
+    ],
+    [
+      "<span class=\"venue\">US Patent 12,444,502 and Japanese Patent 7850135</span>",
+      "<span class=\"venue\">براءة الاختراع الأمريكية <span class=\"ltr\">12,444,502</span> وبراءة الاختراع اليابانية <span class=\"ltr\">7850135</span></span>"
+    ],
+    [
+      "<h2 id=\"news-title\">Milestones</h2>",
+      "<h2 id=\"news-title\">محطات</h2>"
+    ],
+    [
+      "<span>Hosted the <a href=\"https://ssp.jst.go.jp/en/\">JST Sakura Science Program</a> in Fukui</span>",
+      "<span>استضافة برنامج <a href=\"https://ssp.jst.go.jp/en/\">JST Sakura Science</a> في فوكوي</span>"
+    ],
+    [
+      "<span><a href=\"https://doi.org/10.1016/j.measurement.2026.122500\">DHDE paper</a> published in Measurement</span>",
+      "<span>نشر <a href=\"https://doi.org/10.1016/j.measurement.2026.122500\">ورقة DHDE</a> في مجلة Measurement</span>"
+    ],
+    [
+      "<span>Japanese Patent 7850135 granted</span>",
+      "<span>منح براءة الاختراع اليابانية <span class=\"ltr\">7850135</span></span>"
+    ],
+    [
+      "<span>Joined the University of Fukui faculty</span>",
+      "<span>الانضمام إلى هيئة التدريس في جامعة فوكوي</span>"
+    ],
+    [
+      "<span>Doctor of Engineering, University of Fukui</span>",
+      "<span>دكتوراه في الهندسة، جامعة فوكوي</span>"
+    ],
+    [
+      "<span><a href=\"https://www.nsf.gov/funding/initiatives/i-corps\">NSF I-Corps</a> National Team</span>",
+      "<span>الفريق الوطني لبرنامج <a href=\"https://www.nsf.gov/funding/initiatives/i-corps\">NSF I-Corps</a></span>"
+    ],
+    [
+      "<span><a href=\"https://patents.google.com/patent/US12444502B2/en\">US Patent 12,444,502</a> granted</span>",
+      "<span>منح <a href=\"https://patents.google.com/patent/US12444502B2/en\">براءة الاختراع الأمريكية <span class=\"ltr\">12,444,502</span></a></span>"
+    ],
+    [
+      "<span>Speaker, <a href=\"https://onegiantleap.com/2025-speakers\">LEAP 2025</a>, Riyadh</span>",
+      "<span>متحدث في <a href=\"https://onegiantleap.com/2025-speakers\">LEAP 2025</a>، الرياض</span>"
+    ],
+    [
+      "<span>Founded Virufy; featured in <a href=\"https://www.forbes.com.mx/emprendedores-app-diagnostico-covid-19-toser-telefono/\">Forbes México</a></span>",
+      "<span>تأسيس Virufy، وظهورها في <a href=\"https://www.forbes.com.mx/emprendedores-app-diagnostico-covid-19-toser-telefono/\">Forbes México</a></span>"
+    ],
+    [
+      "<span>Represented Fukui at the <a href=\"https://oywj.org/\">One Young World</a> Summit, The Hague</span>",
+      "<span>تمثيل فوكوي في قمة <a href=\"https://oywj.org/\">One Young World</a>، لاهاي</span>"
+    ],
+    [
+      "<h2 id=\"links-title\">Elsewhere</h2>",
+      "<h2 id=\"links-title\">روابط</h2>"
+    ],
+    [
+      "aria-label=\"University of Fukui profile\" title=\"University of Fukui profile\"",
+      "aria-label=\"الملف الأكاديمي في جامعة فوكوي\" title=\"الملف الأكاديمي في جامعة فوكوي\""
+    ],
+    [
+      "aria-label=\"Main navigation\"",
+      "aria-label=\"التنقل الرئيسي\""
+    ],
+    [
+      "aria-label=\"Mobile navigation\"",
+      "aria-label=\"قائمة التنقل\""
+    ],
+    [
+      "<div class=\"lang-switch\" aria-label=\"Language\">",
+      "<div class=\"lang-switch\" aria-label=\"اللغة\">"
+    ],
+    [
+      "<p>© 2026 Amil Khanzada</p>",
+      "<p>© 2026 أميل خانزادا</p>"
+    ],
+    [
+      "<p class=\"summary\">I develop real-world AI applications across healthcare, tourism, data analytics, behavioral science and cybersecurity, while building bridges between people and ideas across Japan, the US and the Middle East.</p>",
+      "<p class=\"summary\">أطوّر تطبيقات ذكاء اصطناعي عملية في مجالات الرعاية الصحية والسياحة وتحليل البيانات والعلوم السلوكية والأمن السيبراني، وأبني جسورًا بين الناس والأفكار في اليابان والولايات المتحدة والشرق الأوسط.</p>",
+      1
+    ],
+    [
+      "<p>I’m a Specially Appointed Assistant Professor at the University of Fukui’s Regional Revitalization Headquarters, where I teach entrepreneurship and AI and work with local governments across Hokuriku on regional innovation.</p>",
+      "<p>أستاذ مساعد بتعيين خاص في مقر التنشيط الإقليمي بـجامعة فوكوي، حيث أدرّس ريادة الأعمال والذكاء الاصطناعي، وأعمل مع الحكومات المحلية في منطقة هوكوريكو على الابتكار الإقليمي.</p>",
+      1
+    ],
+    [
+      "<p>Since 2020, I’ve been Founder and CEO of virufy.org, a nonprofit applying AI to real-world health challenges.</p>",
+      "<p>منذ عام 2020، أشغل منصب مؤسس virufy.org ورئيسها التنفيذي، وهي منظمة غير ربحية تطبّق الذكاء الاصطناعي على تحديات صحية واقعية.</p>",
+      1
+    ],
+    [
+      "<p>I have more than 15 years of experience in tech and AI. I’ve led engineering teams in Silicon Valley and Tokyo at <a href=\"https://en.wikipedia.org/wiki/Greenplum\">VMware Pivotal Greenplum</a> and <a href=\"https://www.hpe.com/\">HP Enterprise</a>, and served as Technical Lead at <a href=\"https://sandbox.mit.edu/\">MIT Sandbox</a>.</p>",
+      "<p>لديّ أكثر من 15 عامًا من الخبرة في التقنية والذكاء الاصطناعي. قدتُ فرقًا هندسية في وادي السيليكون وطوكيو لدى <a href=\"https://en.wikipedia.org/wiki/Greenplum\">VMware Pivotal Greenplum</a> و<a href=\"https://www.hpe.com/\">HP Enterprise</a>، وعملت قائدًا تقنيًا في <a href=\"https://sandbox.mit.edu/\">MIT Sandbox</a>.</p>",
+      1
+    ],
+    [
+      "<a class=\"institution\" href=\"https://haas.berkeley.edu/\">UC Berkeley Haas School of Business</a>\n            <span class=\"detail\">MBA and Master of Engineering (Data Science) concurrent degree program, first year completed</span>",
+      "<a class=\"institution\" href=\"https://haas.berkeley.edu/\">كلية هاس لإدارة الأعمال، جامعة كاليفورنيا في بيركلي</a>\n            <span class=\"detail\">البرنامج المتزامن لماجستير إدارة الأعمال والماجستير في الهندسة (علوم البيانات)، أكملتُ السنة الأولى</span>",
+      1
+    ],
+    [
+      "<a class=\"institution\" href=\"https://scpd.stanford.edu/\">Stanford University</a>\n            <span class=\"detail\">Graduate coursework in computer science and AI, 4.0 GPA</span>",
+      "<a class=\"institution\" href=\"https://scpd.stanford.edu/\">جامعة ستانفورد</a>\n            <span class=\"detail\">مقررات دراسات عليا في علوم الحاسوب والذكاء الاصطناعي، بمعدل 4.0</span>",
+      1
+    ],
+    [
+      "</a> with <a href=\"https://www.andrewng.org/\">Andrew Ng</a></li>",
+      "</a> (<a href=\"https://www.andrewng.org/\">Andrew Ng</a>)</li>",
+      1
+    ],
+    [
+      "</a> with <a href=\"https://profiles.stanford.edu/fei-fei-li\">Fei-Fei Li</a></li>",
+      "</a> (<a href=\"https://profiles.stanford.edu/fei-fei-li\">Fei-Fei Li</a>)</li>",
+      1
+    ],
+    [
+      "</a> with <a href=\"https://huyenchip.com/\">Chip Huyen</a></li>",
+      "</a> (<a href=\"https://huyenchip.com/\">Chip Huyen</a>)</li>",
+      1
+    ],
+    [
+      "</a> with <a href=\"https://profiles.stanford.edu/rishi-mediratta\">Rishi Mediratta</a></li>",
+      "</a> (<a href=\"https://profiles.stanford.edu/rishi-mediratta\">Rishi Mediratta</a>)</li>",
+      1
+    ],
+    [
+      "<p>As CEO, I lead a 501(c)(3) that more than 1,300 volunteers have joined since 2020, with 60+ partner universities.",
+      "<p>بصفتي الرئيس التنفيذي، أقود منظمة أمريكية غير ربحية (501(c)(3)) انضم إليها أكثر من 1,300 متطوع منذ عام 2020، وتتعاون مع أكثر من 60 جامعة شريكة.",
+      1
+    ],
+    [
+      "\">Moments</a></li>",
+      "\">لقطات</a></li>",
+      2
+    ],
+    [
+      "<h2 id=\"moments-title\">Moments</h2>",
+      "<h2 id=\"moments-title\">لقطات</h2>",
+      1
+    ],
+    [
+      "<span class=\"when\">Oct 2026</span>Showing our tourism dashboard to Fukui Governor Ishida at the Fukui Industrial AI/AX Consortium kickoff</figcaption>",
+      "<span class=\"when\">أكتوبر 2026</span>عرض لوحة بيانات السياحة على محافظ فوكوي إيشيدا خلال إطلاق اتحاد فوكوي للذكاء الاصطناعي الصناعي (AI/AX)</figcaption>",
+      1
+    ],
+    [
+      "<span class=\"when\">Sep 2026</span>In Sabae with Mayor Katsuhisa Sasaki and researchers from the <a href=\"https://ssp.jst.go.jp/en/\">JST Sakura Science Exchange Program</a></figcaption>",
+      "<span class=\"when\">سبتمبر 2026</span>في ساباي مع رئيس البلدية كاتسوهيسا ساساكي وباحثي برنامج <a href=\"https://ssp.jst.go.jp/en/\">JST Sakura Science</a></figcaption>",
+      1
+    ],
+    [
+      "<span class=\"when\">2026</span>Doctor of Engineering, University of Fukui</figcaption>",
+      "<span class=\"when\">2026</span>دكتوراه في الهندسة، جامعة فوكوي</figcaption>",
+      1
+    ],
+    [
+      "<span class=\"when\">Jul 2026</span>Leading an AI workshop for a Fukui manufacturer</figcaption>",
+      "<span class=\"when\">يوليو 2026</span>تقديم ورشة عمل في الذكاء الاصطناعي لشركة صناعية في فوكوي</figcaption>",
+      1
+    ],
+    [
+      "<span class=\"when\">2026</span>Teaching a data-driven decision workshop, University of Fukui</figcaption>",
+      "<span class=\"when\">2026</span>ورشة عمل حول اتخاذ القرار المبني على البيانات، جامعة فوكوي</figcaption>",
+      1
+    ],
+    [
+      "alt=\"Amil Khanzada leading an AI workshop for industry in Fukui\"",
+      "alt=\"أميل خانزادا يقدّم ورشة عمل في الذكاء الاصطناعي لقطاع الصناعة في فوكوي\"",
+      1
+    ],
+    [
+      "<span>Launched Virufy <a href=\"https://virufy.org/en/news/gitex-global-2025-dubai/\">operations in Dubai</a></span>",
+      "<span><a href=\"https://virufy.org/en/news/gitex-global-2025-dubai/\">إطلاق عمليات Virufy في دبي</a></span>"
+    ],
+    [
+      "<span>Opened Virufy's Japan hub in Fukuoka</span>",
+      "<span>افتتاح مركز Virufy في اليابان بمدينة فوكوكا</span>"
+    ],
+    [
+      " Our work spans clinical studies in five countries and two patents in the US and Japan.</p>",
+      " وتشمل أعمالنا دراسات سريرية في خمس دول وبراءتي اختراع في الولايات المتحدة واليابان.</p>"
+    ],
+    [
+      ">University research project</a>",
+      ">مشروع بحثي بجامعة فوكوي</a>"
+    ],
+    [
+      "<h3 class=\"subheading\">Published papers</h3>",
+      "<h3 class=\"subheading\">الأبحاث المنشورة</h3>"
+    ],
+    [
+      "<h3 class=\"subheading\">Preprints</h3>",
+      "<h3 class=\"subheading\">المسودات البحثية</h3>"
+    ],
+    [
+      "<h3 class=\"subheading\">Patents</h3>",
+      "<h3 class=\"subheading\">براءات الاختراع</h3>"
+    ],
+    [
+      ">N. Rasmussen et al. · arXiv preprint (not peer reviewed)</span>",
+      ">N. Rasmussen وآخرون · مسودة أولية على arXiv (غير محكّمة)</span>"
+    ]
+  ]
+}
