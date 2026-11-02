@@ -359,6 +359,11 @@ figcaption { margin-top: 10px; font-size: .79rem; line-height: 1.5; color: var(-
 .moments figcaption { margin-top: 10px; font-size: .86rem; color: var(--body); }
 .moments .when { display: block; font-size: .74rem; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); margin-bottom: 2px; }
 @media (max-width: 680px) { .moments { grid-template-columns: 1fr; } }
+.encounters { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 24px; margin: 0; padding: 0; list-style: none; }
+.encounters img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 30%; }
+.photo-credit { display: block; margin-top: 4px; font-size: .72rem; }
+.encounters figcaption { max-width: 38ch; font-size: .86rem; line-height: 1.6; }
+@media (max-width: 680px) { .encounters { grid-template-columns: 1fr; } }
 :root { --display: "Space Grotesk", "Noto Sans JP", sans-serif; --text: "Instrument Sans", "Noto Sans JP", system-ui, sans-serif; }
 html[lang="ja"] body { letter-spacing: .02em; line-height: 1.85; }
 html[lang="ja"] h1 { letter-spacing: -.02em; font-weight: 700; }
@@ -631,9 +636,22 @@ html[lang="ja"] .feature-title { word-break: keep-all; }
         <li><span class="date">2025</span><span><a href="https://patents.google.com/patent/US12444502B2/en">米国特許 12,444,502</a> 取得</span></li>
         <li><span class="date">2025</span><span><a href="https://onegiantleap.com/2025-speakers">LEAP 2025</a>（リヤド）登壇</span></li>
         <li><span class="date">2025</span><span>Virufy <a href="https://virufy.org/en/news/gitex-global-2025-dubai/">ドバイで事業開始</a></span></li>
+        <li><span class="date">2024</span><span>KAUSTのTAQADAMでスタートアップメンターに選出。</span></li>
         <li><span class="date">2023</span><span>Virufy 日本拠点を福岡に開設</span></li>
         <li><span class="date">2020</span><span>Virufy 創業、<a href="https://www.forbes.com.mx/emprendedores-app-diagnostico-covid-19-toser-telefono/">Forbes México</a> に掲載</span></li>
         <li><span class="date">2018</span><span><a href="https://oywj.org/">One Young World</a> サミット（ハーグ）に福井代表として参加</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="encounters" aria-labelledby="encounters-title">
+    <h2 id="encounters-title">出会い</h2>
+    <div class="section-content">
+      <ul class="encounters">
+        <li><figure><img src="../img/encounter_rutte.jpg" width="2000" height="1333" alt="2018年、ハーグで開催されたOne Young Worldにて、マルク・ルッテ氏と。" loading="lazy" decoding="async"><figcaption>2018年、ハーグで開催されたOne Young Worldにて、マルク・ルッテ氏と。<span class="photo-credit">© Fleur Beemster</span></figcaption></figure></li>
+        <li><figure><img src="../img/encounter_andrew_ng.jpg" width="1484" height="1703" alt="AI研究者のアンドリュー・ン氏と。" loading="lazy" decoding="async"><figcaption>AI研究者のアンドリュー・ン氏と。</figcaption></figure></li>
+        <li><figure><img src="../img/encounter_yuzaki.jpg" width="1920" height="2560" alt="2026年1月、前広島県知事の湯崎英彦氏と。" loading="lazy" decoding="async"><figcaption>2026年1月、前広島県知事の湯崎英彦氏と。</figcaption></figure></li>
+        <li><figure><img src="../img/encounter_gomez.jpg" width="1750" height="1536" alt="2025年2月、リヤドのLEAPにて、Cohere共同創業者のエイダン・ゴメス氏と。" loading="lazy" decoding="async"><figcaption>2025年2月、リヤドのLEAPにて、Cohere共同創業者のエイダン・ゴメス氏と。</figcaption></figure></li>
       </ul>
     </div>
   </section>
