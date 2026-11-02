@@ -1,140 +1,246 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>竹本研究室 — Seminar</title>
+  <meta name="color-scheme" content="dark light">
+  <title>竹本研究室 Seminar Captions</title>
   <style>
+    :root {
+      --bg: #0d0f14; --paper: #13161e; --border: #252a35;
+      --ja: #8d9a8b; --en: #eef2ea; --muted: #6b7570; --accent: #2ec49c; --warn: #e0a24a; --danger: #e06060;
+      --fs: 1.35rem;
+    }
+    :root[data-theme="light"] {
+      --bg: #f6f7f4; --paper: #ffffff; --border: #d9ddd6;
+      --ja: #5d6a5e; --en: #14181a; --muted: #7a847d; --accent: #138a69;
+    }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
+    html, body { height: 100%; }
     body {
-      background: #0d0f14;
-      color: #dde2d8;
-      font-family: "Helvetica Neue", "Segoe UI", sans-serif;
-      height: 100vh;
-      height: 100dvh;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
+      background: var(--bg); color: var(--en);
+      font-family: -apple-system, "Segoe UI", "Hiragino Sans", "Noto Sans JP", "Yu Gothic UI", sans-serif;
+      height: 100vh; height: 100dvh; display: flex; flex-direction: column; overflow: hidden;
+      padding-top: env(safe-area-inset-top);
     }
-
     header {
-      padding: 10px 16px;
-      background: #13161e;
-      border-bottom: 1px solid #252a35;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-shrink: 0;
+      display: flex; align-items: center; justify-content: space-between; gap: 8px;
+      padding: 8px 14px; background: var(--paper); border-bottom: 1px solid var(--border); flex-shrink: 0;
     }
-    header h1 { font-size: 1rem; font-weight: 700; }
-    #statusDot { font-size: 0.8rem; color: #555; }
-    #statusDot.live { color: #2ec49c; }
-
-    #transcript {
-      flex: 1;
-      overflow-y: auto;
-      -webkit-overflow-scrolling: touch;
-      padding: 14px 16px;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
+    header h1 { font-size: 1rem; font-weight: 700; white-space: nowrap; }
+    header h1 small { font-weight: 400; color: var(--muted); margin-left: 6px; font-size: 0.8rem; }
+    .tools { display: flex; align-items: center; gap: 6px; }
+    .tools button {
+      border: 1px solid var(--border); background: transparent; color: var(--en);
+      border-radius: 8px; font: inherit; font-size: 0.95rem; min-width: 38px; height: 34px; cursor: pointer;
     }
-
-    .entry {}
-    .entry-ja { font-size: 1.1rem; line-height: 1.6; }
-    .entry-en {
-      font-size: 0.95rem;
-      color: #7a9478;
-      padding-left: 10px;
-      border-left: 3px solid #1a3a2a;
-      margin-top: 5px;
-      line-height: 1.5;
+    .tools button:active { background: var(--border); }
+    #status {
+      font-size: 0.78rem; color: var(--muted); display: flex; align-items: center; gap: 6px; white-space: nowrap;
     }
-    .entry-en.loading { opacity: 0.4; font-style: italic; }
-
-    .status-line { font-size: 0.8rem; color: #555; font-style: italic; }
+    #status::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--muted); display: inline-block; }
+    #status.live { color: var(--accent); } #status.live::before { background: var(--accent); }
+    #status.reconnecting { color: var(--warn); } #status.reconnecting::before { background: var(--warn); animation: blink 1s infinite; }
+    @keyframes blink { 50% { opacity: 0.2; } }
+    main {
+      flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch;
+      padding: 14px 16px 24px; display: flex; flex-direction: column; gap: 18px;
+    }
+    .entry { animation: slide-in 0.2s ease; display: flex; flex-direction: column; }
+    /* 日本語 reading mode: the Japanese line is the large one, English small above it */
+    :root[data-read="ja"] .entry { flex-direction: column-reverse; }
+    :root[data-read="ja"] .ja { font-size: var(--fs); color: var(--en); margin-top: 3px; }
+    :root[data-read="ja"] .en { font-size: calc(var(--fs) * 0.68); color: var(--ja); margin-top: 0; }
+    :root[data-read="ja"] .entry.from-en .en { border-left: none; padding-left: 0; }
+    :root[data-read="ja"] .entry.from-en .ja { border-left: 3px solid var(--accent); padding-left: 10px; }
+    .ja.pending { opacity: 0.45; }
+    .tools button.on { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .ja { font-size: calc(var(--fs) * 0.68); line-height: 1.5; color: var(--ja); }
+    .en { font-size: var(--fs); line-height: 1.45; color: var(--en); margin-top: 3px; }
+    .en.pending { opacity: 0.45; }
+    .entry.from-en .en { border-left: 3px solid var(--accent); padding-left: 10px; }
+    .note { font-size: 0.8rem; color: var(--muted); font-style: italic; }
+    #latest {
+      position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(18px + env(safe-area-inset-bottom));
+      background: var(--accent); color: #fff; border: none; border-radius: 999px; padding: 10px 18px;
+      font: inherit; font-weight: 700; box-shadow: 0 6px 20px rgba(0,0,0,0.35); cursor: pointer; display: none;
+    }
+    #latest.show { display: block; }
+    @keyframes slide-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+    @media (max-width: 480px) { header h1 small { display: none; } main { padding: 12px 12px 24px; } }
   </style>
 </head>
 <body>
   <header>
-    <h1>竹本研究室</h1>
-    <span id="statusDot">接続中…</span>
+    <h1>竹本研究室<small>Live captions</small></h1>
+    <span id="status">接続中 / connecting</span>
+    <div class="tools">
+      <button id="read" title="Reading language / 表示言語">EN</button>
+      <button id="voice" title="Read translations aloud / 翻訳を読み上げ">🔇</button>
+      <button id="smaller" title="Smaller text">A−</button>
+      <button id="larger" title="Larger text">A+</button>
+      <button id="theme" title="Light / dark">☾</button>
+    </div>
   </header>
-  <div id="transcript"></div>
+  <main id="transcript" aria-live="polite"></main>
+  <button id="latest">↓ 最新 / Latest</button>
 
   <script>
+    // One file serves two places: the box (/?view, same origin) and GitHub Pages
+    // (amilkhanzada.com/seminar, which must name the box explicitly).
+    const BOX = "52-196-249-44.sslip.io";
+    const sameOrigin = location.hostname === BOX || location.hostname === "localhost" || location.hostname === "127.0.0.1";
+    const HTTP_BASE = sameOrigin ? `${location.protocol}//${location.host}` : `https://${BOX}`;
+    const WS_URL = (sameOrigin ? (location.protocol === "https:" ? "wss:" : "ws:") + "//" + location.host : `wss://${BOX}`) + "/ws/view";
+
     const transcript = document.getElementById("transcript");
-    const statusDot  = document.getElementById("statusDot");
-    const WS_URL     = "wss://52-196-249-44.sslip.io/ws/view";
+    const statusEl = document.getElementById("status");
+    const latestBtn = document.getElementById("latest");
+    const root = document.documentElement;
+    const MAX_ENTRIES = 300;
 
-    function addEntry(ja, en) {
-      const wrap  = document.createElement("div");
-      wrap.className = "entry";
+    // Preferences (per device).
+    // read: which language is the large line (EN for international students, 日本語 for
+    // Japanese students following an English speaker); ?read=ja sets it from a link.
+    let fs = 1.35, theme = "dark", read = "en", voice = false;
+    try {
+      fs = parseFloat(localStorage.getItem("cap.fs")) || fs; theme = localStorage.getItem("cap.theme") || theme;
+      read = localStorage.getItem("cap.read") || read;
+    } catch (_) {}
+    const qRead = new URLSearchParams(location.search).get("read");
+    if (qRead === "ja" || qRead === "en") read = qRead;
+    function applyPrefs() {
+      root.style.setProperty("--fs", fs + "rem");
+      root.dataset.theme = theme;
+      root.dataset.read = read;
+      root.lang = read === "ja" ? "ja" : "en";
+      document.getElementById("theme").textContent = theme === "dark" ? "☾" : "☀";
+      document.getElementById("read").textContent = read === "ja" ? "日本語" : "EN";
+      const v = document.getElementById("voice");
+      v.textContent = voice ? "🔊" : "🔇"; v.classList.toggle("on", voice);
+      try { localStorage.setItem("cap.fs", fs); localStorage.setItem("cap.theme", theme); localStorage.setItem("cap.read", read); } catch (_) {}
+    }
+    document.getElementById("read").onclick = () => { read = read === "ja" ? "en" : "ja"; applyPrefs(); };
+    // Voice: the device's own speech engine reads each translation in the reading
+    // language (English speech in 日本語 mode, Japanese speech in EN mode). Off by default.
+    const synth = window.speechSynthesis;
+    document.getElementById("voice").onclick = () => {
+      if (!synth) { addNote("この端末は読み上げ非対応 / Voice not supported on this device"); return; }
+      voice = !voice; if (!voice) synth.cancel();
+      else synth.speak(new SpeechSynthesisUtterance(""));      // unlocks audio on iOS (needs the tap)
+      applyPrefs();
+    };
+    function speak(text, lang) {
+      if (!voice || !synth || !text) return;
+      const u = new SpeechSynthesisUtterance(text);
+      u.lang = lang === "ja" ? "ja-JP" : "en-US";
+      u.rate = 1.1;
+      synth.speak(u);
+    }
+    document.getElementById("smaller").onclick = () => { fs = Math.max(0.9, +(fs - 0.15).toFixed(2)); applyPrefs(); };
+    document.getElementById("larger").onclick = () => { fs = Math.min(3.0, +(fs + 0.15).toFixed(2)); applyPrefs(); };
+    document.getElementById("theme").onclick = () => { theme = theme === "dark" ? "light" : "dark"; applyPrefs(); };
+    applyPrefs();
 
-      const jaEl = document.createElement("div");
-      jaEl.className = "entry-ja";
-      jaEl.textContent = ja;
-      wrap.appendChild(jaEl);
+    // Auto-scroll pauses while the reader has scrolled up; the button jumps back.
+    let follow = true;
+    transcript.addEventListener("scroll", () => {
+      const nearBottom = transcript.scrollHeight - transcript.scrollTop - transcript.clientHeight < 40;
+      follow = nearBottom;
+      latestBtn.classList.toggle("show", !follow);
+    });
+    function scrollIfFollowing() { if (follow) transcript.scrollTop = transcript.scrollHeight; }
+    latestBtn.onclick = () => { follow = true; transcript.scrollTop = transcript.scrollHeight; latestBtn.classList.remove("show"); };
 
-      const enEl = document.createElement("div");
-      enEl.className = "entry-en" + (en ? "" : " loading");
-      enEl.textContent = en || "…";
-      wrap.appendChild(enEl);
+    function setStatus(text, cls) { statusEl.textContent = text; statusEl.className = cls || ""; }
 
+    function addNote(text) {
+      const el = document.createElement("div"); el.className = "note"; el.textContent = text;
+      transcript.appendChild(el); scrollIfFollowing();
+    }
+
+    let lastText = "";
+    // The reading language (see `read`) is the large line; the other sits beside it in smaller type.
+    function addEntry(msg) {
+      if (!msg.text || msg.text === lastText) return;
+      lastText = msg.text;
+      const fromEn = msg.lang === "en";
+      const ja = fromEn ? (msg.translation || "") : msg.text;
+      const en = fromEn ? msg.text : (msg.translation || "");
+      const wrap = document.createElement("div");
+      wrap.className = "entry" + (fromEn ? " from-en" : "");
+      const jaEl = document.createElement("div"); jaEl.className = "ja"; jaEl.textContent = ja;
+      const enEl = document.createElement("div"); enEl.className = "en" + (en ? "" : " pending"); enEl.textContent = en || "…";
+      if (!ja) { jaEl.classList.add("pending"); jaEl.textContent = "…"; }
+      wrap.appendChild(jaEl); wrap.appendChild(enEl);
       transcript.appendChild(wrap);
-      transcript.scrollTop = transcript.scrollHeight;
-      return enEl;
+      while (transcript.children.length > MAX_ENTRIES) transcript.removeChild(transcript.firstChild);
+      scrollIfFollowing();
+      if (!msg.translation) fetchTranslation(msg, fromEn ? jaEl : enEl);
+      else if ((fromEn ? "ja" : "en") === read) speak(msg.translation, read);
     }
 
-    function connect() {
-      const ws = new WebSocket(WS_URL);
-
-      ws.onopen = () => {
-        statusDot.textContent = "● Live";
-        statusDot.className = "live";
-      };
-
-      ws.onclose = () => {
-        statusDot.textContent = "○ Reconnecting…";
-        statusDot.className = "";
-        setTimeout(connect, 3000);
-      };
-
-      ws.onerror = () => {};
-
-      ws.onmessage = ({ data }) => {
-        let msg;
-        try { msg = JSON.parse(data); } catch { return; }
-
-        if (msg.type === "final" && msg.text) {
-          const enEl = addEntry(msg.text, msg.translation || "");
-          if (!msg.translation) {
-            // Broadcast had no translation — fetch it directly
-            fetch("https://52-196-249-44.sslip.io/api/translate", {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({ text: msg.text, target_lang: "en" }),
-            })
-            .then(r => r.ok ? r.text() : Promise.reject())
-            .then(t => {
-              t = t.trim();
-              if (t && !/<!doctype|<html/i.test(t)) {
-                enEl.className = "entry-en";
-                enEl.textContent = t;
-                transcript.scrollTop = transcript.scrollHeight;
-              } else {
-                enEl.remove();
-              }
-            })
-            .catch(() => enEl.remove());
-          }
-        } else if (msg.type === "session_start") {
-          transcript.innerHTML = "";
+    // The server normally attaches the translation; this covers a broadcast without one.
+    function fetchTranslation(msg, el) {
+      fetch(`${HTTP_BASE}/api/translate`, {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ text: msg.text, target_lang: msg.lang === "en" ? "ja" : "en" }),
+      }).then(r => r.ok ? r.text() : "").then(t => {
+        t = (t || "").trim();
+        if (t && !/<!doctype|<html/i.test(t)) {
+          el.textContent = t; el.classList.remove("pending"); scrollIfFollowing();
+          const lang = msg.lang === "en" ? "ja" : "en";
+          if (lang === read) speak(t, lang);
         }
-      };
+        else el.textContent = "";
+      }).catch(() => {});
     }
 
+    function handle(data) {
+      let msg; try { msg = JSON.parse(data); } catch { return; }
+      lastMessageAt = Date.now();
+      if (msg.type === "final" && msg.text) addEntry(msg);
+      else if (msg.type === "session_start") { transcript.innerHTML = ""; lastText = ""; }
+      else if (msg.type === "error" && msg.message) addNote(msg.message);
+    }
+
+    // WebSocket with reconnect; after three consecutive failures fall back to SSE
+    // (campus proxies have blocked WebSocket upgrades before).
+    let ws = null, es = null, failures = 0, lastMessageAt = Date.now(), everConnected = false, retryTimer = null;
+    function connect() {
+      if (es || (ws && ws.readyState <= 1)) return;          // one live connection at a time
+      clearTimeout(retryTimer); retryTimer = null;
+      setStatus(everConnected ? "再接続中 / reconnecting" : "接続中 / connecting", "reconnecting");
+      const sock = new WebSocket(WS_URL);
+      ws = sock;
+      sock.onopen = () => { failures = 0; everConnected = true; lastMessageAt = Date.now(); setStatus("LIVE", "live"); };
+      sock.onmessage = (e) => handle(e.data);
+      sock.onerror = () => {};
+      sock.onclose = () => {
+        if (ws !== sock) return;                               // superseded
+        ws = null;
+        failures++;
+        if (failures >= 3) { connectSSE(); return; }
+        setStatus("再接続中 / reconnecting", "reconnecting");
+        retryTimer = setTimeout(connect, 2000);
+      };
+    }
+    function connectSSE() {
+      if (es) es.close();
+      setStatus("再接続中 (SSE) / reconnecting", "reconnecting");
+      const src = new EventSource(`${HTTP_BASE}/api/stream`);
+      es = src;
+      src.onopen = () => setStatus("LIVE (SSE)", "live");
+      src.onmessage = (e) => handle(e.data);
+      src.onerror = () => { if (es !== src) return; src.close(); es = null; retryTimer = setTimeout(connectSSE, 5000); };
+    }
+    // The server pings every 15 s; a silent socket is dead (phone sleep, Wi-Fi change).
+    setInterval(() => {
+      if (ws && ws.readyState === WebSocket.OPEN && Date.now() - lastMessageAt > 45000) { try { ws.close(); } catch (_) {} }
+    }, 5000);
+    document.addEventListener("visibilitychange", () => {
+      if (!document.hidden && !es && !(ws && ws.readyState <= 1)) connect();
+    });
     connect();
   </script>
 </body>
