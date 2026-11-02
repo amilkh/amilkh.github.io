@@ -361,6 +361,9 @@ figcaption { margin-top: 10px; font-size: .79rem; line-height: 1.5; color: var(-
 @media (max-width: 680px) { .moments { grid-template-columns: 1fr; } }
 .encounters { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 24px; margin: 0; padding: 0; list-style: none; }
 .encounters img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 30%; }
+.encounters .wide { grid-column: 1 / -1; }
+.encounters .wide img { aspect-ratio: auto; }
+.encounters .wide figcaption { max-width: 65ch; }
 .photo-credit { display: block; margin-top: 4px; font-size: .72rem; }
 .encounters figcaption { max-width: 38ch; font-size: .86rem; line-height: 1.6; }
 @media (max-width: 680px) { .encounters { grid-template-columns: 1fr; } }
@@ -652,6 +655,9 @@ html[lang="ja"] .feature-title { word-break: keep-all; }
         <li><figure><img src="../img/encounter_andrew_ng.jpg" width="1484" height="1703" alt="AI研究者のアンドリュー・ン氏と。" loading="lazy" decoding="async"><figcaption>AI研究者のアンドリュー・ン氏と。</figcaption></figure></li>
         <li><figure><img src="../img/encounter_yuzaki.jpg" width="1920" height="2560" alt="2026年1月、前広島県知事の湯崎英彦氏と。" loading="lazy" decoding="async"><figcaption>2026年1月、前広島県知事の湯崎英彦氏と。</figcaption></figure></li>
         <li><figure><img src="../img/encounter_gomez.jpg" width="1750" height="1536" alt="2025年2月、リヤドのLEAPにて、Cohere共同創業者のエイダン・ゴメス氏と。" loading="lazy" decoding="async"><figcaption>2025年2月、リヤドのLEAPにて、Cohere共同創業者のエイダン・ゴメス氏と。</figcaption></figure></li>
+        <li><figure><img src="../img/encounter_schmidhuber.jpg" width="1320" height="941" alt="2024年12月、KAUSTにて、AI研究者のユルゲン・シュミットフーバー氏と。" loading="lazy" decoding="async"><figcaption>2024年12月、KAUSTにて、AI研究者のユルゲン・シュミットフーバー氏と。</figcaption></figure></li>
+        <li><figure><img src="../img/encounter_fujii.jpg" width="1200" height="1600" alt="2023年5月、ボストンにて、東京大学総長の藤井輝夫氏と。" loading="lazy" decoding="async"><figcaption>2023年5月、ボストンにて、東京大学総長の藤井輝夫氏と。</figcaption></figure></li>
+        <li class="wide"><figure><img src="../img/encounter_schulman.jpg" width="1600" height="908" alt="2022年3月、当時PayPalのCEOだったダン・シュルマン氏、バークレー・ハースの学生仲間と。" loading="lazy" decoding="async"><figcaption>2022年3月、当時PayPalのCEOだったダン・シュルマン氏、バークレー・ハースの学生仲間と。</figcaption></figure></li>
       </ul>
     </div>
   </section>
