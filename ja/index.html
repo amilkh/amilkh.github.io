@@ -360,11 +360,7 @@ figcaption { margin-top: 10px; font-size: .79rem; line-height: 1.5; color: var(-
 .moments .when { display: block; font-size: .74rem; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); margin-bottom: 2px; }
 @media (max-width: 680px) { .moments { grid-template-columns: 1fr; } }
 .encounters { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 24px; margin: 0; padding: 0; list-style: none; }
-.encounters img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 30%; }
-.encounters img[src="../img/encounter_yuzaki.jpg"] { object-fit: contain; }
-.encounters .wide { grid-column: 1 / -1; }
-.encounters .wide img { aspect-ratio: auto; }
-.encounters .wide figcaption { max-width: 65ch; }
+.encounters img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: contain; background: rgba(128, 128, 128, .06); }
 .photo-credit { display: block; margin-top: 4px; font-size: .72rem; }
 .encounters figcaption { max-width: 38ch; font-size: .86rem; line-height: 1.6; }
 @media (max-width: 680px) { .encounters { grid-template-columns: 1fr; } }
@@ -649,7 +645,7 @@ html[lang="ja"] .feature-title { word-break: keep-all; }
   </section>
 
   <section class="section" id="encounters" aria-labelledby="encounters-title">
-    <h2 id="encounters-title">出会い</h2>
+    <h2 id="encounters-title">歩みの中で</h2>
     <div class="section-content">
       <ul class="encounters">
         <li><figure><img src="../img/encounter_rutte.jpg" width="2000" height="1333" alt="2018年、ハーグで開催されたOne Young Worldにて、マルク・ルッテ氏と。" loading="lazy" decoding="async"><figcaption>2018年、ハーグで開催されたOne Young Worldにて、<a href="https://en.wikipedia.org/wiki/Mark_Rutte">マルク・ルッテ</a>氏と。</figcaption></figure></li>
@@ -658,7 +654,7 @@ html[lang="ja"] .feature-title { word-break: keep-all; }
         <li><figure><img src="../img/encounter_gomez.jpg" width="1750" height="1536" alt="2025年2月、リヤドのLEAPにて、Cohere共同創業者のエイダン・ゴメス氏と。" loading="lazy" decoding="async"><figcaption>2025年2月、リヤドのLEAPにて、Cohere共同創業者の<a href="https://en.wikipedia.org/wiki/Aidan_Gomez">エイダン・ゴメス</a>氏と。</figcaption></figure></li>
         <li><figure><img src="../img/encounter_schmidhuber.jpg" width="1320" height="941" alt="2024年12月、KAUSTにて、AI研究者のユルゲン・シュミットフーバー氏と。" loading="lazy" decoding="async"><figcaption>2024年12月、KAUSTにて、AI研究者の<a href="https://en.wikipedia.org/wiki/J%C3%BCrgen_Schmidhuber">ユルゲン・シュミットフーバー</a>氏と。</figcaption></figure></li>
         <li><figure><img src="../img/encounter_fujii.jpg" width="1200" height="1600" alt="2023年5月、ボストンにて、東京大学総長の藤井輝夫氏と。" loading="lazy" decoding="async"><figcaption>2023年5月、ボストンにて、東京大学総長の<a href="https://en.wikipedia.org/wiki/Teruo_Fujii">藤井輝夫</a>氏と。</figcaption></figure></li>
-        <li class="wide"><figure><img src="../img/encounter_schulman.jpg" width="1600" height="908" alt="2022年3月、当時PayPalのCEOだったダン・シュルマン氏、バークレー・ハースの学生仲間と。" loading="lazy" decoding="async"><figcaption>2022年3月、当時PayPalのCEOだった<a href="https://en.wikipedia.org/wiki/Dan_Schulman">ダン・シュルマン</a>氏、バークレー・ハースの学生仲間と。</figcaption></figure></li>
+        <li><figure><img src="../img/encounter_schulman.jpg" width="1600" height="908" alt="2022年3月、当時PayPalのCEOだったダン・シュルマン氏、バークレー・ハースの学生仲間と。" loading="lazy" decoding="async"><figcaption>2022年3月、当時PayPalのCEOだった<a href="https://en.wikipedia.org/wiki/Dan_Schulman">ダン・シュルマン</a>氏、バークレー・ハースの学生仲間と。</figcaption></figure></li>
       </ul>
     </div>
   </section>
