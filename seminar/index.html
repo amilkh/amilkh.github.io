@@ -102,13 +102,16 @@
     // Preferences (per device).
     // read: which language is the large line (EN for international students, 日本語 for
     // Japanese students following an English speaker); ?read=ja sets it from a link.
-    let fs = 1.35, theme = "dark", read = "en", voice = false;
+    // Until the reader picks one, the large line follows the speech: English speech shows
+    // 日本語 large, Japanese speech shows English large.
+    let fs = 1.35, theme = "dark", read = "en", voice = false, readChosen = false;
     try {
       fs = parseFloat(localStorage.getItem("cap.fs")) || fs; theme = localStorage.getItem("cap.theme") || theme;
-      read = localStorage.getItem("cap.read") || read;
+      const saved = localStorage.getItem("cap.read");
+      if (saved) { read = saved; readChosen = true; }
     } catch (_) {}
     const qRead = new URLSearchParams(location.search).get("read");
-    if (qRead === "ja" || qRead === "en") read = qRead;
+    if (qRead === "ja" || qRead === "en") { read = qRead; readChosen = true; }
     function applyPrefs() {
       root.style.setProperty("--fs", fs + "rem");
       root.dataset.theme = theme;
@@ -118,9 +121,9 @@
       document.getElementById("read").textContent = read === "ja" ? "日本語" : "EN";
       const v = document.getElementById("voice");
       v.textContent = voice ? "🔊" : "🔇"; v.classList.toggle("on", voice);
-      try { localStorage.setItem("cap.fs", fs); localStorage.setItem("cap.theme", theme); localStorage.setItem("cap.read", read); } catch (_) {}
+      try { localStorage.setItem("cap.fs", fs); localStorage.setItem("cap.theme", theme); if (readChosen) localStorage.setItem("cap.read", read); } catch (_) {}
     }
-    document.getElementById("read").onclick = () => { read = read === "ja" ? "en" : "ja"; applyPrefs(); };
+    document.getElementById("read").onclick = () => { read = read === "ja" ? "en" : "ja"; readChosen = true; applyPrefs(); };
     // Voice: the device's own speech engine reads each translation in the reading
     // language (English speech in 日本語 mode, Japanese speech in EN mode). Off by default.
     const synth = window.speechSynthesis;
@@ -165,6 +168,7 @@
       if (!msg.text || msg.text === lastText) return;
       lastText = msg.text;
       const fromEn = msg.lang === "en";
+      if (!readChosen && read !== (fromEn ? "ja" : "en")) { read = fromEn ? "ja" : "en"; applyPrefs(); }
       const ja = fromEn ? (msg.translation || "") : msg.text;
       const en = fromEn ? msg.text : (msg.translation || "");
       const wrap = document.createElement("div");
