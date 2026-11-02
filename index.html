@@ -361,6 +361,7 @@ figcaption { margin-top: 10px; font-size: .79rem; line-height: 1.5; color: var(-
 @media (max-width: 680px) { .moments { grid-template-columns: 1fr; } }
 .encounters { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 24px; margin: 0; padding: 0; list-style: none; }
 .encounters img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 30%; }
+.encounters img[src="img/encounter_yuzaki.jpg"] { object-fit: contain; }
 .encounters .wide { grid-column: 1 / -1; }
 .encounters .wide img { aspect-ratio: auto; }
 .encounters .wide figcaption { max-width: 65ch; }
@@ -646,8 +647,8 @@ figcaption { margin-top: 10px; font-size: .79rem; line-height: 1.5; color: var(-
     <h2 id="encounters-title">Selected<br>encounters</h2>
     <div class="section-content">
       <ul class="encounters">
-        <li><figure><img src="img/encounter_rutte.jpg" width="2000" height="1333" alt="With Mark Rutte at One Young World, The Hague, 2018." loading="lazy" decoding="async"><figcaption>With Mark Rutte at One Young World, The Hague, 2018.<span class="photo-credit">© Fleur Beemster</span></figcaption></figure></li>
-        <li><figure><img src="img/encounter_andrew_ng.jpg" width="1484" height="1703" alt="With AI researcher Andrew Ng." loading="lazy" decoding="async"><figcaption>With AI researcher Andrew Ng.</figcaption></figure></li>
+        <li><figure><img src="img/encounter_rutte.jpg" width="2000" height="1333" alt="With Mark Rutte at One Young World, The Hague, 2018." loading="lazy" decoding="async"><figcaption>With Mark Rutte at One Young World, The Hague, 2018.</figcaption></figure></li>
+        <li><figure><img src="img/encounter_andrew_ng.jpg" width="1484" height="1703" alt="With Andrew Ng, AI pioneer, Coursera co-founder, and founding lead of Google Brain." loading="lazy" decoding="async"><figcaption>With <a href="https://www.andrewng.org/">Andrew Ng</a>, AI pioneer, Coursera co-founder, and founding lead of Google Brain.</figcaption></figure></li>
         <li><figure><img src="img/encounter_yuzaki.jpg" width="1920" height="2560" alt="With former Hiroshima Governor Hidehiko Yuzaki, January 2026." loading="lazy" decoding="async"><figcaption>With former Hiroshima Governor Hidehiko Yuzaki, January 2026.</figcaption></figure></li>
         <li><figure><img src="img/encounter_gomez.jpg" width="1750" height="1536" alt="With Cohere co-founder Aidan Gomez at LEAP, Riyadh, February 2025." loading="lazy" decoding="async"><figcaption>With Cohere co-founder Aidan Gomez at LEAP, Riyadh, February 2025.</figcaption></figure></li>
         <li><figure><img src="img/encounter_schmidhuber.jpg" width="1320" height="941" alt="With AI researcher Jürgen Schmidhuber at KAUST, December 2024." loading="lazy" decoding="async"><figcaption>With AI researcher Jürgen Schmidhuber at KAUST, December 2024.</figcaption></figure></li>
