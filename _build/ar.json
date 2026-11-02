@@ -362,8 +362,11 @@
     ],
     [
       "With Mark Rutte at One Young World, The Hague, 2018.",
-      "مع مارك روته في مؤتمر ون يونغ وورلد، لاهاي، 2018.",
-      2
+      "مع مارك روته في مؤتمر ون يونغ وورلد، لاهاي، 2018."
+    ],
+    [
+      "With <a href=\"https://en.wikipedia.org/wiki/Mark_Rutte\">Mark Rutte</a> at One Young World, The Hague, 2018.",
+      "مع <a href=\"https://en.wikipedia.org/wiki/Mark_Rutte\">مارك روته</a> في مؤتمر ون يونغ وورلد، لاهاي، 2018."
     ],
     [
       "With Andrew Ng, AI pioneer, Coursera co-founder, and founding lead of Google Brain.",
@@ -375,13 +378,19 @@
     ],
     [
       "With former Hiroshima Governor Hidehiko Yuzaki, January 2026.",
-      "مع هيديهيكو يوزاكي، محافظ هيروشيما السابق، يناير 2026.",
-      2
+      "مع هيديهيكو يوزاكي، محافظ هيروشيما السابق، يناير 2026."
+    ],
+    [
+      "With former Hiroshima Governor <a href=\"https://en.wikipedia.org/wiki/Hidehiko_Yuzaki\">Hidehiko Yuzaki</a>, January 2026.",
+      "مع <a href=\"https://en.wikipedia.org/wiki/Hidehiko_Yuzaki\">هيديهيكو يوزاكي</a>، محافظ هيروشيما السابق، يناير 2026."
     ],
     [
       "With Cohere co-founder Aidan Gomez at LEAP, Riyadh, February 2025.",
-      "مع إيدان غوميز، الشريك المؤسس لشركة Cohere، في مؤتمر LEAP، الرياض، فبراير 2025.",
-      2
+      "مع إيدان غوميز، الشريك المؤسس لشركة Cohere، في مؤتمر LEAP، الرياض، فبراير 2025."
+    ],
+    [
+      "With Cohere co-founder <a href=\"https://en.wikipedia.org/wiki/Aidan_Gomez\">Aidan Gomez</a> at LEAP, Riyadh, February 2025.",
+      "مع <a href=\"https://en.wikipedia.org/wiki/Aidan_Gomez\">إيدان غوميز</a>، الشريك المؤسس لشركة Cohere، في مؤتمر LEAP، الرياض، فبراير 2025."
     ],
     [
       "Selected as a startup mentor for TAQADAM at KAUST.",
@@ -389,18 +398,27 @@
     ],
     [
       "With AI researcher Jürgen Schmidhuber at KAUST, December 2024.",
-      "مع باحث الذكاء الاصطناعي يورغن شميدهوبر في جامعة الملك عبدالله للعلوم والتقنية، ديسمبر 2024.",
-      2
+      "مع باحث الذكاء الاصطناعي يورغن شميدهوبر في جامعة الملك عبدالله للعلوم والتقنية، ديسمبر 2024."
+    ],
+    [
+      "With AI researcher <a href=\"https://en.wikipedia.org/wiki/J%C3%BCrgen_Schmidhuber\">Jürgen Schmidhuber</a> at KAUST, December 2024.",
+      "مع باحث الذكاء الاصطناعي <a href=\"https://en.wikipedia.org/wiki/J%C3%BCrgen_Schmidhuber\">يورغن شميدهوبر</a> في جامعة الملك عبدالله للعلوم والتقنية، ديسمبر 2024."
     ],
     [
       "With University of Tokyo President Teruo Fujii in Boston, May 2023.",
-      "مع رئيس جامعة طوكيو تيرو فوجي في بوسطن، مايو 2023.",
-      2
+      "مع رئيس جامعة طوكيو تيرو فوجي في بوسطن، مايو 2023."
+    ],
+    [
+      "With University of Tokyo President <a href=\"https://en.wikipedia.org/wiki/Teruo_Fujii\">Teruo Fujii</a> in Boston, May 2023.",
+      "مع رئيس جامعة طوكيو <a href=\"https://en.wikipedia.org/wiki/Teruo_Fujii\">تيرو فوجي</a> في بوسطن، مايو 2023."
     ],
     [
       "With Dan Schulman, then PayPal CEO, and fellow Berkeley Haas students, March 2022.",
-      "مع دان شولمان، الرئيس التنفيذي لشركة PayPal آنذاك، وزملاء من طلاب بيركلي هاس، مارس 2022.",
-      2
+      "مع دان شولمان، الرئيس التنفيذي لشركة PayPal آنذاك، وزملاء من طلاب بيركلي هاس، مارس 2022."
+    ],
+    [
+      "With <a href=\"https://en.wikipedia.org/wiki/Dan_Schulman\">Dan Schulman</a>, then PayPal CEO, and fellow Berkeley Haas students, March 2022.",
+      "مع <a href=\"https://en.wikipedia.org/wiki/Dan_Schulman\">دان شولمان</a>، الرئيس التنفيذي لشركة PayPal آنذاك، وزملاء من طلاب بيركلي هاس، مارس 2022."
     ]
   ]
 }
