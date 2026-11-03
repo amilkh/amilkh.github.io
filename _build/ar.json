@@ -78,16 +78,16 @@
       "alt=\"أميل خانزادا مع رئيس بلدية ساباي كاتسوهيسا ساساكي وباحثين زائرين\""
     ],
     [
-      "<h3>Medical AI</h3>\n          <div><p>Researching whether cough sounds recorded on a phone can help screen for respiratory conditions.</p></div>",
-      "<h3>الذكاء الاصطناعي الطبي</h3>\n          <div><p>أبحاث حول ما إذا كانت أصوات السعال المسجلة بالهاتف يمكن أن تساعد في فحص أمراض الجهاز التنفسي.</p></div>"
+      "<h3>Medical AI</h3>\n          <div><p>Developed a smartphone app for respiratory screening research using cough and breathing sounds. As a Clinical AI Consultant with the University of Washington’s XPAI project, I coordinate UW–University of Tsukuba study protocols and lung-sound data quality for pneumonia research.</p>\n            <div class=\"reference\"><a href=\"https://arxiv.org/abs/2609.27222\">Pneumonia study · 185 residents · preprint</a></div></div>",
+      "<h3>الذكاء الاصطناعي الطبي</h3>\n          <div><p>طوّرت تطبيقًا للهواتف الذكية لأبحاث فحص أمراض الجهاز التنفسي باستخدام أصوات السعال والتنفس. وبصفتي مستشارًا للذكاء الاصطناعي السريري في مشروع XPAI بجامعة واشنطن، أنسّق بروتوكولات الدراسة وجودة بيانات أصوات الرئة لأبحاث الالتهاب الرئوي بالتعاون مع جامعة تسوكوبا.</p>\n            <div class=\"reference\"><a href=\"https://arxiv.org/abs/2609.27222\">دراسة الالتهاب الرئوي · 185 مقيمًا · مسودة بحثية</a></div></div>"
     ],
     [
       "<h3>Tourism and data analytics</h3>",
       "<h3>السياحة وتحليل البيانات</h3>"
     ],
     [
-      "<p>Forecasting visitor demand across Fukui with local governments.</p>",
-      "<p>التنبؤ بأعداد الزوار في محافظة فوكوي بالتعاون مع الحكومات المحلية.</p>"
+      "<p>Led development of DHDE, an edge-AI sensor fusion instrument for measuring human mobility, published in Measurement (2026). Working with local governments to forecast visitor demand across Fukui.</p>",
+      "<p>قدت تطوير DHDE، وهو نظام لدمج بيانات المستشعرات باستخدام الذكاء الاصطناعي على الأجهزة الطرفية لقياس حركة الأشخاص، ونُشر البحث في مجلة Measurement عام 2026. التنبؤ بأعداد الزوار في محافظة فوكوي بالتعاون مع الحكومات المحلية.</p>"
     ],
     [
       ">Live dashboard</a>",
@@ -98,8 +98,8 @@
       "<h3>الوكز السلوكي</h3>\n          <div><p>تشجيع الناس على مشاركة بياناتهم على نطاق واسع دون مقابل مادي.</p></div>"
     ],
     [
-      "<h3>Information security</h3>\n          <div><p>Security analytics for Fortune 500 clients and Japanese megabanks at <a href=\"https://www.hpe.com/\">HP Enterprise</a>.</p></div>",
-      "<h3>أمن المعلومات</h3>\n          <div><p>تحليلات أمنية لعملاء Fortune 500 وكبرى البنوك اليابانية لدى <a href=\"https://www.hpe.com/\">HP Enterprise</a>.</p></div>"
+      "<h3>Security and data systems</h3>\n          <div><p>At HP ArcSight, developed multi-device log processing for a SIEM threat-analysis engine used by Fortune 500 clients. At VMware Pivotal Greenplum, led 10 developers across the US and Beijing to build a database workload manager adopted by a US megabank, and cut software release time from days to hours.</p></div>",
+      "<h3>الأمن وأنظمة البيانات</h3>\n          <div><p>طوّرت في HP ArcSight معالجة سجلات أجهزة متعددة لمحرك تحليل تهديدات SIEM تستخدمه شركات Fortune 500. وفي VMware Pivotal Greenplum، قدت عشرة مطورين في الولايات المتحدة وبكين لبناء نظام لإدارة أحمال قواعد البيانات اعتمده بنك أمريكي كبير، وقلّصت زمن إصدار البرمجيات من أيام إلى ساعات.</p></div>"
     ],
     [
       "<h3>Bridging Japan and the world</h3>",
@@ -250,8 +250,8 @@
       1
     ],
     [
-      "<a class=\"institution\" href=\"https://haas.berkeley.edu/\">UC Berkeley Haas School of Business</a>\n            <span class=\"detail\">MBA and Master of Engineering (Data Science) concurrent degree program, first year completed</span>",
-      "<a class=\"institution\" href=\"https://haas.berkeley.edu/\">كلية هاس لإدارة الأعمال، جامعة كاليفورنيا في بيركلي</a>\n            <span class=\"detail\">البرنامج المتزامن لماجستير إدارة الأعمال والماجستير في الهندسة (علوم البيانات)، أكملتُ السنة الأولى</span>",
+      "<a class=\"institution\" href=\"https://haas.berkeley.edu/\">UC Berkeley Haas School of Business</a>\n            <span class=\"detail\">MBA and Master of Engineering (Data Science) concurrent degree program, first year completed; on leave of absence</span>",
+      "<a class=\"institution\" href=\"https://haas.berkeley.edu/\">كلية هاس لإدارة الأعمال، جامعة كاليفورنيا في بيركلي</a>\n            <span class=\"detail\">برنامج مشترك للماجستير في إدارة الأعمال والماجستير في الهندسة (علوم البيانات)، أتممت السنة الأولى؛ في إجازة دراسية</span>",
       1
     ],
     [
@@ -280,8 +280,8 @@
       1
     ],
     [
-      "<p>As CEO, I lead a 501(c)(3) that more than 1,300 volunteers have joined since 2020, with 60+ partner universities.",
-      "<p>بصفتي الرئيس التنفيذي، أقود منظمة أمريكية غير ربحية (501(c)(3)) انضم إليها أكثر من 1,300 متطوع منذ عام 2020، وتتعاون مع أكثر من 60 جامعة شريكة.",
+      "<p>As CEO, I lead a 501(c)(3) that more than 1,400 volunteers have joined since 2020, with 60+ partner universities.",
+      "<p>بصفتي الرئيس التنفيذي، أقود منظمة أمريكية غير ربحية (501(c)(3)) انضم إليها أكثر من 1,400 متطوع منذ عام 2020، وتتعاون مع أكثر من 60 جامعة شريكة.",
       1
     ],
     [
@@ -419,6 +419,30 @@
     [
       "With <a href=\"https://en.wikipedia.org/wiki/Dan_Schulman\">Dan Schulman</a>, then PayPal CEO, and fellow Berkeley Haas students, March 2022.",
       "مع <a href=\"https://en.wikipedia.org/wiki/Dan_Schulman\">دان شولمان</a>، الرئيس التنفيذي لشركة PayPal آنذاك، وزملاء من طلاب بيركلي هاس، مارس 2022."
+    ],
+    [
+      ">E. Darici Haritaoglu et al. · arXiv preprint (not peer reviewed)</span>",
+      ">E. Darici Haritaoglu وآخرون · مسودة أولية على arXiv (غير محكّمة)</span>"
+    ],
+    [
+      "<h2 id=\"contact-title\">Contact</h2>",
+      "<h2 id=\"contact-title\">تواصل</h2>"
+    ],
+    [
+      "<p>For research collaborations in medical AI, human mobility or data systems, get in touch.</p>",
+      "<p>للتعاون البحثي في الذكاء الاصطناعي الطبي أو حركة الأشخاص أو أنظمة البيانات، يُرجى التواصل.</p>"
+    ],
+    [
+      ">Research <span class=\"arrow\" aria-hidden=\"true\">↓</span></a>",
+      ">الأبحاث <span class=\"arrow\" aria-hidden=\"true\">↓</span></a>"
+    ],
+    [
+      ">Contact <span class=\"arrow\" aria-hidden=\"true\">↓</span></a>",
+      ">تواصل <span class=\"arrow\" aria-hidden=\"true\">↓</span></a>"
+    ],
+    [
+      ">DHDE paper</a>",
+      ">بحث DHDE</a>"
     ]
   ]
 }

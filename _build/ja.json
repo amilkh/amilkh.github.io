@@ -78,24 +78,24 @@
       "alt=\"鯖江市 佐々木勝久市長、来日研究者とともに\""
     ],
     [
-      "<h3>Medical AI</h3>\n          <div><p>Researching whether cough sounds recorded on a phone can help screen for respiratory conditions.</p></div>",
-      "<h3>医療AI</h3>\n          <div><p>スマートフォンで録音した咳の音による呼吸器疾患スクリーニング技術の研究・開発。</p></div>"
+      "<h3>Medical AI</h3>\n          <div><p>Developed a smartphone app for respiratory screening research using cough and breathing sounds. As a Clinical AI Consultant with the University of Washington’s XPAI project, I coordinate UW–University of Tsukuba study protocols and lung-sound data quality for pneumonia research.</p>\n            <div class=\"reference\"><a href=\"https://arxiv.org/abs/2609.27222\">Pneumonia study · 185 residents · preprint</a></div></div>",
+      "<h3>医療AI</h3>\n          <div><p>咳・呼吸音を用いた呼吸器疾患スクリーニング研究向けスマートフォンアプリの開発。ワシントン大学XPAIプロジェクトの臨床AIコンサルタントとして、同大学と筑波大学による肺炎研究の研究手順の調整と肺音データの品質管理に従事。</p>\n            <div class=\"reference\"><a href=\"https://arxiv.org/abs/2609.27222\">肺炎研究・対象者185人・プレプリント</a></div></div>"
     ],
     [
       "<h3>Tourism and data analytics</h3>",
       "<h3>観光・データ分析</h3>"
     ],
     [
-      "<p>Forecasting visitor demand across Fukui with local governments.</p>\n            <div class=\"reference\"><a href=\"https://dhde-tourism-ai.github.io/dhde-app/\">Live dashboard</a> · <a href=\"https://r-farm.ad.u-fukui.ac.jp/archives/farm/farm-2085\">University research project</a></div>",
-      "<p>自治体と連携した<a href=\"https://dhde-tourism-ai.github.io/dhde-app/\">リアルタイムダッシュボード</a>の構築、および福井県内の観光需要予測。</p>\n            <div class=\"reference\"><a href=\"https://r-farm.ad.u-fukui.ac.jp/archives/farm/farm-2085\">研究プロジェクト（福井大学）</a></div>"
+      "<p>Led development of DHDE, an edge-AI sensor fusion instrument for measuring human mobility, published in Measurement (2026). Working with local governments to forecast visitor demand across Fukui.</p>\n            <div class=\"reference\"><a href=\"https://doi.org/10.1016/j.measurement.2026.122500\">DHDE paper</a> · <a href=\"https://dhde-tourism-ai.github.io/dhde-app/\">Live dashboard</a> · <a href=\"https://r-farm.ad.u-fukui.ac.jp/archives/farm/farm-2085\">University research project</a></div>",
+      "<p>人の移動を計測するエッジAIセンサーフュージョンシステムDHDEの開発を主導し、Measurement誌で発表（2026年）。自治体と連携した<a href=\"https://dhde-tourism-ai.github.io/dhde-app/\">リアルタイムダッシュボード</a>の構築、および福井県内の観光需要予測。</p>\n            <div class=\"reference\"><a href=\"https://doi.org/10.1016/j.measurement.2026.122500\">DHDE論文</a> · <a href=\"https://r-farm.ad.u-fukui.ac.jp/archives/farm/farm-2085\">研究プロジェクト（福井大学）</a></div>"
     ],
     [
       "<h3>Behavioral nudges</h3>\n          <div><p>Getting people to share data at scale, without paying them.</p></div>",
       "<h3>行動ナッジ</h3>\n          <div><p>金銭的謝礼に頼らず、多くの人にデータ提供を促す仕組みの設計。</p></div>"
     ],
     [
-      "<h3>Information security</h3>\n          <div><p>Security analytics for Fortune 500 clients and Japanese megabanks at <a href=\"https://www.hpe.com/\">HP Enterprise</a>.</p></div>",
-      "<h3>情報セキュリティ</h3>\n          <div><p><a href=\"https://www.hpe.com/\">HP Enterprise</a> にて、Fortune 500企業や日本のメガバンク向けセキュリティ分析に従事。</p></div>"
+      "<h3>Security and data systems</h3>\n          <div><p>At HP ArcSight, developed multi-device log processing for a SIEM threat-analysis engine used by Fortune 500 clients. At VMware Pivotal Greenplum, led 10 developers across the US and Beijing to build a database workload manager adopted by a US megabank, and cut software release time from days to hours.</p></div>",
+      "<h3>セキュリティ・データシステム</h3>\n          <div><p>HP ArcSightにて、Fortune 500企業が利用するSIEM脅威分析エンジン向けのマルチデバイスログ処理を開発。VMware Pivotal Greenplumでは、米国・北京の開発者10人を率い、米国のメガバンクに採用されたデータベースのワークロード管理システムを構築し、ソフトウェアのリリース時間を数日から数時間に短縮。</p></div>"
     ],
     [
       "<h3>Bridging Japan and the world</h3>",
@@ -250,8 +250,8 @@
       1
     ],
     [
-      "<a class=\"institution\" href=\"https://haas.berkeley.edu/\">UC Berkeley Haas School of Business</a>\n            <span class=\"detail\">MBA and Master of Engineering (Data Science) concurrent degree program, first year completed</span>",
-      "<a class=\"institution\" href=\"https://haas.berkeley.edu/\">カリフォルニア大学バークレー校 ハース・スクール・オブ・ビジネス</a>\n            <span class=\"detail\">MBA・工学修士（データサイエンス）同時学位プログラム 1年次修了</span>",
+      "<a class=\"institution\" href=\"https://haas.berkeley.edu/\">UC Berkeley Haas School of Business</a>\n            <span class=\"detail\">MBA and Master of Engineering (Data Science) concurrent degree program, first year completed; on leave of absence</span>",
+      "<a class=\"institution\" href=\"https://haas.berkeley.edu/\">カリフォルニア大学バークレー校 ハース・スクール・オブ・ビジネス</a>\n            <span class=\"detail\">MBA・工学修士（データサイエンス）同時学位プログラム 1年次修了・休学中</span>",
       1
     ],
     [
@@ -280,8 +280,8 @@
       1
     ],
     [
-      "<p>As CEO, I lead a 501(c)(3) that more than 1,300 volunteers have joined since 2020, with 60+ partner universities.",
-      "<p>CEOとして、2020年以降1,300人以上のボランティアが参加し、60以上のパートナー大学と連携する米国の非営利団体（501(c)(3)）を率いています。",
+      "<p>As CEO, I lead a 501(c)(3) that more than 1,400 volunteers have joined since 2020, with 60+ partner universities.",
+      "<p>CEOとして、2020年以降1,400人以上のボランティアが参加し、60以上のパートナー大学と連携する米国の非営利団体（501(c)(3)）を率いています。",
       1
     ],
     [
@@ -415,6 +415,26 @@
     [
       "With <a href=\"https://en.wikipedia.org/wiki/Dan_Schulman\">Dan Schulman</a>, then PayPal CEO, and fellow Berkeley Haas students, March 2022.",
       "2022年3月、当時PayPalのCEOだった<a href=\"https://en.wikipedia.org/wiki/Dan_Schulman\">ダン・シュルマン</a>氏、バークレー・ハースの学生仲間と。"
+    ],
+    [
+      ">E. Darici Haritaoglu et al. · arXiv preprint (not peer reviewed)</span>",
+      ">E. Darici Haritaogluほか · arXivプレプリント（査読前）</span>"
+    ],
+    [
+      "<h2 id=\"contact-title\">Contact</h2>",
+      "<h2 id=\"contact-title\">お問い合わせ</h2>"
+    ],
+    [
+      "<p>For research collaborations in medical AI, human mobility or data systems, get in touch.</p>",
+      "<p>医療AI、人の移動、データシステムに関する共同研究のお問い合わせはこちらへ。</p>"
+    ],
+    [
+      ">Research <span class=\"arrow\" aria-hidden=\"true\">↓</span></a>",
+      ">研究 <span class=\"arrow\" aria-hidden=\"true\">↓</span></a>"
+    ],
+    [
+      ">Contact <span class=\"arrow\" aria-hidden=\"true\">↓</span></a>",
+      ">お問い合わせ <span class=\"arrow\" aria-hidden=\"true\">↓</span></a>"
     ]
   ]
 }
