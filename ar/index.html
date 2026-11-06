@@ -221,13 +221,14 @@ figcaption { margin-top: 10px; font-size: 1rem; line-height: 1.5; color: var(--m
 .text-link { display: inline-block; margin-top: 22px; font-weight: 500; text-decoration: none; }
 .text-link:hover { text-decoration: underline; }
 #speaking .feature-title { overflow-wrap: anywhere; }
-.speaking-formats { margin-block: 24px; }
-.speaking-formats li { padding-block: 18px; border-top: 1px solid var(--line); }
-.speaking-formats li:last-child { border-bottom: 1px solid var(--line); }
-.speaking-formats h4 { font-size: 1rem; font-weight: 500; margin-bottom: 8px; }
-.speaking-formats p { max-width: 720px; }
-.speaking-evidence { list-style: disc; padding-inline-start: 22px; }
-.speaking-evidence li + li { margin-top: 18px; }
+.speaking-intro { color: var(--muted); margin-bottom: 30px; }
+.speaking-topics { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 36px; }
+.speaking-topics h4 { font-size: 1.15rem; font-weight: 500; margin-bottom: 10px; }
+.speaking-topics p { font-size: 1rem; }
+.speaking-invite { margin-top: 36px; padding: 26px 28px; background: var(--wash); border-inline-start: 3px solid var(--accent); }
+.speaking-invite h3 { margin-bottom: 10px; }
+.speaking-invite .text-link { margin-top: 14px; overflow-wrap: anywhere; }
+@media (max-width: 700px) { .speaking-topics { grid-template-columns: 1fr; gap: 26px; } .speaking-invite { padding: 22px; } }
 .teaching-photo, .research-photo { margin-top: 30px; max-width: 720px; }
 .teaching-photo img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
 .research-photo img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
@@ -559,24 +560,19 @@ html[lang="ar"] .feature-title { line-height: 1.35; }
   <section class="section" id="speaking" aria-labelledby="speaking-title">
     <h2 id="speaking-title">المحاضرات</h2>
     <div class="section-content">
-      <h3 class="feature-title">التنبؤ بأعداد الزوار باستخدام كاميرات الذكاء الاصطناعي الطرفي والبيانات المفتوحة</h3>
-      <p class="prose">في فوكوي، ندمج أعداد الزوار التي ترصدها كاميرات الذكاء الاصطناعي الطرفي مع توقعات الطقس واتجاهات البحث والتقييمات عبر الإنترنت وبيانات الاستبيانات المفتوحة في <a href="https://dhde-tourism-ai.github.io/dhde-app/">لوحة بيانات مباشرة</a> تتنبأ بأعداد الزوار لأسبوع مقبل، ولأشهر مقبلة بدقة أقل. أجرى وكلاء الذكاء الاصطناعي على خوادم سحابية التحليلات الإحصائية المكثفة بوتيرة لم تكن ممكنة قبل الذكاء الاصطناعي التوليدي. توضح المحاضرة كيف تتحول أعداد الزوار إلى قرارات بشأن الموظفين والمخزون ومواقف السيارات وتوزيع الزوار، بمنهج يمكن تطبيقه في محطات القطارات والمراكز التجارية والمعابد والشوارع التجارية.</p>
-      <h3 class="subheading">البرنامج</h3>
-      <p class="prose">المحاضرة وورشة العمل: من 90 إلى 120 دقيقة، باليابانية أو الإنجليزية. يمكن أن يليهما نقاش اختياري مع القيادات.</p>
-      <ul class="speaking-formats">
-        <li><h4>المحاضرة · من 30 إلى 45 دقيقة</h4><p>من وادي السيليكون إلى فوكوي؛ عدّ الزوار بالكاميرات ودمج البيانات والتنبؤ باستخدام وكلاء الذكاء الاصطناعي؛ نتائج فوكوي وتطبيق التجربة في أماكن أخرى.</p></li>
-        <li><h4>ورشة عمل تطبيقية · من 45 إلى 75 دقيقة (اختيارية)</h4><p>تحلل الفرق بيانات حقيقية عن حركة الأشخاص والسياحة باستخدام الذكاء الاصطناعي. ويعرض كل فريق نتيجة واحدة ورقماً واحداً وتوصية واحدة. لا تتطلب برمجة.</p></li>
-        <li><h4>نقاش مع القيادات · من 30 إلى 60 دقيقة (اختياري)</h4><p>لقاء مغلق مع صناع القرار حول البيانات المتاحة لديهم، وما يمكن التنبؤ به، وخطوة تالية مثل تجربة ميدانية أو بحث مشترك أو دراسة ممولة.</p></li>
-      </ul>
-      <p class="prose">مواضيع أخرى: الذكاء الاصطناعي التوليدي في العمل، والذكاء الاصطناعي في الرعاية الصحية وتوسيع منظمة غير ربحية للذكاء الاصطناعي الطبي، والذكاء الاصطناعي للمتاجر والأعمال المحلية.</p>
-      <h3 class="subheading">من البحث إلى التطبيق</h3>
-      <ul class="speaking-evidence prose">
-        <li><a href="https://doi.org/10.1016/j.measurement.2026.122500">ورقة DHDE</a> في <cite>Measurement</cite> (Elsevier، 2026): أربع وحدات كاميرا و397 رصداً يومياً، ومعامل تحديد <bdi>R² = 0.68</bdi>. تُقدّر خسائر إنفاق الزوار بسبب الطقس بنحو 12 مليار ين سنوياً في المواقع الأربعة في فوكوي. <a href="https://doi.org/10.5281/zenodo.21271429">الشيفرة المفتوحة</a>.</li>
-        <li>بعد عدة أشهر من التحضير، شارك باحثون شباب من سبع دول ضمن <a href="https://ssp.jst.go.jp/EN/">برنامج JST ساكورا للعلوم</a> في بناء لوحة البيانات خلال 21 يوماً. وسُجلت 129 عملية عدّ للحشود و98 استبياناً للزوار خلال يومين من العمل الميداني. عُرضت اللوحة على <a href="https://www.linkedin.com/feed/update/urn:li:activity:7513008143862448128/">المحافظ إيشيدا</a> وأكاديميين في الذكاء الاصطناعي من جامعة طوكيو عند انطلاق اتحاد فوكوي للذكاء الاصطناعي والتحول بالذكاء الاصطناعي في أكتوبر 2026.</li>
-        <li><a href="https://www.facebook.com/permalink.php?story_fbid=pfbid0KXjF5DaAikVjw5ALvaXri1ChthZw44gggHGYc44tZiDiVwvpPpL1rRv3eFCkUBbul&amp;id=100054517897857">ورشة ذكاء اصطناعي لشركة صناعية في فوكوي</a> (نحو 90 موظفاً، يوليو 2026). خلال تطبيق عملي مدته 45 دقيقة، وجد مشاركون لا يعملون بالبرمجة أن 89% من الزوار راضون، لكن 41% يغادرون في اليوم نفسه، بينما ينفق من يبيتون نحو ثلاثة أضعاف ما ينفقه زوار اليوم الواحد.</li>
-        <li>متحدث في <a href="https://onegiantleap.com/speakers/amil-khanzada">LEAP 2025 في الرياض</a> حول الذكاء الاصطناعي في الرعاية الصحية وتوسيع منظمة غير ربحية للذكاء الاصطناعي الطبي.</li>
-      </ul>
-      <a class="text-link" href="mailto:amil.k@u-fukui.ac.jp">دعوتي لإلقاء محاضرة <span aria-hidden="true">↗</span></a>
+      <h3 class="feature-title">محاضرات وورش عمل</h3>
+      <p class="speaking-intro">باليابانية أو الإنجليزية، للمؤتمرات والشركات والمجتمعات المحلية.</p>
+      <div class="speaking-topics">
+        <article><h4>التنبؤ بأعداد الزوار باستخدام الذكاء الاصطناعي</h4><p>كيف تستعد بلدة أو شركة لزوار الغد؟ انطلاقاً من <a href="https://dhde-tourism-ai.github.io/dhde-app/">لوحة البيانات المباشرة في فوكوي</a>، أوضح كيف تتحول أعداد الزوار التي ترصدها الكاميرات وبيانات الطقس والبيانات المفتوحة إلى توقعات تساعد في تخطيط الموظفين والمخزون ومواقف السيارات. ويمكن تطبيق هذا النهج في المحطات والمراكز التجارية والمواقع السياحية.</p></article>
+        <article><h4>الذكاء الاصطناعي التوليدي في العمل</h4><p>ورش تطبيقية تستخدم فيها الفرق الذكاء الاصطناعي لاستكشاف بيانات حقيقية وتحويل نتيجة إلى توصية. بناءً على ورش مع شركات صناعية في فوكوي، ينصب التركيز على أعمال مفيدة يستطيع المشاركون إنجازها بأنفسهم، دون الحاجة إلى البرمجة.</p></article>
+        <article><h4>الذكاء الاصطناعي في الرعاية الصحية</h4><p>دروس من تأسيس Virufy، وهي منظمة غير ربحية للذكاء الاصطناعي الطبي، والعمل في أبحاث أصوات التنفس: الانتقال من فكرة بحثية نحو الدراسات السريرية، وبناء فريق دولي، والتحديات خلال هذه الرحلة. تحدثت عن هذا العمل في مؤتمر <a href="https://onegiantleap.com/speakers/amil-khanzada">LEAP في الرياض</a>.</p></article>
+        <article><h4>الذكاء الاصطناعي للمتاجر والأعمال المحلية</h4><p>ماذا يمكن أن تكشف آراء العملاء وأنماط الزيارة وبيانات المبيعات لمشروع صغير؟ أناقش طرقاً عملية لاستخدام الذكاء الاصطناعي لفهم العملاء واتخاذ القرارات اليومية، مع أمثلة من السياحة والأعمال المحلية في اليابان.</p></article>
+      </div>
+      <div class="speaking-invite">
+        <h3>دعوتي لإلقاء محاضرة</h3>
+        <p>هل تخطط لمحاضرة أو ورشة عمل؟ راسلني مع نبذة عن الجمهور والموضوع والمواعيد المقترحة.</p>
+        <a class="text-link" href="mailto:amil.k@u-fukui.ac.jp?subject=Speaking%20invitation"><bdi>amil.k@u-fukui.ac.jp</bdi> <span aria-hidden="true">↗</span></a>
+      </div>
     </div>
   </section>
 
