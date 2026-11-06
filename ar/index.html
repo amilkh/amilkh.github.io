@@ -220,6 +220,14 @@ figcaption { margin-top: 10px; font-size: 1rem; line-height: 1.5; color: var(--m
 .virufy-body .feature-title { margin-bottom: 18px; }
 .text-link { display: inline-block; margin-top: 22px; font-weight: 500; text-decoration: none; }
 .text-link:hover { text-decoration: underline; }
+#speaking .feature-title { overflow-wrap: anywhere; }
+.speaking-formats { margin-block: 24px; }
+.speaking-formats li { padding-block: 18px; border-top: 1px solid var(--line); }
+.speaking-formats li:last-child { border-bottom: 1px solid var(--line); }
+.speaking-formats h4 { font-size: 1rem; font-weight: 500; margin-bottom: 8px; }
+.speaking-formats p { max-width: 720px; }
+.speaking-evidence { list-style: disc; padding-inline-start: 22px; }
+.speaking-evidence li + li { margin-top: 18px; }
 .teaching-photo, .research-photo { margin-top: 30px; max-width: 720px; }
 .teaching-photo img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
 .research-photo img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
@@ -386,6 +394,7 @@ html[lang="ar"] .feature-title { line-height: 1.35; }
         <li><a href="#expertise">الخبرات</a></li>
         <li><a href="#virufy">Virufy</a></li>
         <li><a href="#teaching">التدريس</a></li>
+        <li><a href="#speaking">المحاضرات</a></li>
         <li><a href="#moments">لقطات</a></li>
         <li><a href="#publications">المنشورات</a></li>
         <li><a href="#news">محطات</a></li>
@@ -400,6 +409,7 @@ html[lang="ar"] .feature-title { line-height: 1.35; }
           <li><a href="#expertise">الخبرات</a></li>
           <li><a href="#virufy">Virufy</a></li>
           <li><a href="#teaching">التدريس</a></li>
+        <li><a href="#speaking">المحاضرات</a></li>
         <li><a href="#moments">لقطات</a></li>
           <li><a href="#publications">المنشورات</a></li>
           <li><a href="#news">محطات</a></li>
@@ -543,6 +553,30 @@ html[lang="ar"] .feature-title { line-height: 1.35; }
         <li>الذكاء الاصطناعي للمناطق</li>
         <li>فرق عالمية</li>
       </ul>
+    </div>
+  </section>
+
+  <section class="section" id="speaking" aria-labelledby="speaking-title">
+    <h2 id="speaking-title">المحاضرات</h2>
+    <div class="section-content">
+      <h3 class="feature-title">التنبؤ بأعداد الزوار باستخدام كاميرات الذكاء الاصطناعي الطرفي والبيانات المفتوحة</h3>
+      <p class="prose">في فوكوي، ندمج أعداد الزوار التي ترصدها كاميرات الذكاء الاصطناعي الطرفي مع توقعات الطقس واتجاهات البحث والتقييمات عبر الإنترنت وبيانات الاستبيانات المفتوحة في <a href="https://dhde-tourism-ai.github.io/dhde-app/">لوحة بيانات مباشرة</a> تتنبأ بأعداد الزوار لأسبوع مقبل، ولأشهر مقبلة بدقة أقل. أجرى وكلاء الذكاء الاصطناعي على خوادم سحابية التحليلات الإحصائية المكثفة بوتيرة لم تكن ممكنة قبل الذكاء الاصطناعي التوليدي. توضح المحاضرة كيف تتحول أعداد الزوار إلى قرارات بشأن الموظفين والمخزون ومواقف السيارات وتوزيع الزوار، بمنهج يمكن تطبيقه في محطات القطارات والمراكز التجارية والمعابد والشوارع التجارية.</p>
+      <h3 class="subheading">البرنامج</h3>
+      <p class="prose">المحاضرة وورشة العمل: من 90 إلى 120 دقيقة، باليابانية أو الإنجليزية. يمكن أن يليهما نقاش اختياري مع القيادات.</p>
+      <ul class="speaking-formats">
+        <li><h4>المحاضرة · من 30 إلى 45 دقيقة</h4><p>من وادي السيليكون إلى فوكوي؛ عدّ الزوار بالكاميرات ودمج البيانات والتنبؤ باستخدام وكلاء الذكاء الاصطناعي؛ نتائج فوكوي وتطبيق التجربة في أماكن أخرى.</p></li>
+        <li><h4>ورشة عمل تطبيقية · من 45 إلى 75 دقيقة (اختيارية)</h4><p>تحلل الفرق بيانات حقيقية عن حركة الأشخاص والسياحة باستخدام الذكاء الاصطناعي. ويعرض كل فريق نتيجة واحدة ورقماً واحداً وتوصية واحدة. لا تتطلب برمجة.</p></li>
+        <li><h4>نقاش مع القيادات · من 30 إلى 60 دقيقة (اختياري)</h4><p>لقاء مغلق مع صناع القرار حول البيانات المتاحة لديهم، وما يمكن التنبؤ به، وخطوة تالية مثل تجربة ميدانية أو بحث مشترك أو دراسة ممولة.</p></li>
+      </ul>
+      <p class="prose">مواضيع أخرى: الذكاء الاصطناعي التوليدي في العمل، والذكاء الاصطناعي في الرعاية الصحية وتوسيع منظمة غير ربحية للذكاء الاصطناعي الطبي، والذكاء الاصطناعي للمتاجر والأعمال المحلية.</p>
+      <h3 class="subheading">من البحث إلى التطبيق</h3>
+      <ul class="speaking-evidence prose">
+        <li><a href="https://doi.org/10.1016/j.measurement.2026.122500">ورقة DHDE</a> في <cite>Measurement</cite> (Elsevier، 2026): أربع وحدات كاميرا و397 رصداً يومياً، ومعامل تحديد <bdi>R² = 0.68</bdi>. تُقدّر خسائر إنفاق الزوار بسبب الطقس بنحو 12 مليار ين سنوياً في المواقع الأربعة في فوكوي. <a href="https://doi.org/10.5281/zenodo.21271429">الشيفرة المفتوحة</a>.</li>
+        <li>بعد عدة أشهر من التحضير، شارك باحثون شباب من سبع دول ضمن <a href="https://ssp.jst.go.jp/EN/">برنامج JST ساكورا للعلوم</a> في بناء لوحة البيانات خلال 21 يوماً. وسُجلت 129 عملية عدّ للحشود و98 استبياناً للزوار خلال يومين من العمل الميداني. عُرضت اللوحة على <a href="https://www.linkedin.com/feed/update/urn:li:activity:7513008143862448128/">المحافظ إيشيدا</a> وأكاديميين في الذكاء الاصطناعي من جامعة طوكيو عند انطلاق اتحاد فوكوي للذكاء الاصطناعي والتحول بالذكاء الاصطناعي في أكتوبر 2026.</li>
+        <li><a href="https://www.facebook.com/permalink.php?story_fbid=pfbid0KXjF5DaAikVjw5ALvaXri1ChthZw44gggHGYc44tZiDiVwvpPpL1rRv3eFCkUBbul&amp;id=100054517897857">ورشة ذكاء اصطناعي لشركة صناعية في فوكوي</a> (نحو 90 موظفاً، يوليو 2026). خلال تطبيق عملي مدته 45 دقيقة، وجد مشاركون لا يعملون بالبرمجة أن 89% من الزوار راضون، لكن 41% يغادرون في اليوم نفسه، بينما ينفق من يبيتون نحو ثلاثة أضعاف ما ينفقه زوار اليوم الواحد.</li>
+        <li>متحدث في <a href="https://onegiantleap.com/speakers/amil-khanzada">LEAP 2025 في الرياض</a> حول الذكاء الاصطناعي في الرعاية الصحية وتوسيع منظمة غير ربحية للذكاء الاصطناعي الطبي.</li>
+      </ul>
+      <a class="text-link" href="mailto:amil.k@u-fukui.ac.jp">دعوتي لإلقاء محاضرة <span aria-hidden="true">↗</span></a>
     </div>
   </section>
 

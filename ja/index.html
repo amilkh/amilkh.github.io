@@ -220,6 +220,14 @@ figcaption { margin-top: 10px; font-size: 1rem; line-height: 1.5; color: var(--m
 .virufy-body .feature-title { margin-bottom: 18px; }
 .text-link { display: inline-block; margin-top: 22px; font-weight: 500; text-decoration: none; }
 .text-link:hover { text-decoration: underline; }
+#speaking .feature-title { overflow-wrap: anywhere; }
+.speaking-formats { margin-block: 24px; }
+.speaking-formats li { padding-block: 18px; border-top: 1px solid var(--line); }
+.speaking-formats li:last-child { border-bottom: 1px solid var(--line); }
+.speaking-formats h4 { font-size: 1rem; font-weight: 500; margin-bottom: 8px; }
+.speaking-formats p { max-width: 720px; }
+.speaking-evidence { list-style: disc; padding-inline-start: 22px; }
+.speaking-evidence li + li { margin-top: 18px; }
 .teaching-photo, .research-photo { margin-top: 30px; max-width: 720px; }
 .teaching-photo img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
 .research-photo img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
@@ -381,6 +389,7 @@ html[lang="ja"] .feature-title { word-break: keep-all; }
         <li><a href="#expertise">専門分野</a></li>
         <li><a href="#virufy">Virufy</a></li>
         <li><a href="#teaching">教育</a></li>
+        <li><a href="#speaking">講演</a></li>
         <li><a href="#moments">活動の記録</a></li>
         <li><a href="#publications">業績</a></li>
         <li><a href="#news">あゆみ</a></li>
@@ -395,6 +404,7 @@ html[lang="ja"] .feature-title { word-break: keep-all; }
           <li><a href="#expertise">専門分野</a></li>
           <li><a href="#virufy">Virufy</a></li>
           <li><a href="#teaching">教育</a></li>
+        <li><a href="#speaking">講演</a></li>
         <li><a href="#moments">活動の記録</a></li>
           <li><a href="#publications">業績</a></li>
           <li><a href="#news">あゆみ</a></li>
@@ -538,6 +548,30 @@ html[lang="ja"] .feature-title { word-break: keep-all; }
         <li>地域のためのAI</li>
         <li>グローバルチーム</li>
       </ul>
+    </div>
+  </section>
+
+  <section class="section" id="speaking" aria-labelledby="speaking-title">
+    <h2 id="speaking-title">講演</h2>
+    <div class="section-content">
+      <h3 class="feature-title">エッジAIカメラとオープンデータで来訪者を予測する</h3>
+      <p class="prose">福井では、エッジAIカメラの人流カウントに気象予報、検索トレンド、口コミ、公開アンケートを組み合わせ、1週間先に加え、精度は下がるものの数か月先まで来訪者数を予測する<a href="https://dhde-tourism-ai.github.io/dhde-app/">ダッシュボード</a>を公開運用しています。重い統計解析はクラウド上のAIエージェントで行い、生成AI以前には不可能だった速さで構築しました。本講演では、カメラの計測値が現場の判断（人員、在庫、駐車場、分散誘導）にどうつながるかをお話しします。鉄道駅、商業施設、寺社、商店街にも応用できます。</p>
+      <h3 class="subheading">プログラム</h3>
+      <p class="prose">講演とハンズオンで90〜120分、日本語または英語。終了後に経営層との意見交換も可能です。</p>
+      <ul class="speaking-formats">
+        <li><h4>講演・30〜45分</h4><p>シリコンバレーから福井へ。カメラ計測、データ統合、AIエージェントによる予測、福井での結果、他地域への展開。</p></li>
+        <li><h4>ハンズオン・45〜75分（任意）</h4><p>本物の人流・観光データをAIで分析し、チームごとに「事実1つ、数字1つ、提案1つ」を発表。プログラミングは不要です。</p></li>
+        <li><h4>経営層との意見交換・30〜60分（任意）</h4><p>意思決定者の方々と非公開で、お持ちのデータ、予測できること、具体的な次の一歩（実証・共同研究・研究資金）について話し合います。</p></li>
+      </ul>
+      <p class="prose">その他の講演テーマ：企業での生成AI活用、医療AIと医療AI非営利団体の成長、店舗・地域事業者のためのAI。</p>
+      <h3 class="subheading">研究と実践の実績</h3>
+      <ul class="speaking-evidence prose">
+        <li><a href="https://doi.org/10.1016/j.measurement.2026.122500">DHDE論文</a>が<cite>Measurement</cite>（Elsevier、2026年）に掲載。カメラ4拠点、397日分で検証、決定係数 R² = 0.68。福井県内の4拠点で天候による来訪者消費の減少は年間約120億円と推計。<a href="https://doi.org/10.5281/zenodo.21271429">公開コード</a>。</li>
+        <li>ダッシュボードは、数か月の準備の上に、<a href="https://ssp.jst.go.jp/EN/">JSTさくらサイエンスプログラム</a>の7か国の若手研究者と21日間で共同開発。2日間の現地調査で人流カウント129件、来訪者アンケート98件を記録しました。福井県AI/AXコンソーシアムのキックオフ（2026年10月）で<a href="https://www.linkedin.com/feed/update/urn:li:activity:7513008143862448128/">石田知事</a>と東京大学のAI研究者にご覧いただきました。</li>
+        <li><a href="https://www.facebook.com/permalink.php?story_fbid=pfbid0KXjF5DaAikVjw5ALvaXri1ChthZw44gggHGYc44tZiDiVwvpPpL1rRv3eFCkUBbul&amp;id=100054517897857">福井の製造業企業向けAIワークショップ</a>（約90名、2026年7月）。45分のハンズオンで非エンジニアが「満足度89%なのに41%が日帰り、宿泊客の消費は日帰り客の約3倍」という事実を見出しました。</li>
+        <li><a href="https://onegiantleap.com/speakers/amil-khanzada">LEAP 2025（リヤド）</a>で、医療AIと医療AI非営利団体の成長について登壇。</li>
+      </ul>
+      <a class="text-link" href="mailto:amil.k@u-fukui.ac.jp">講演のご相談 <span aria-hidden="true">↗</span></a>
     </div>
   </section>
 
